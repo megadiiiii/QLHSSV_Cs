@@ -57,6 +57,7 @@ namespace BTL_QLHSSV_NETFW
 
         private void majorsLoad()
         {
+            DataTable dt = new DataTable();
             try
             {
                 using (MySqlConnection conn = dbConn.GetConnection())
@@ -68,7 +69,6 @@ namespace BTL_QLHSSV_NETFW
                     {
                         using (var da = new MySqlDataAdapter(cmd))
                         {
-                            DataTable dt = new DataTable();
                             da.Fill(dt);
                             dgvMajorId.DataPropertyName = "major_id";
                             dgvMajorName.DataPropertyName = "major_name";

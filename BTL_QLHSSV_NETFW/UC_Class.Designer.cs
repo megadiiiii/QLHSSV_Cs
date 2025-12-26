@@ -77,7 +77,7 @@
             // txtFacuNameSearch
             // 
             this.txtFacuNameSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtFacuNameSearch.BeforeTouchSize = new System.Drawing.Size(250, 29);
+            this.txtFacuNameSearch.BeforeTouchSize = new System.Drawing.Size(175, 45);
             this.txtFacuNameSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtFacuNameSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFacuNameSearch.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -134,7 +134,7 @@
             // txtFacuIDSearch
             // 
             this.txtFacuIDSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtFacuIDSearch.BeforeTouchSize = new System.Drawing.Size(250, 29);
+            this.txtFacuIDSearch.BeforeTouchSize = new System.Drawing.Size(175, 45);
             this.txtFacuIDSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtFacuIDSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFacuIDSearch.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -228,7 +228,7 @@
             // txtFacuId
             // 
             this.txtFacuId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtFacuId.BeforeTouchSize = new System.Drawing.Size(250, 29);
+            this.txtFacuId.BeforeTouchSize = new System.Drawing.Size(175, 45);
             this.txtFacuId.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtFacuId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFacuId.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -275,7 +275,7 @@
             // txtFacuName
             // 
             this.txtFacuName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtFacuName.BeforeTouchSize = new System.Drawing.Size(250, 29);
+            this.txtFacuName.BeforeTouchSize = new System.Drawing.Size(175, 45);
             this.txtFacuName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtFacuName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFacuName.Cursor = System.Windows.Forms.Cursors.Arrow;

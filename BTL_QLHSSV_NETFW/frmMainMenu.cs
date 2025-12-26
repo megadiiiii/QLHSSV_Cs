@@ -29,6 +29,11 @@ namespace BTL_QLHSSV_NETFW
             uC_Dashboard1.BringToFront();
         }
 
+        private void navTeacher_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void navFaculties_Click(object sender, EventArgs e)
         {
             uC_Faculties1.BringToFront();
@@ -45,6 +50,11 @@ namespace BTL_QLHSSV_NETFW
             uC_Student1.BringToFront();
         }
 
+        private void uC_Student1_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnLogout_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -57,7 +67,7 @@ namespace BTL_QLHSSV_NETFW
 
         private void navClass_Click(object sender, EventArgs e)
         {
-                uC_Class1.BringToFront();
+                
         }
 
         private void navMajor_Click(object sender, EventArgs e)
@@ -65,14 +75,14 @@ namespace BTL_QLHSSV_NETFW
             uC_Major1.BringToFront();
         }
 
-        private void nav_KhenThuong_Click(object sender, EventArgs e)
+        private void sfButton2_Click(object sender, EventArgs e)
         {
-            uC_KhenThuong1.BringToFront();
+
         }
 
-        private void nav_KyLuat_Click(object sender, EventArgs e)
+        private void sfButton3_Click(object sender, EventArgs e)
         {
-            uC_KyLuat1.BringToFront();
+
         }
     }
 }

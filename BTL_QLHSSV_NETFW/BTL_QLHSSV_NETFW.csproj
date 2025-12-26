@@ -199,6 +199,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="UC_Class.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Class.Designer.cs">
+      <DependentUpon>UC_Class.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_Dashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -210,6 +216,18 @@
     </Compile>
     <Compile Include="UC_Faculties.Designer.cs">
       <DependentUpon>UC_Faculties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_KhenThuong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_KhenThuong.Designer.cs">
+      <DependentUpon>UC_KhenThuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_KyLuat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_KyLuat.Designer.cs">
+      <DependentUpon>UC_KyLuat.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_Major.cs">
       <SubType>UserControl</SubType>
@@ -246,11 +264,20 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_Class.resx">
+      <DependentUpon>UC_Class.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_Dashboard.resx">
       <DependentUpon>UC_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Faculties.resx">
       <DependentUpon>UC_Faculties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_KhenThuong.resx">
+      <DependentUpon>UC_KhenThuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_KyLuat.resx">
+      <DependentUpon>UC_KyLuat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Major.resx">
       <DependentUpon>UC_Major.cs</DependentUpon>
@@ -274,6 +301,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Resource\Dump20251226.sql" />
     <Content Include="Resource\password_hide.png" />
     <Content Include="Resource\password_show.png" />
   </ItemGroup>

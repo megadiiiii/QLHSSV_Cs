@@ -126,33 +126,23 @@ namespace BTL_QLHSSV_NETFW
             }
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        public void clearInput()
         {
+            txtId.Clear();
+            txtLastName.Clear();
+            txtFirstName.Clear();
+            txtDob.Value = DateTime.Now;
+            txtHometown.Clear();
+            txtPhone.Clear();
+            txtEmail.Clear();
+            txtIdNo.Clear();
 
-        }
+            cboGender.SelectedIndex = -1;
+            cboStatus.SelectedIndex = -1;
 
-        private void autoLabel3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxExt2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void sfComboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void autoLabel4_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void autoLabel1_Click(object sender, EventArgs e)
-        {
-
+            cboFacu.SelectedIndex = -1;
+            cboMajor.DataSource = null;
+            cboClass.DataSource = null;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -227,6 +217,7 @@ namespace BTL_QLHSSV_NETFW
                         {
                             MessageBox.Show("Lưu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             studentTableLoad();
+                            clearInput();
                         }
                         else
                         {
@@ -290,7 +281,112 @@ namespace BTL_QLHSSV_NETFW
 
         private void dgvStudentTable_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex < 0) return;
+            DataGridViewRow row = dgvStudentTable.Rows[e.RowIndex];
 
+            txtId.Text = row.Cells["dgvID"].Value?.ToString();
+            txtLastName.Text = row.Cells["dgvLastName"].Value?.ToString();
+            txtFirstName.Text = row.Cells["dgvFirstName"].Value?.ToString();
+            if (row.Cells["dgvDob"].Value != DBNull.Value)
+            {
+                txtDob.Value = Convert.ToDateTime(row.Cells["dgvDob"].Value);
+            }
+            cboGender.SelectedItem = row.Cells["dgvGender"].Value?.ToString();
+            txtHometown.Text = row.Cells["dgvHometown"].Value?.ToString();
+            txtPhone.Text = row.Cells["dgvPhone"].Value?.ToString();
+            txtEmail.Text = row.Cells["dgvEmail"].Value?.ToString();
+            txtIdNo.Text = row.Cells["dgvIdNo"].Value?.ToString();
+            cboStatus.Text = row.Cells["dgvStatus"].Value?.ToString();
+
+            //Load Facu/Major/Class info
+            comboLoad(row);
+
+        }
+
+        public void comboLoad(DataGridViewRow row)
+        {
+            string classId = row.Cells["dgvClassID"].Value?.ToString();
+            try
+            {
+                using (var conn = dbConn.GetConnection())
+                {
+                    conn.Open();
+                    string sql = @"
+                                select c.class_id, m.major_id, f.facu_id
+                                from class c
+                                join major m on m.major_id = c.major_id
+                                join faculties f on f.facu_id = m.facu_id
+                                where c.class_id = @classId";
+                    using (var cmd = new MySqlCommand(sql, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@classId", classId);
+                        using (var reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                string facuId = reader["facu_id"].ToString();
+                                string majorId = reader["major_id"].ToString();
+
+                                //Set Facu
+                                cboFacu.SelectedValue = facuId;
+
+                                //Set Major
+                                LoadMajorsByFaculty(facuId);
+                                cboMajor.SelectedValue = majorId;
+
+                                //Set Class
+                                LoadClassByMajor(majorId);
+                                cboClass.SelectedValue = classId;
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            string id = txtId.Text.Trim();
+            if (MessageBox.Show("Bạn chắc chắn muốn xóa sinh viên?", "Xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                try
+                {
+                    using (MySqlConnection conn = dbConn.GetConnection())
+                    {
+                        conn.Open();
+                        string sql = @"DELETE FROM student
+                                 WHERE student_id = @id";
+                        using (var cmd = new MySqlCommand(sql, conn))
+                        {
+                            cmd.Parameters.AddWithValue(@"id", id);
+                            int row = cmd.ExecuteNonQuery();
+                            if (row > 0)
+                            {
+                                MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                studentTableLoad();
+                                clearInput();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Xóa thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Lỗi", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

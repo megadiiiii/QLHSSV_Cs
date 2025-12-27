@@ -123,7 +123,6 @@
             this.autoLabel1.TabIndex = 5;
             this.autoLabel1.Text = "Thông tin sinh viên";
             this.autoLabel1.ThemeName = "Managed";
-            this.autoLabel1.Click += new System.EventHandler(this.autoLabel1_Click);
             // 
             // panel2
             // 
@@ -161,7 +160,6 @@
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm sinh viên";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // button1
             // 
@@ -179,7 +177,7 @@
             // textBoxExt10
             // 
             this.textBoxExt10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.textBoxExt10.BeforeTouchSize = new System.Drawing.Size(175, 45);
+            this.textBoxExt10.BeforeTouchSize = new System.Drawing.Size(175, 29);
             this.textBoxExt10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.textBoxExt10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxExt10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
@@ -205,7 +203,7 @@
             // textBoxExt9
             // 
             this.textBoxExt9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.textBoxExt9.BeforeTouchSize = new System.Drawing.Size(175, 45);
+            this.textBoxExt9.BeforeTouchSize = new System.Drawing.Size(175, 29);
             this.textBoxExt9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.textBoxExt9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxExt9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
@@ -231,7 +229,7 @@
             // textBoxExt8
             // 
             this.textBoxExt8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.textBoxExt8.BeforeTouchSize = new System.Drawing.Size(175, 45);
+            this.textBoxExt8.BeforeTouchSize = new System.Drawing.Size(175, 29);
             this.textBoxExt8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.textBoxExt8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxExt8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
@@ -310,6 +308,7 @@
             this.btnDelete.Text = "Xóa";
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -323,6 +322,7 @@
             this.btnEdit.Text = "Sửa";
             this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnSave
             // 
@@ -405,7 +405,7 @@
             // txtIdNo
             // 
             this.txtIdNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtIdNo.BeforeTouchSize = new System.Drawing.Size(175, 45);
+            this.txtIdNo.BeforeTouchSize = new System.Drawing.Size(175, 29);
             this.txtIdNo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtIdNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtIdNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
@@ -421,7 +421,7 @@
             // txtEmail
             // 
             this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtEmail.BeforeTouchSize = new System.Drawing.Size(175, 45);
+            this.txtEmail.BeforeTouchSize = new System.Drawing.Size(175, 29);
             this.txtEmail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
@@ -437,7 +437,7 @@
             // txtPhone
             // 
             this.txtPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtPhone.BeforeTouchSize = new System.Drawing.Size(175, 45);
+            this.txtPhone.BeforeTouchSize = new System.Drawing.Size(175, 29);
             this.txtPhone.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
@@ -453,7 +453,7 @@
             // txtHometown
             // 
             this.txtHometown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtHometown.BeforeTouchSize = new System.Drawing.Size(175, 45);
+            this.txtHometown.BeforeTouchSize = new System.Drawing.Size(175, 29);
             this.txtHometown.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtHometown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtHometown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
@@ -469,7 +469,7 @@
             // txtFirstName
             // 
             this.txtFirstName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtFirstName.BeforeTouchSize = new System.Drawing.Size(175, 45);
+            this.txtFirstName.BeforeTouchSize = new System.Drawing.Size(175, 29);
             this.txtFirstName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtFirstName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFirstName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
@@ -485,7 +485,7 @@
             // txtLastName
             // 
             this.txtLastName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtLastName.BeforeTouchSize = new System.Drawing.Size(175, 45);
+            this.txtLastName.BeforeTouchSize = new System.Drawing.Size(175, 29);
             this.txtLastName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtLastName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtLastName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
@@ -501,7 +501,7 @@
             // txtId
             // 
             this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtId.BeforeTouchSize = new System.Drawing.Size(175, 45);
+            this.txtId.BeforeTouchSize = new System.Drawing.Size(175, 29);
             this.txtId.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtId.Cursor = System.Windows.Forms.Cursors.No;
@@ -655,7 +655,7 @@
             this.cboStatus.Location = new System.Drawing.Point(460, 56);
             this.cboStatus.Name = "cboStatus";
             this.cboStatus.Size = new System.Drawing.Size(175, 29);
-            this.cboStatus.TabIndex = 49;
+            this.cboStatus.TabIndex = 14;
             this.cboStatus.Text = "Trạng thái";
             // 
             // autoLabel15
@@ -678,7 +678,7 @@
             this.cboClass.Location = new System.Drawing.Point(140, 56);
             this.cboClass.Name = "cboClass";
             this.cboClass.Size = new System.Drawing.Size(175, 29);
-            this.cboClass.TabIndex = 31;
+            this.cboClass.TabIndex = 13;
             this.cboClass.Text = "Lớp";
             // 
             // autoLabel30
@@ -698,7 +698,7 @@
             this.cboMajor.Location = new System.Drawing.Point(460, 13);
             this.cboMajor.Name = "cboMajor";
             this.cboMajor.Size = new System.Drawing.Size(493, 29);
-            this.cboMajor.TabIndex = 10;
+            this.cboMajor.TabIndex = 12;
             this.cboMajor.Text = "Ngành";
             this.cboMajor.SelectedIndexChanged += new System.EventHandler(this.cboMajor_SelectedIndexChanged);
             // 
@@ -767,7 +767,7 @@
             // 
             this.dgvLastName.HeaderText = "Họ đệm";
             this.dgvLastName.Name = "dgvLastName";
-            this.dgvLastName.Width = 65;
+            this.dgvLastName.Width = 70;
             // 
             // dgvFirstName
             // 
@@ -779,19 +779,19 @@
             // 
             this.dgvDob.HeaderText = "Ngày sinh";
             this.dgvDob.Name = "dgvDob";
-            this.dgvDob.Width = 73;
+            this.dgvDob.Width = 79;
             // 
             // dgvGender
             // 
             this.dgvGender.HeaderText = "Giới tính";
             this.dgvGender.Name = "dgvGender";
-            this.dgvGender.Width = 67;
+            this.dgvGender.Width = 72;
             // 
             // dgvClassID
             // 
             this.dgvClassID.HeaderText = "Mã lớp";
             this.dgvClassID.Name = "dgvClassID";
-            this.dgvClassID.Width = 47;
+            this.dgvClassID.Width = 64;
             // 
             // dgvClass
             // 
@@ -809,19 +809,19 @@
             // 
             this.dgvMajor.HeaderText = "Chuyên ngành";
             this.dgvMajor.Name = "dgvMajor";
-            this.dgvMajor.Width = 93;
+            this.dgvMajor.Width = 101;
             // 
             // dgvStatus
             // 
             this.dgvStatus.HeaderText = "Trạng thái";
             this.dgvStatus.Name = "dgvStatus";
-            this.dgvStatus.Width = 74;
+            this.dgvStatus.Width = 80;
             // 
             // dgvHometown
             // 
             this.dgvHometown.HeaderText = "Quê quán";
             this.dgvHometown.Name = "dgvHometown";
-            this.dgvHometown.Width = 73;
+            this.dgvHometown.Width = 79;
             // 
             // dgvPhone
             // 
@@ -839,7 +839,7 @@
             // 
             this.dgvIdNo.HeaderText = "Số CCCD";
             this.dgvIdNo.Name = "dgvIdNo";
-            this.dgvIdNo.Width = 71;
+            this.dgvIdNo.Width = 77;
             // 
             // UC_Student
             // 

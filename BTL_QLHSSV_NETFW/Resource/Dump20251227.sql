@@ -42,6 +42,7 @@ CREATE TABLE `class` (
 
 LOCK TABLES `class` WRITE;
 /*!40000 ALTER TABLE `class` DISABLE KEYS */;
+INSERT INTO `class` VALUES ('RM1','Rau má 1','RM',1),('RM2','Rau má 2','RM',1),('RM3','Rau má 3','RM',1),('RM4','Rau má 4','RM',1);
 /*!40000 ALTER TABLE `class` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -82,7 +83,9 @@ CREATE TABLE `kyluat` (
   `hinhThuc` varchar(30) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
   `kyluat_date` date NOT NULL,
   `lyDo` text NOT NULL,
-  PRIMARY KEY (`idkyluat`)
+  PRIMARY KEY (`idkyluat`),
+  KEY `FK_KL_STU_idx` (`student_id`),
+  CONSTRAINT `FK_KL_STU` FOREIGN KEY (`student_id`) REFERENCES `student` (`student_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -166,10 +169,12 @@ CREATE TABLE `student` (
   `phone` varchar(15) NOT NULL,
   `email` varchar(50) NOT NULL,
   `id_no` varchar(12) NOT NULL,
-  `cohort` int NOT NULL,
   `class_id` varchar(10) NOT NULL,
   `status` varchar(45) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
   PRIMARY KEY (`student_id`),
+  UNIQUE KEY `phone_UNIQUE` (`phone`),
+  UNIQUE KEY `email_UNIQUE` (`email`),
+  UNIQUE KEY `id_no_UNIQUE` (`id_no`),
   KEY `FK_ClassID_idx` (`class_id`),
   CONSTRAINT `FK_ClassID` FOREIGN KEY (`class_id`) REFERENCES `class` (`class_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -181,6 +186,7 @@ CREATE TABLE `student` (
 
 LOCK TABLES `student` WRITE;
 /*!40000 ALTER TABLE `student` DISABLE KEYS */;
+INSERT INTO `student` VALUES ('1','1','1','2025-12-11','Nam','1','1','1','1','RM4','Đang theo học'),('1211','1212','21212','2025-12-18','Nam','1212','3123123','3123123','2231231223','RM3','Đã tốt nghiệp'),('12121','121212','1212','2025-12-11','Nam','21','12121','1212','1212','RM1','Đang theo học'),('323','232','2332','2025-12-11','Nam','323','2323213','123123','3213123','RM4','Đang theo học'),('453455','453453','3453','2025-12-10','Nam','45345','34534','45345','534534','RM2','Buộc thôi học');
 /*!40000 ALTER TABLE `student` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -193,4 +199,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-12-27  2:30:35
+-- Dump completed on 2025-12-27 15:25:30

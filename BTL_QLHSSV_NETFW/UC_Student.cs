@@ -89,7 +89,7 @@ namespace BTL_QLHSSV_NETFW
                 using (var conn = dbConn.GetConnection())
                 {
                     conn.Open();
-                    string sql = @"select s.*, c.class_name, m.major_name, f.facu_name 
+                    string sql = @"select s.*, c.class_name, m.major_name, f.facu_name, cohort 
                                     from student s
                                     join class c on c.class_id = s.class_id
                                     join major m on m.major_id = c.major_id
@@ -107,14 +107,15 @@ namespace BTL_QLHSSV_NETFW
                         dgvStudentTable.Columns["dgvFirstName"].DataPropertyName = "student_firstName";
                         dgvStudentTable.Columns["dgvDob"].DataPropertyName = "dob";
                         dgvStudentTable.Columns["dgvGender"].DataPropertyName = "gender";
+                        dgvStudentTable.Columns["dgvClassID"].DataPropertyName = "class_id";
+                        dgvStudentTable.Columns["dgvClass"].DataPropertyName = "class_name";
+                        dgvStudentTable.Columns["dgvCohort"].DataPropertyName = "cohort";
+                        dgvStudentTable.Columns["dgvMajor"].DataPropertyName = "major_name";
+                        dgvStudentTable.Columns["dgvFacu"].DataPropertyName = "facu_name";
                         dgvStudentTable.Columns["dgvHometown"].DataPropertyName = "hometown";
                         dgvStudentTable.Columns["dgvPhone"].DataPropertyName = "phone";
                         dgvStudentTable.Columns["dgvEmail"].DataPropertyName = "email";
                         dgvStudentTable.Columns["dgvIdNo"].DataPropertyName = "id_no";
-                        dgvStudentTable.Columns["dgvClass"].DataPropertyName = "class_name";
-                        dgvStudentTable.Columns["dgvClassID"].DataPropertyName = "class_id";
-                        dgvStudentTable.Columns["dgvMajor"].DataPropertyName = "major_name";
-                        dgvStudentTable.Columns["dgvFacu"].DataPropertyName = "facu_name";
                         dgvStudentTable.Columns["dgvStatus"].DataPropertyName = "status";
                         dgvStudentTable.DataSource = dt;
                     }
@@ -281,10 +282,15 @@ namespace BTL_QLHSSV_NETFW
 
         private void dgvStudentTable_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex < 0) return;
+            if (e.RowIndex < 0)
+            {
+                //txtId.ReadOnly = false;
+                return;
+            }
             DataGridViewRow row = dgvStudentTable.Rows[e.RowIndex];
 
             txtId.Text = row.Cells["dgvID"].Value?.ToString();
+            //txtId.ReadOnly = true;
             txtLastName.Text = row.Cells["dgvLastName"].Value?.ToString();
             txtFirstName.Text = row.Cells["dgvFirstName"].Value?.ToString();
             if (row.Cells["dgvDob"].Value != DBNull.Value)
@@ -386,7 +392,108 @@ namespace BTL_QLHSSV_NETFW
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            
+            string id = txtId.Text.Trim();
+            if (string.IsNullOrEmpty(id))
+            {
+                MessageBox.Show("Vui lòng chọn sinh viên cần sửa", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                using (MySqlConnection conn = dbConn.GetConnection())
+                {
+                    conn.Open();
+                    string sql = @"UPDATE student 
+                           SET student_lastName = @lastName,
+                               student_firstName = @firstName,
+                               dob = @dob,
+                               gender = @gender,
+                               hometown = @hometown,
+                               phone = @phone,
+                               email = @email,
+                               id_no = @idNo,
+                               class_id = @classId,
+                               status = @status
+                           WHERE student_id = @student_id";
+
+                    using (var cmd = new MySqlCommand(sql, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@student_id", id);
+                        cmd.Parameters.AddWithValue("@lastName", txtLastName.Text.Trim());
+                        cmd.Parameters.AddWithValue("@firstName", txtFirstName.Text.Trim());
+                        cmd.Parameters.AddWithValue("@dob", txtDob.Value);
+                        cmd.Parameters.AddWithValue("@gender", cboGender.SelectedItem.ToString());
+                        cmd.Parameters.AddWithValue("@hometown", txtHometown.Text.Trim());
+                        cmd.Parameters.AddWithValue("@phone", txtPhone.Text.Trim());
+                        cmd.Parameters.AddWithValue("@email", txtEmail.Text.Trim());
+                        cmd.Parameters.AddWithValue("@idNo", txtIdNo.Text.Trim());
+                        cmd.Parameters.AddWithValue("@classId", cboClass.SelectedValue.ToString());
+                        cmd.Parameters.AddWithValue("@status", cboStatus.SelectedItem?.ToString());
+                        int row = cmd.ExecuteNonQuery();
+                        if (row > 0)
+                        {
+                            MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            studentTableLoad();
+                            clearInput();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Cập nhật thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string id = txtIDSearch.Text.Trim();
+            string name = txtNameSearch.Text.Trim();
+            string className = txtClassNameSearch.Text.Trim();
+
+            DataTable dt = new DataTable();
+            try
+            {
+                using (MySqlConnection conn = dbConn.GetConnection())
+                {
+                    string sql = @"select s.*, c.class_name, m.major_name, f.facu_name, cohort
+                                    from student s
+                                    join class c on c.class_id = s.class_id
+                                    join major m on m.major_id = c.major_id
+                                    join faculties f on f.facu_id = m.facu_id
+                                    WHERE (@id = '' OR s.student_id LIKE @id)
+                                    AND (@name = '' OR CONCAT(s.student_lastName, ' ', s.student_firstName) LIKE @name)
+                                    AND (@className = '' OR c.class_name LIKE @className)";
+
+                    using (var cmd = new MySqlCommand(sql, conn))
+                    {
+                        cmd.Parameters.AddWithValue(@"id", "%" + id + "%");
+                        cmd.Parameters.AddWithValue(@"name", "%" + name + "%");
+                        cmd.Parameters.AddWithValue(@"className", "%" + className + "%");
+
+                        using (var da = new MySqlDataAdapter(cmd))
+                        {
+                            da.Fill(dt);
+                        }
+                    }
+                    dgvStudentTable.AutoGenerateColumns = false;
+                    dgvStudentTable.DataSource = dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

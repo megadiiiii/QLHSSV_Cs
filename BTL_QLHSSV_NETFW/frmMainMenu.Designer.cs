@@ -32,6 +32,10 @@ namespace BTL_QLHSSV_NETFW
         {
             this.components = new System.ComponentModel.Container();
             this.gradientPanel1 = new Syncfusion.Windows.Forms.Tools.GradientPanel();
+            this.uC_Dashboard1 = new BTL_QLHSSV_NETFW.UC_Dashboard();
+            this.uC_Student1 = new BTL_QLHSSV_NETFW.UC_Student();
+            this.uC_Faculties1 = new BTL_QLHSSV_NETFW.UC_Faculties();
+            this.uC_Major1 = new BTL_QLHSSV_NETFW.UC_Major();
             this.navMajor = new Syncfusion.WinForms.Controls.SfButton();
             this.navFaculties = new Syncfusion.WinForms.Controls.SfButton();
             this.navClass = new Syncfusion.WinForms.Controls.SfButton();
@@ -39,15 +43,13 @@ namespace BTL_QLHSSV_NETFW
             this.navDashboard = new Syncfusion.WinForms.Controls.SfButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.sfButton2 = new Syncfusion.WinForms.Controls.SfButton();
-            this.sfButton3 = new Syncfusion.WinForms.Controls.SfButton();
+            this.navKhenThuong = new Syncfusion.WinForms.Controls.SfButton();
+            this.navKyLuat = new Syncfusion.WinForms.Controls.SfButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnLogout = new Syncfusion.WinForms.Controls.SfButton();
             this.sfSkinManager1 = new Syncfusion.WinForms.Controls.SfSkinManager(this.components);
-            this.uC_Major1 = new BTL_QLHSSV_NETFW.UC_Major();
-            this.uC_Dashboard1 = new BTL_QLHSSV_NETFW.UC_Dashboard();
-            this.uC_Student1 = new BTL_QLHSSV_NETFW.UC_Student();
-            this.uC_Faculties1 = new BTL_QLHSSV_NETFW.UC_Faculties();
+            this.uC_KhenThuong1 = new BTL_QLHSSV_NETFW.UC_KhenThuong();
+            this.uC_KyLuat1 = new BTL_QLHSSV_NETFW.UC_KyLuat();
             ((System.ComponentModel.ISupportInitialize)(this.gradientPanel1)).BeginInit();
             this.gradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -64,6 +66,8 @@ namespace BTL_QLHSSV_NETFW
             this.gradientPanel1.Controls.Add(this.uC_Student1);
             this.gradientPanel1.Controls.Add(this.uC_Faculties1);
             this.gradientPanel1.Controls.Add(this.uC_Major1);
+            this.gradientPanel1.Controls.Add(this.uC_KhenThuong1);
+            this.gradientPanel1.Controls.Add(this.uC_KyLuat1);
             this.gradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gradientPanel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gradientPanel1.Location = new System.Drawing.Point(240, 0);
@@ -72,6 +76,46 @@ namespace BTL_QLHSSV_NETFW
             this.gradientPanel1.TabIndex = 2;
             this.gradientPanel1.ThemeName = "Office2019";
             this.gradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.gradientPanel1_Paint);
+            // 
+            // uC_Dashboard1
+            // 
+            this.uC_Dashboard1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_Dashboard1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Dashboard1.Margin = new System.Windows.Forms.Padding(2);
+            this.uC_Dashboard1.Name = "uC_Dashboard1";
+            this.uC_Dashboard1.Size = new System.Drawing.Size(1340, 857);
+            this.uC_Dashboard1.TabIndex = 0;
+            // 
+            // uC_Student1
+            // 
+            this.uC_Student1.BackColor = System.Drawing.SystemColors.Control;
+            this.uC_Student1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.uC_Student1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_Student1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.uC_Student1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Student1.Margin = new System.Windows.Forms.Padding(2);
+            this.uC_Student1.Name = "uC_Student1";
+            this.uC_Student1.Size = new System.Drawing.Size(1340, 857);
+            this.uC_Student1.TabIndex = 1;
+            this.uC_Student1.Load += new System.EventHandler(this.uC_Student1_Load);
+            // 
+            // uC_Faculties1
+            // 
+            this.uC_Faculties1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_Faculties1.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uC_Faculties1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Faculties1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.uC_Faculties1.Name = "uC_Faculties1";
+            this.uC_Faculties1.Size = new System.Drawing.Size(1340, 857);
+            this.uC_Faculties1.TabIndex = 2;
+            // 
+            // uC_Major1
+            // 
+            this.uC_Major1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_Major1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Major1.Name = "uC_Major1";
+            this.uC_Major1.Size = new System.Drawing.Size(1340, 857);
+            this.uC_Major1.TabIndex = 3;
             // 
             // navMajor
             // 
@@ -200,8 +244,8 @@ namespace BTL_QLHSSV_NETFW
             this.flowLayoutPanel1.Controls.Add(this.navClass);
             this.flowLayoutPanel1.Controls.Add(this.navFaculties);
             this.flowLayoutPanel1.Controls.Add(this.navMajor);
-            this.flowLayoutPanel1.Controls.Add(this.sfButton2);
-            this.flowLayoutPanel1.Controls.Add(this.sfButton3);
+            this.flowLayoutPanel1.Controls.Add(this.navKhenThuong);
+            this.flowLayoutPanel1.Controls.Add(this.navKyLuat);
             this.flowLayoutPanel1.Controls.Add(this.pictureBox2);
             this.flowLayoutPanel1.Controls.Add(this.btnLogout);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -210,49 +254,49 @@ namespace BTL_QLHSSV_NETFW
             this.flowLayoutPanel1.Size = new System.Drawing.Size(240, 861);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
-            // sfButton2
+            // navKhenThuong
             // 
-            this.sfButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.sfButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sfButton2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.sfButton2.Location = new System.Drawing.Point(0, 375);
-            this.sfButton2.Margin = new System.Windows.Forms.Padding(0);
-            this.sfButton2.Name = "sfButton2";
-            this.sfButton2.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
-            this.sfButton2.Size = new System.Drawing.Size(240, 47);
-            this.sfButton2.Style.FocusedBackColor = System.Drawing.Color.Empty;
-            this.sfButton2.Style.HoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(106)))), ((int)(((byte)(255)))));
-            this.sfButton2.Style.HoverForeColor = System.Drawing.Color.White;
-            this.sfButton2.Style.PressedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(149)))), ((int)(((byte)(0)))));
-            this.sfButton2.Style.PressedForeColor = System.Drawing.Color.White;
-            this.sfButton2.TabIndex = 7;
-            this.sfButton2.Text = "Khen thưởng";
-            this.sfButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sfButton2.TextMargin = new System.Windows.Forms.Padding(5, 10, 5, 10);
-            this.sfButton2.ThemeName = "Office2019";
-            this.sfButton2.Click += new System.EventHandler(this.sfButton2_Click);
+            this.navKhenThuong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.navKhenThuong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.navKhenThuong.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.navKhenThuong.Location = new System.Drawing.Point(0, 375);
+            this.navKhenThuong.Margin = new System.Windows.Forms.Padding(0);
+            this.navKhenThuong.Name = "navKhenThuong";
+            this.navKhenThuong.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
+            this.navKhenThuong.Size = new System.Drawing.Size(240, 47);
+            this.navKhenThuong.Style.FocusedBackColor = System.Drawing.Color.Empty;
+            this.navKhenThuong.Style.HoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(106)))), ((int)(((byte)(255)))));
+            this.navKhenThuong.Style.HoverForeColor = System.Drawing.Color.White;
+            this.navKhenThuong.Style.PressedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(149)))), ((int)(((byte)(0)))));
+            this.navKhenThuong.Style.PressedForeColor = System.Drawing.Color.White;
+            this.navKhenThuong.TabIndex = 7;
+            this.navKhenThuong.Text = "Khen thưởng";
+            this.navKhenThuong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.navKhenThuong.TextMargin = new System.Windows.Forms.Padding(5, 10, 5, 10);
+            this.navKhenThuong.ThemeName = "Office2019";
+            this.navKhenThuong.Click += new System.EventHandler(this.navKhenThuong_Click);
             // 
-            // sfButton3
+            // navKyLuat
             // 
-            this.sfButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.sfButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sfButton3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.sfButton3.Location = new System.Drawing.Point(0, 422);
-            this.sfButton3.Margin = new System.Windows.Forms.Padding(0);
-            this.sfButton3.Name = "sfButton3";
-            this.sfButton3.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
-            this.sfButton3.Size = new System.Drawing.Size(240, 47);
-            this.sfButton3.Style.FocusedBackColor = System.Drawing.Color.Empty;
-            this.sfButton3.Style.HoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(106)))), ((int)(((byte)(255)))));
-            this.sfButton3.Style.HoverForeColor = System.Drawing.Color.White;
-            this.sfButton3.Style.PressedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(149)))), ((int)(((byte)(0)))));
-            this.sfButton3.Style.PressedForeColor = System.Drawing.Color.White;
-            this.sfButton3.TabIndex = 8;
-            this.sfButton3.Text = "Kỷ luật";
-            this.sfButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sfButton3.TextMargin = new System.Windows.Forms.Padding(5, 10, 5, 10);
-            this.sfButton3.ThemeName = "Office2019";
-            this.sfButton3.Click += new System.EventHandler(this.sfButton3_Click);
+            this.navKyLuat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.navKyLuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.navKyLuat.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.navKyLuat.Location = new System.Drawing.Point(0, 422);
+            this.navKyLuat.Margin = new System.Windows.Forms.Padding(0);
+            this.navKyLuat.Name = "navKyLuat";
+            this.navKyLuat.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
+            this.navKyLuat.Size = new System.Drawing.Size(240, 47);
+            this.navKyLuat.Style.FocusedBackColor = System.Drawing.Color.Empty;
+            this.navKyLuat.Style.HoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(106)))), ((int)(((byte)(255)))));
+            this.navKyLuat.Style.HoverForeColor = System.Drawing.Color.White;
+            this.navKyLuat.Style.PressedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(149)))), ((int)(((byte)(0)))));
+            this.navKyLuat.Style.PressedForeColor = System.Drawing.Color.White;
+            this.navKyLuat.TabIndex = 8;
+            this.navKyLuat.Text = "Kỷ luật";
+            this.navKyLuat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.navKyLuat.TextMargin = new System.Windows.Forms.Padding(5, 10, 5, 10);
+            this.navKyLuat.ThemeName = "Office2019";
+            this.navKyLuat.Click += new System.EventHandler(this.navKyLuat_Click);
             // 
             // pictureBox2
             // 
@@ -292,45 +336,23 @@ namespace BTL_QLHSSV_NETFW
             this.sfSkinManager1.ThemeName = "Office2019";
             this.sfSkinManager1.VisualTheme = Syncfusion.Windows.Forms.VisualTheme.Managed;
             // 
-            // uC_Major1
+            // uC_KhenThuong1
             // 
-            this.uC_Major1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_Major1.Location = new System.Drawing.Point(0, 0);
-            this.uC_Major1.Name = "uC_Major1";
-            this.uC_Major1.Size = new System.Drawing.Size(1340, 857);
-            this.uC_Major1.TabIndex = 3;
+            this.uC_KhenThuong1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_KhenThuong1.Location = new System.Drawing.Point(0, 0);
+            this.uC_KhenThuong1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uC_KhenThuong1.Name = "uC_KhenThuong1";
+            this.uC_KhenThuong1.Size = new System.Drawing.Size(1340, 857);
+            this.uC_KhenThuong1.TabIndex = 4;
             // 
-            // uC_Dashboard1
+            // uC_KyLuat1
             // 
-            this.uC_Dashboard1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_Dashboard1.Location = new System.Drawing.Point(0, 0);
-            this.uC_Dashboard1.Margin = new System.Windows.Forms.Padding(2);
-            this.uC_Dashboard1.Name = "uC_Dashboard1";
-            this.uC_Dashboard1.Size = new System.Drawing.Size(1340, 857);
-            this.uC_Dashboard1.TabIndex = 0;
-            // 
-            // uC_Student1
-            // 
-            this.uC_Student1.BackColor = System.Drawing.SystemColors.Control;
-            this.uC_Student1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.uC_Student1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_Student1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.uC_Student1.Location = new System.Drawing.Point(0, 0);
-            this.uC_Student1.Margin = new System.Windows.Forms.Padding(2);
-            this.uC_Student1.Name = "uC_Student1";
-            this.uC_Student1.Size = new System.Drawing.Size(1340, 857);
-            this.uC_Student1.TabIndex = 1;
-            this.uC_Student1.Load += new System.EventHandler(this.uC_Student1_Load);
-            // 
-            // uC_Faculties1
-            // 
-            this.uC_Faculties1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_Faculties1.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uC_Faculties1.Location = new System.Drawing.Point(0, 0);
-            this.uC_Faculties1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.uC_Faculties1.Name = "uC_Faculties1";
-            this.uC_Faculties1.Size = new System.Drawing.Size(1340, 857);
-            this.uC_Faculties1.TabIndex = 2;
+            this.uC_KyLuat1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_KyLuat1.Location = new System.Drawing.Point(0, 0);
+            this.uC_KyLuat1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uC_KyLuat1.Name = "uC_KyLuat1";
+            this.uC_KyLuat1.Size = new System.Drawing.Size(1340, 857);
+            this.uC_KyLuat1.TabIndex = 5;
             // 
             // frmMainMenu
             // 
@@ -368,12 +390,14 @@ namespace BTL_QLHSSV_NETFW
         private UC_Dashboard uC_Dashboard1;
         private UC_Student uC_Student1;
         private UC_Faculties uC_Faculties1;
-        private Syncfusion.WinForms.Controls.SfButton sfButton2;
-        private Syncfusion.WinForms.Controls.SfButton sfButton3;
+        private Syncfusion.WinForms.Controls.SfButton navKhenThuong;
+        private Syncfusion.WinForms.Controls.SfButton navKyLuat;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Syncfusion.WinForms.Controls.SfButton btnLogout;
         private Syncfusion.WinForms.Controls.SfSkinManager sfSkinManager1;
         private UC_Major uC_Major1;
+        private UC_KhenThuong uC_KhenThuong1;
+        private UC_KyLuat uC_KyLuat1;
     }
 }
 

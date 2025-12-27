@@ -75,14 +75,14 @@ namespace BTL_QLHSSV_NETFW
             uC_Major1.BringToFront();
         }
 
-        private void sfButton2_Click(object sender, EventArgs e)
+        private void navKhenThuong_Click(object sender, EventArgs e)
         {
-
+            uC_KhenThuong1.BringToFront();
         }
 
-        private void sfButton3_Click(object sender, EventArgs e)
+        private void navKyLuat_Click(object sender, EventArgs e)
         {
-
+            uC_KyLuat1.BringToFront();
         }
     }
 }

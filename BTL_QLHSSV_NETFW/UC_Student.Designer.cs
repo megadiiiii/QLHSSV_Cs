@@ -33,12 +33,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBoxExt10 = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtClassNameSearch = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.autoLabel13 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.textBoxExt9 = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.txtNameSearch = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.autoLabel12 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.textBoxExt8 = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.txtIDSearch = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.autoLabel11 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnExport = new System.Windows.Forms.Button();
@@ -85,6 +85,7 @@
             this.dgvGender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvClassID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvClass = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvCohort = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvFacu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvMajor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -93,9 +94,9 @@
             this.dgvEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvIdNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxExt10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxExt9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxExt8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtClassNameSearch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNameSearch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIDSearch)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gradientPanelExt1)).BeginInit();
             this.gradientPanelExt1.SuspendLayout();
@@ -145,103 +146,100 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBoxExt10);
+            this.groupBox1.Controls.Add(this.btnSearch);
+            this.groupBox1.Controls.Add(this.txtClassNameSearch);
             this.groupBox1.Controls.Add(this.autoLabel13);
-            this.groupBox1.Controls.Add(this.textBoxExt9);
+            this.groupBox1.Controls.Add(this.txtNameSearch);
             this.groupBox1.Controls.Add(this.autoLabel12);
-            this.groupBox1.Controls.Add(this.textBoxExt8);
+            this.groupBox1.Controls.Add(this.txtIDSearch);
             this.groupBox1.Controls.Add(this.autoLabel11);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(36, 297);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1268, 136);
+            this.groupBox1.Size = new System.Drawing.Size(1268, 82);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm sinh viên";
             // 
-            // button1
+            // btnSearch
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(1052, 27);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 31);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Xóa";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSearch.Location = new System.Drawing.Point(1052, 27);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(100, 31);
+            this.btnSearch.TabIndex = 5;
+            this.btnSearch.Text = "Tìm kiếm";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // textBoxExt10
+            // txtClassNameSearch
             // 
-            this.textBoxExt10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.textBoxExt10.BeforeTouchSize = new System.Drawing.Size(175, 29);
-            this.textBoxExt10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
-            this.textBoxExt10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxExt10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.textBoxExt10.Location = new System.Drawing.Point(795, 28);
-            this.textBoxExt10.MinimumSize = new System.Drawing.Size(14, 10);
-            this.textBoxExt10.Name = "textBoxExt10";
-            this.textBoxExt10.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
-            this.textBoxExt10.Size = new System.Drawing.Size(175, 29);
-            this.textBoxExt10.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2007;
-            this.textBoxExt10.TabIndex = 35;
-            this.textBoxExt10.Text = "textBoxExt10";
-            this.textBoxExt10.ThemeName = "Office2007";
+            this.txtClassNameSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
+            this.txtClassNameSearch.BeforeTouchSize = new System.Drawing.Size(175, 29);
+            this.txtClassNameSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
+            this.txtClassNameSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtClassNameSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.txtClassNameSearch.Location = new System.Drawing.Point(795, 28);
+            this.txtClassNameSearch.MinimumSize = new System.Drawing.Size(14, 10);
+            this.txtClassNameSearch.Name = "txtClassNameSearch";
+            this.txtClassNameSearch.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
+            this.txtClassNameSearch.Size = new System.Drawing.Size(175, 29);
+            this.txtClassNameSearch.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2007;
+            this.txtClassNameSearch.TabIndex = 33;
+            this.txtClassNameSearch.ThemeName = "Office2007";
             // 
             // autoLabel13
             // 
             this.autoLabel13.Location = new System.Drawing.Point(686, 31);
             this.autoLabel13.Name = "autoLabel13";
-            this.autoLabel13.Size = new System.Drawing.Size(93, 21);
+            this.autoLabel13.Size = new System.Drawing.Size(57, 21);
             this.autoLabel13.TabIndex = 34;
-            this.autoLabel13.Text = "Mã sinh viên";
+            this.autoLabel13.Text = "Tên lớp";
             this.autoLabel13.ThemeName = "Managed";
             // 
-            // textBoxExt9
+            // txtNameSearch
             // 
-            this.textBoxExt9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.textBoxExt9.BeforeTouchSize = new System.Drawing.Size(175, 29);
-            this.textBoxExt9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
-            this.textBoxExt9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxExt9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.textBoxExt9.Location = new System.Drawing.Point(477, 29);
-            this.textBoxExt9.MinimumSize = new System.Drawing.Size(14, 10);
-            this.textBoxExt9.Name = "textBoxExt9";
-            this.textBoxExt9.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
-            this.textBoxExt9.Size = new System.Drawing.Size(175, 29);
-            this.textBoxExt9.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2007;
-            this.textBoxExt9.TabIndex = 33;
-            this.textBoxExt9.Text = "textBoxExt9";
-            this.textBoxExt9.ThemeName = "Office2007";
+            this.txtNameSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
+            this.txtNameSearch.BeforeTouchSize = new System.Drawing.Size(175, 29);
+            this.txtNameSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
+            this.txtNameSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNameSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.txtNameSearch.Location = new System.Drawing.Point(477, 29);
+            this.txtNameSearch.MinimumSize = new System.Drawing.Size(14, 10);
+            this.txtNameSearch.Name = "txtNameSearch";
+            this.txtNameSearch.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
+            this.txtNameSearch.Size = new System.Drawing.Size(175, 29);
+            this.txtNameSearch.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2007;
+            this.txtNameSearch.TabIndex = 32;
+            this.txtNameSearch.ThemeName = "Office2007";
             // 
             // autoLabel12
             // 
             this.autoLabel12.Location = new System.Drawing.Point(369, 31);
             this.autoLabel12.Name = "autoLabel12";
-            this.autoLabel12.Size = new System.Drawing.Size(93, 21);
+            this.autoLabel12.Size = new System.Drawing.Size(75, 21);
             this.autoLabel12.TabIndex = 32;
-            this.autoLabel12.Text = "Mã sinh viên";
+            this.autoLabel12.Text = "Họ và tên";
             this.autoLabel12.ThemeName = "Managed";
             // 
-            // textBoxExt8
+            // txtIDSearch
             // 
-            this.textBoxExt8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.textBoxExt8.BeforeTouchSize = new System.Drawing.Size(175, 29);
-            this.textBoxExt8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
-            this.textBoxExt8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxExt8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.textBoxExt8.Location = new System.Drawing.Point(157, 28);
-            this.textBoxExt8.MinimumSize = new System.Drawing.Size(14, 10);
-            this.textBoxExt8.Name = "textBoxExt8";
-            this.textBoxExt8.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
-            this.textBoxExt8.Size = new System.Drawing.Size(175, 29);
-            this.textBoxExt8.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2007;
-            this.textBoxExt8.TabIndex = 31;
-            this.textBoxExt8.Text = "textBoxExt8";
-            this.textBoxExt8.ThemeName = "Office2007";
+            this.txtIDSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
+            this.txtIDSearch.BeforeTouchSize = new System.Drawing.Size(175, 29);
+            this.txtIDSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
+            this.txtIDSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtIDSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.txtIDSearch.Location = new System.Drawing.Point(157, 28);
+            this.txtIDSearch.MinimumSize = new System.Drawing.Size(14, 10);
+            this.txtIDSearch.Name = "txtIDSearch";
+            this.txtIDSearch.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
+            this.txtIDSearch.Size = new System.Drawing.Size(175, 29);
+            this.txtIDSearch.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2007;
+            this.txtIDSearch.TabIndex = 31;
+            this.txtIDSearch.ThemeName = "Office2007";
             // 
             // autoLabel11
             // 
@@ -282,6 +280,7 @@
             this.btnExport.Text = "Xuất Excel";
             this.btnExport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // btnImport
             // 
@@ -306,7 +305,6 @@
             this.btnDelete.Size = new System.Drawing.Size(100, 31);
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Xóa";
-            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -320,7 +318,6 @@
             this.btnEdit.Size = new System.Drawing.Size(100, 31);
             this.btnEdit.TabIndex = 1;
             this.btnEdit.Text = "Sửa";
-            this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
@@ -335,7 +332,6 @@
             this.btnSave.Size = new System.Drawing.Size(100, 31);
             this.btnSave.TabIndex = 0;
             this.btnSave.Text = "Lưu";
-            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -744,6 +740,7 @@
             this.dgvGender,
             this.dgvClassID,
             this.dgvClass,
+            this.dgvCohort,
             this.dgvFacu,
             this.dgvMajor,
             this.dgvStatus,
@@ -751,9 +748,9 @@
             this.dgvPhone,
             this.dgvEmail,
             this.dgvIdNo});
-            this.dgvStudentTable.Location = new System.Drawing.Point(36, 462);
+            this.dgvStudentTable.Location = new System.Drawing.Point(36, 403);
             this.dgvStudentTable.Name = "dgvStudentTable";
-            this.dgvStudentTable.Size = new System.Drawing.Size(1268, 358);
+            this.dgvStudentTable.Size = new System.Drawing.Size(1268, 413);
             this.dgvStudentTable.TabIndex = 10;
             this.dgvStudentTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudentTable_CellClick);
             // 
@@ -798,6 +795,12 @@
             this.dgvClass.HeaderText = "Lớp";
             this.dgvClass.Name = "dgvClass";
             this.dgvClass.Width = 50;
+            // 
+            // dgvCohort
+            // 
+            this.dgvCohort.HeaderText = "Khóa";
+            this.dgvCohort.Name = "dgvCohort";
+            this.dgvCohort.Width = 57;
             // 
             // dgvFacu
             // 
@@ -858,9 +861,9 @@
             this.Load += new System.EventHandler(this.UC_Student_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxExt10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxExt9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxExt8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtClassNameSearch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNameSearch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIDSearch)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gradientPanelExt1)).EndInit();
             this.gradientPanelExt1.ResumeLayout(false);
@@ -894,12 +897,12 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnExport;
         private System.Windows.Forms.Button btnImport;
-        private System.Windows.Forms.Button button1;
-        private Syncfusion.Windows.Forms.Tools.TextBoxExt textBoxExt10;
+        private System.Windows.Forms.Button btnSearch;
+        private Syncfusion.Windows.Forms.Tools.TextBoxExt txtClassNameSearch;
         private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel13;
-        private Syncfusion.Windows.Forms.Tools.TextBoxExt textBoxExt9;
+        private Syncfusion.Windows.Forms.Tools.TextBoxExt txtNameSearch;
         private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel12;
-        private Syncfusion.Windows.Forms.Tools.TextBoxExt textBoxExt8;
+        private Syncfusion.Windows.Forms.Tools.TextBoxExt txtIDSearch;
         private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel11;
         private Syncfusion.WinForms.Controls.SfSkinManager sfSkinManager1;
         private Syncfusion.Windows.Forms.Tools.GradientPanelExt gradientPanelExt1;
@@ -940,6 +943,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvGender;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvClassID;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvClass;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvCohort;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvFacu;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvMajor;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvStatus;

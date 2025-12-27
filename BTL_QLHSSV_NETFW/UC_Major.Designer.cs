@@ -44,6 +44,7 @@
             this.dgvFacuName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sfSkinManager1 = new Syncfusion.WinForms.Controls.SfSkinManager(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnExport = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
@@ -58,7 +59,6 @@
             this.autoLabel1 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnExport = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cboFacuNameSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMajorNameSearch)).BeginInit();
@@ -76,10 +76,9 @@
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSearch.Location = new System.Drawing.Point(1792, 60);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnSearch.Location = new System.Drawing.Point(1024, 34);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(152, 54);
+            this.btnSearch.Size = new System.Drawing.Size(87, 31);
             this.btnSearch.TabIndex = 5;
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -95,11 +94,9 @@
             this.groupBox3.Controls.Add(this.txtMajorIdSearch);
             this.groupBox3.Controls.Add(this.autoLabel3);
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(63, 397);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupBox3.Location = new System.Drawing.Point(36, 227);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.groupBox3.Size = new System.Drawing.Size(2219, 231);
+            this.groupBox3.Size = new System.Drawing.Size(1268, 132);
             this.groupBox3.TabIndex = 41;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tìm kiếm";
@@ -108,11 +105,9 @@
             // 
             this.cboFacuNameSearch.DropDownPosition = Syncfusion.WinForms.Core.Enums.PopupRelativeAlignment.Center;
             this.cboFacuNameSearch.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboFacuNameSearch.Location = new System.Drawing.Point(208, 144);
-            this.cboFacuNameSearch.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.cboFacuNameSearch.Location = new System.Drawing.Point(119, 82);
             this.cboFacuNameSearch.Name = "cboFacuNameSearch";
-            this.cboFacuNameSearch.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.cboFacuNameSearch.Size = new System.Drawing.Size(746, 46);
+            this.cboFacuNameSearch.Size = new System.Drawing.Size(426, 26);
             this.cboFacuNameSearch.Style.EditorStyle.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboFacuNameSearch.Style.ReadOnlyEditorStyle.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboFacuNameSearch.Style.TokenStyle.CloseButtonBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -125,10 +120,9 @@
             this.autoLabel6.BackColor = System.Drawing.Color.Transparent;
             this.autoLabel6.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.autoLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.autoLabel6.Location = new System.Drawing.Point(21, 149);
-            this.autoLabel6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.autoLabel6.Location = new System.Drawing.Point(12, 85);
             this.autoLabel6.Name = "autoLabel6";
-            this.autoLabel6.Size = new System.Drawing.Size(77, 38);
+            this.autoLabel6.Size = new System.Drawing.Size(44, 21);
             this.autoLabel6.TabIndex = 38;
             this.autoLabel6.Text = "Khoa";
             this.autoLabel6.ThemeName = "Managed";
@@ -142,13 +136,12 @@
             this.txtMajorNameSearch.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtMajorNameSearch.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMajorNameSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.txtMajorNameSearch.Location = new System.Drawing.Point(864, 63);
-            this.txtMajorNameSearch.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.txtMajorNameSearch.MinimumSize = new System.Drawing.Size(39, 20);
+            this.txtMajorNameSearch.Location = new System.Drawing.Point(494, 36);
+            this.txtMajorNameSearch.MinimumSize = new System.Drawing.Size(24, 20);
             this.txtMajorNameSearch.Name = "txtMajorNameSearch";
             this.txtMajorNameSearch.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
             this.txtMajorNameSearch.Office2010ColorScheme = Syncfusion.Windows.Forms.Office2010Theme.Black;
-            this.txtMajorNameSearch.Size = new System.Drawing.Size(774, 45);
+            this.txtMajorNameSearch.Size = new System.Drawing.Size(444, 29);
             this.txtMajorNameSearch.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2016Colorful;
             this.txtMajorNameSearch.TabIndex = 41;
             this.txtMajorNameSearch.ThemeName = "Office2016Colorful";
@@ -158,10 +151,9 @@
             this.autoLabel2.BackColor = System.Drawing.Color.Transparent;
             this.autoLabel2.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.autoLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.autoLabel2.Location = new System.Drawing.Point(677, 70);
-            this.autoLabel2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.autoLabel2.Location = new System.Drawing.Point(387, 40);
             this.autoLabel2.Name = "autoLabel2";
-            this.autoLabel2.Size = new System.Drawing.Size(139, 38);
+            this.autoLabel2.Size = new System.Drawing.Size(80, 21);
             this.autoLabel2.TabIndex = 40;
             this.autoLabel2.Text = "Tên ngành";
             this.autoLabel2.ThemeName = "Managed";
@@ -175,13 +167,12 @@
             this.txtMajorIdSearch.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtMajorIdSearch.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMajorIdSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.txtMajorIdSearch.Location = new System.Drawing.Point(208, 63);
-            this.txtMajorIdSearch.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.txtMajorIdSearch.MinimumSize = new System.Drawing.Size(39, 20);
+            this.txtMajorIdSearch.Location = new System.Drawing.Point(119, 36);
+            this.txtMajorIdSearch.MinimumSize = new System.Drawing.Size(24, 20);
             this.txtMajorIdSearch.Name = "txtMajorIdSearch";
             this.txtMajorIdSearch.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
             this.txtMajorIdSearch.Office2010ColorScheme = Syncfusion.Windows.Forms.Office2010Theme.Black;
-            this.txtMajorIdSearch.Size = new System.Drawing.Size(330, 45);
+            this.txtMajorIdSearch.Size = new System.Drawing.Size(190, 29);
             this.txtMajorIdSearch.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2016Colorful;
             this.txtMajorIdSearch.TabIndex = 39;
             this.txtMajorIdSearch.ThemeName = "Office2016Colorful";
@@ -191,10 +182,9 @@
             this.autoLabel3.BackColor = System.Drawing.Color.Transparent;
             this.autoLabel3.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.autoLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.autoLabel3.Location = new System.Drawing.Point(21, 70);
-            this.autoLabel3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.autoLabel3.Location = new System.Drawing.Point(12, 40);
             this.autoLabel3.Name = "autoLabel3";
-            this.autoLabel3.Size = new System.Drawing.Size(137, 38);
+            this.autoLabel3.Size = new System.Drawing.Size(79, 21);
             this.autoLabel3.TabIndex = 38;
             this.autoLabel3.Text = "Mã ngành";
             this.autoLabel3.ThemeName = "Managed";
@@ -208,11 +198,10 @@
             this.dgvMajorName,
             this.dgvFacuId,
             this.dgvFacuName});
-            this.dgvMajor.Location = new System.Drawing.Point(63, 702);
-            this.dgvMajor.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.dgvMajor.Location = new System.Drawing.Point(36, 401);
             this.dgvMajor.Name = "dgvMajor";
             this.dgvMajor.RowHeadersWidth = 72;
-            this.dgvMajor.Size = new System.Drawing.Size(2210, 341);
+            this.dgvMajor.Size = new System.Drawing.Size(1263, 195);
             this.dgvMajor.TabIndex = 40;
             this.dgvMajor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMajor_CellClick);
             // 
@@ -254,22 +243,33 @@
             this.groupBox2.Controls.Add(this.btnSave);
             this.groupBox2.Controls.Add(this.btnEdit);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(1841, 156);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupBox2.Location = new System.Drawing.Point(1052, 89);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.groupBox2.Size = new System.Drawing.Size(441, 231);
+            this.groupBox2.Size = new System.Drawing.Size(252, 132);
             this.groupBox2.TabIndex = 39;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
             // 
+            // btnExport
+            // 
+            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExport.Location = new System.Drawing.Point(127, 81);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(118, 31);
+            this.btnExport.TabIndex = 4;
+            this.btnExport.Text = "Xuất Excel";
+            this.btnExport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
             // btnDelete
             // 
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDelete.Location = new System.Drawing.Point(14, 142);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnDelete.Location = new System.Drawing.Point(8, 81);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(198, 54);
+            this.btnDelete.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnDelete.Size = new System.Drawing.Size(113, 31);
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -279,10 +279,9 @@
             // 
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(14, 66);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnSave.Location = new System.Drawing.Point(8, 38);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(198, 54);
+            this.btnSave.Size = new System.Drawing.Size(113, 31);
             this.btnSave.TabIndex = 0;
             this.btnSave.Text = "Lưu";
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -292,10 +291,9 @@
             // btnEdit
             // 
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEdit.Location = new System.Drawing.Point(222, 66);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnEdit.Location = new System.Drawing.Point(127, 38);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(207, 54);
+            this.btnEdit.Size = new System.Drawing.Size(118, 31);
             this.btnEdit.TabIndex = 1;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -311,11 +309,9 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.autoLabel11);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(63, 156);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupBox1.Location = new System.Drawing.Point(36, 89);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.groupBox1.Size = new System.Drawing.Size(1701, 231);
+            this.groupBox1.Size = new System.Drawing.Size(972, 132);
             this.groupBox1.TabIndex = 38;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chuyên ngành";
@@ -329,13 +325,12 @@
             this.txtMajorName.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtMajorName.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMajorName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.txtMajorName.Location = new System.Drawing.Point(864, 52);
-            this.txtMajorName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.txtMajorName.MinimumSize = new System.Drawing.Size(39, 20);
+            this.txtMajorName.Location = new System.Drawing.Point(494, 30);
+            this.txtMajorName.MinimumSize = new System.Drawing.Size(24, 20);
             this.txtMajorName.Name = "txtMajorName";
             this.txtMajorName.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
             this.txtMajorName.Office2010ColorScheme = Syncfusion.Windows.Forms.Office2010Theme.Black;
-            this.txtMajorName.Size = new System.Drawing.Size(774, 45);
+            this.txtMajorName.Size = new System.Drawing.Size(444, 29);
             this.txtMajorName.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2016Colorful;
             this.txtMajorName.TabIndex = 37;
             this.txtMajorName.ThemeName = "Office2016Colorful";
@@ -345,10 +340,9 @@
             this.autoLabel5.BackColor = System.Drawing.Color.Transparent;
             this.autoLabel5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.autoLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.autoLabel5.Location = new System.Drawing.Point(677, 60);
-            this.autoLabel5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.autoLabel5.Location = new System.Drawing.Point(387, 34);
             this.autoLabel5.Name = "autoLabel5";
-            this.autoLabel5.Size = new System.Drawing.Size(146, 38);
+            this.autoLabel5.Size = new System.Drawing.Size(81, 21);
             this.autoLabel5.TabIndex = 36;
             this.autoLabel5.Text = "Tên ngành";
             this.autoLabel5.ThemeName = "Managed";
@@ -362,13 +356,12 @@
             this.txtMajorId.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtMajorId.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMajorId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.txtMajorId.Location = new System.Drawing.Point(208, 52);
-            this.txtMajorId.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.txtMajorId.MinimumSize = new System.Drawing.Size(39, 20);
+            this.txtMajorId.Location = new System.Drawing.Point(119, 30);
+            this.txtMajorId.MinimumSize = new System.Drawing.Size(24, 20);
             this.txtMajorId.Name = "txtMajorId";
             this.txtMajorId.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
             this.txtMajorId.Office2010ColorScheme = Syncfusion.Windows.Forms.Office2010Theme.Black;
-            this.txtMajorId.Size = new System.Drawing.Size(330, 45);
+            this.txtMajorId.Size = new System.Drawing.Size(190, 29);
             this.txtMajorId.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2016Colorful;
             this.txtMajorId.TabIndex = 35;
             this.txtMajorId.ThemeName = "Office2016Colorful";
@@ -377,11 +370,9 @@
             // 
             this.cboFacuName.DropDownPosition = Syncfusion.WinForms.Core.Enums.PopupRelativeAlignment.Center;
             this.cboFacuName.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboFacuName.Location = new System.Drawing.Point(208, 142);
-            this.cboFacuName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.cboFacuName.Location = new System.Drawing.Point(119, 81);
             this.cboFacuName.Name = "cboFacuName";
-            this.cboFacuName.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.cboFacuName.Size = new System.Drawing.Size(746, 46);
+            this.cboFacuName.Size = new System.Drawing.Size(426, 26);
             this.cboFacuName.Style.EditorStyle.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboFacuName.Style.ReadOnlyEditorStyle.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboFacuName.Style.TokenStyle.CloseButtonBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -394,10 +385,9 @@
             this.autoLabel4.BackColor = System.Drawing.Color.Transparent;
             this.autoLabel4.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.autoLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.autoLabel4.Location = new System.Drawing.Point(21, 60);
-            this.autoLabel4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.autoLabel4.Location = new System.Drawing.Point(12, 34);
             this.autoLabel4.Name = "autoLabel4";
-            this.autoLabel4.Size = new System.Drawing.Size(137, 38);
+            this.autoLabel4.Size = new System.Drawing.Size(79, 21);
             this.autoLabel4.TabIndex = 34;
             this.autoLabel4.Text = "Mã ngành";
             this.autoLabel4.ThemeName = "Managed";
@@ -407,10 +397,9 @@
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(1841, 37);
-            this.button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button1.Location = new System.Drawing.Point(1052, 21);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(0, 54);
+            this.button1.Size = new System.Drawing.Size(0, 31);
             this.button1.TabIndex = 5;
             this.button1.Text = "Xóa";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -421,10 +410,9 @@
             this.autoLabel11.BackColor = System.Drawing.Color.Transparent;
             this.autoLabel11.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.autoLabel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.autoLabel11.Location = new System.Drawing.Point(21, 147);
-            this.autoLabel11.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.autoLabel11.Location = new System.Drawing.Point(12, 84);
             this.autoLabel11.Name = "autoLabel11";
-            this.autoLabel11.Size = new System.Drawing.Size(77, 38);
+            this.autoLabel11.Size = new System.Drawing.Size(44, 21);
             this.autoLabel11.TabIndex = 30;
             this.autoLabel11.Text = "Khoa";
             this.autoLabel11.ThemeName = "Managed";
@@ -436,10 +424,9 @@
             this.autoLabel1.BackColor = System.Drawing.Color.Transparent;
             this.autoLabel1.Font = new System.Drawing.Font("Segoe UI Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.autoLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.autoLabel1.Location = new System.Drawing.Point(63, 63);
-            this.autoLabel1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.autoLabel1.Location = new System.Drawing.Point(36, 36);
             this.autoLabel1.Name = "autoLabel1";
-            this.autoLabel1.Size = new System.Drawing.Size(485, 65);
+            this.autoLabel1.Size = new System.Drawing.Size(267, 37);
             this.autoLabel1.TabIndex = 37;
             this.autoLabel1.Text = "Quản lý chuyên ngành";
             this.autoLabel1.ThemeName = "Managed";
@@ -448,11 +435,10 @@
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(2293, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel2.Location = new System.Drawing.Point(1310, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(12, 12, 12, 12);
-            this.panel2.Size = new System.Drawing.Size(52, 1500);
+            this.panel2.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.panel2.Size = new System.Drawing.Size(30, 857);
             this.panel2.TabIndex = 36;
             // 
             // panel1
@@ -460,28 +446,13 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(52, 1500);
+            this.panel1.Size = new System.Drawing.Size(30, 857);
             this.panel1.TabIndex = 35;
-            // 
-            // btnExport
-            // 
-            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnExport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExport.Location = new System.Drawing.Point(222, 142);
-            this.btnExport.Margin = new System.Windows.Forms.Padding(5);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(207, 54);
-            this.btnExport.TabIndex = 4;
-            this.btnExport.Text = "Xuất Excel";
-            this.btnExport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnExport.UseVisualStyleBackColor = true;
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // UC_Major
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(168F, 168F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.dgvMajor);
@@ -490,9 +461,8 @@
             this.Controls.Add(this.autoLabel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "UC_Major";
-            this.Size = new System.Drawing.Size(2345, 1500);
+            this.Size = new System.Drawing.Size(1340, 857);
             this.Load += new System.EventHandler(this.UC_Major_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();

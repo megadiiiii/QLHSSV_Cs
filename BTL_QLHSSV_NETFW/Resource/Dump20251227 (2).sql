@@ -79,14 +79,16 @@ DROP TABLE IF EXISTS `kyluat`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `kyluat` (
   `idkyluat` int NOT NULL AUTO_INCREMENT,
-  `student_id` varchar(10) NOT NULL,
+  `student_id` varchar(20) NOT NULL,
   `hinhThuc` varchar(30) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
-  `kyluat_date` date NOT NULL,
+  `kyluat_startDate` date NOT NULL,
+  `kyluat_endDate` date NOT NULL,
   `lyDo` text NOT NULL,
   PRIMARY KEY (`idkyluat`),
   KEY `FK_KL_STU_idx` (`student_id`),
-  CONSTRAINT `FK_KL_STU` FOREIGN KEY (`student_id`) REFERENCES `student` (`student_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  CONSTRAINT `FK_KL_STU` FOREIGN KEY (`student_id`) REFERENCES `student` (`student_id`),
+  CONSTRAINT `chk_endDate_gt_startDate` CHECK ((`kyluat_endDate` > `kyluat_startDate`))
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -134,7 +136,7 @@ DROP TABLE IF EXISTS `reward`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `reward` (
   `reward_id` int NOT NULL AUTO_INCREMENT,
-  `student_id` varchar(45) NOT NULL,
+  `student_id` varchar(20) NOT NULL,
   `reward_date` date NOT NULL,
   `reward_note` text NOT NULL,
   PRIMARY KEY (`reward_id`),
@@ -160,7 +162,7 @@ DROP TABLE IF EXISTS `student`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `student` (
-  `student_id` varchar(10) NOT NULL,
+  `student_id` varchar(20) NOT NULL,
   `student_lastName` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
   `student_firstName` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
   `dob` date NOT NULL,
@@ -186,7 +188,7 @@ CREATE TABLE `student` (
 
 LOCK TABLES `student` WRITE;
 /*!40000 ALTER TABLE `student` DISABLE KEYS */;
-INSERT INTO `student` VALUES ('1','1','1','2025-12-11','Nam','1','1','1','1','RM4','Đang theo học'),('1211','1212','21212','2025-12-18','Nam','1212','3123123','3123123','2231231223','RM3','Đã tốt nghiệp'),('12121','121212','1212','2025-12-11','Nam','21','12121','1212','1212','RM1','Đang theo học'),('323','232','2332','2025-12-11','Nam','323','2323213','123123','3213123','RM4','Đang theo học'),('453455','453453','3453','2025-12-10','Nam','45345','34534','45345','534534','RM2','Buộc thôi học');
+INSERT INTO `student` VALUES ('1','1','1','2025-12-11','Nam','1','1','1','1','RM4','Đang theo học'),('1211','12122','21212','2025-12-18','Nữ','12122','3123123','3123123','2231231223','RM1','Đang theo học'),('12121','121212','1212','2025-12-11','Nam','212','12121','1212','1212','RM1','Bị đình chỉ'),('453455','453453','3453','2025-12-10','Nam','45345','34534','45345','534534','RM2','Buộc thôi học'),('74DCHT22041','Phạm Anh','Đức','2005-01-30','Nam','Thái Bình','0962819282','duc74dcht22041@st.utt.edu.vn','034205006846','RM2','Đang theo học');
 /*!40000 ALTER TABLE `student` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -199,4 +201,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-12-27 15:25:30
+-- Dump completed on 2025-12-27 19:49:05

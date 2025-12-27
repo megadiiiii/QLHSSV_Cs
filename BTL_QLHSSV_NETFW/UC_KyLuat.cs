@@ -16,5 +16,10 @@ namespace BTL_QLHSSV_NETFW
         {
             InitializeComponent();
         }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

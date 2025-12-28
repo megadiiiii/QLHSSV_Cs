@@ -19,7 +19,7 @@ namespace BTL_QLHSSV_NETFW
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
-
+            x
         }
     }
 }

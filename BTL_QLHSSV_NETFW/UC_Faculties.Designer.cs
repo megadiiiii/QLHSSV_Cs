@@ -126,7 +126,7 @@
             // txtFacuName
             // 
             this.txtFacuName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtFacuName.BeforeTouchSize = new System.Drawing.Size(175, 29);
+            this.txtFacuName.BeforeTouchSize = new System.Drawing.Size(175, 34);
             this.txtFacuName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtFacuName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFacuName.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -136,7 +136,7 @@
             this.txtFacuName.MinimumSize = new System.Drawing.Size(24, 20);
             this.txtFacuName.Name = "txtFacuName";
             this.txtFacuName.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
-            this.txtFacuName.Size = new System.Drawing.Size(250, 29);
+            this.txtFacuName.Size = new System.Drawing.Size(250, 34);
             this.txtFacuName.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2007;
             this.txtFacuName.TabIndex = 33;
             this.txtFacuName.ThemeName = "Office2007";
@@ -148,7 +148,7 @@
             this.autoLabel12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.autoLabel12.Location = new System.Drawing.Point(512, 40);
             this.autoLabel12.Name = "autoLabel12";
-            this.autoLabel12.Size = new System.Drawing.Size(69, 21);
+            this.autoLabel12.Size = new System.Drawing.Size(86, 28);
             this.autoLabel12.TabIndex = 32;
             this.autoLabel12.Text = "Tên khoa";
             this.autoLabel12.ThemeName = "Managed";
@@ -160,7 +160,7 @@
             this.autoLabel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.autoLabel11.Location = new System.Drawing.Point(12, 40);
             this.autoLabel11.Name = "autoLabel11";
-            this.autoLabel11.Size = new System.Drawing.Size(68, 21);
+            this.autoLabel11.Size = new System.Drawing.Size(85, 28);
             this.autoLabel11.TabIndex = 30;
             this.autoLabel11.Text = "Mã khoa";
             this.autoLabel11.ThemeName = "Managed";
@@ -184,7 +184,7 @@
             // txtFacuId
             // 
             this.txtFacuId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtFacuId.BeforeTouchSize = new System.Drawing.Size(175, 29);
+            this.txtFacuId.BeforeTouchSize = new System.Drawing.Size(175, 34);
             this.txtFacuId.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtFacuId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFacuId.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -195,7 +195,7 @@
             this.txtFacuId.Name = "txtFacuId";
             this.txtFacuId.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
             this.txtFacuId.Office2010ColorScheme = Syncfusion.Windows.Forms.Office2010Theme.Black;
-            this.txtFacuId.Size = new System.Drawing.Size(175, 29);
+            this.txtFacuId.Size = new System.Drawing.Size(175, 34);
             this.txtFacuId.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2007;
             this.txtFacuId.TabIndex = 31;
             this.txtFacuId.ThemeName = "Office2007";
@@ -228,7 +228,7 @@
             this.autoLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.autoLabel1.Location = new System.Drawing.Point(36, 36);
             this.autoLabel1.Name = "autoLabel1";
-            this.autoLabel1.Size = new System.Drawing.Size(164, 37);
+            this.autoLabel1.Size = new System.Drawing.Size(208, 46);
             this.autoLabel1.TabIndex = 11;
             this.autoLabel1.Text = "Quản lý khoa";
             this.autoLabel1.ThemeName = "Managed";
@@ -250,6 +250,7 @@
             this.dgvFacuName});
             this.dgvFacu.Location = new System.Drawing.Point(36, 298);
             this.dgvFacu.Name = "dgvFacu";
+            this.dgvFacu.RowHeadersWidth = 51;
             this.dgvFacu.Size = new System.Drawing.Size(1263, 195);
             this.dgvFacu.TabIndex = 15;
             this.dgvFacu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFacu_CellClick);
@@ -257,11 +258,13 @@
             // dgvFacuID
             // 
             this.dgvFacuID.HeaderText = "Mã khoa";
+            this.dgvFacuID.MinimumWidth = 6;
             this.dgvFacuID.Name = "dgvFacuID";
             // 
             // dgvFacuName
             // 
             this.dgvFacuName.HeaderText = "Tên khoa";
+            this.dgvFacuName.MinimumWidth = 6;
             this.dgvFacuName.Name = "dgvFacuName";
             // 
             // groupBox3
@@ -295,7 +298,7 @@
             // txtFacuNameSearch
             // 
             this.txtFacuNameSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtFacuNameSearch.BeforeTouchSize = new System.Drawing.Size(175, 29);
+            this.txtFacuNameSearch.BeforeTouchSize = new System.Drawing.Size(175, 34);
             this.txtFacuNameSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtFacuNameSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFacuNameSearch.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -305,7 +308,7 @@
             this.txtFacuNameSearch.MinimumSize = new System.Drawing.Size(24, 20);
             this.txtFacuNameSearch.Name = "txtFacuNameSearch";
             this.txtFacuNameSearch.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
-            this.txtFacuNameSearch.Size = new System.Drawing.Size(250, 29);
+            this.txtFacuNameSearch.Size = new System.Drawing.Size(250, 34);
             this.txtFacuNameSearch.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2007;
             this.txtFacuNameSearch.TabIndex = 33;
             this.txtFacuNameSearch.ThemeName = "Office2007";
@@ -317,7 +320,7 @@
             this.autoLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.autoLabel2.Location = new System.Drawing.Point(512, 40);
             this.autoLabel2.Name = "autoLabel2";
-            this.autoLabel2.Size = new System.Drawing.Size(69, 21);
+            this.autoLabel2.Size = new System.Drawing.Size(86, 28);
             this.autoLabel2.TabIndex = 32;
             this.autoLabel2.Text = "Tên khoa";
             this.autoLabel2.ThemeName = "Managed";
@@ -325,7 +328,7 @@
             // txtFacuIDSearch
             // 
             this.txtFacuIDSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtFacuIDSearch.BeforeTouchSize = new System.Drawing.Size(175, 29);
+            this.txtFacuIDSearch.BeforeTouchSize = new System.Drawing.Size(175, 34);
             this.txtFacuIDSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtFacuIDSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFacuIDSearch.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -336,7 +339,7 @@
             this.txtFacuIDSearch.Name = "txtFacuIDSearch";
             this.txtFacuIDSearch.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
             this.txtFacuIDSearch.Office2010ColorScheme = Syncfusion.Windows.Forms.Office2010Theme.Black;
-            this.txtFacuIDSearch.Size = new System.Drawing.Size(175, 29);
+            this.txtFacuIDSearch.Size = new System.Drawing.Size(175, 34);
             this.txtFacuIDSearch.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2007;
             this.txtFacuIDSearch.TabIndex = 31;
             this.txtFacuIDSearch.ThemeName = "Office2007";
@@ -348,7 +351,7 @@
             this.autoLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.autoLabel3.Location = new System.Drawing.Point(12, 40);
             this.autoLabel3.Name = "autoLabel3";
-            this.autoLabel3.Size = new System.Drawing.Size(68, 21);
+            this.autoLabel3.Size = new System.Drawing.Size(85, 28);
             this.autoLabel3.TabIndex = 30;
             this.autoLabel3.Text = "Mã khoa";
             this.autoLabel3.ThemeName = "Managed";

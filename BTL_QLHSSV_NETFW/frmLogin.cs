@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,31 +35,56 @@ namespace BTL_QLHSSV_NETFW
         {
             txtPassword.UseSystemPasswordChar = true;
             btnShowHidePassword.Image = IconResource.password_show;
-           
+
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //if (txtUsername.Text == "admin" && txtPassword.Text == "admin")
-            //{
-            //    this.Hide();   // ẩn login, KHÔNG dispose
+            string username = txtUsername.Text.Trim();
+            string password = txtPassword.Text.Trim();
 
-            //    frmMainMenu main = new frmMainMenu();
-            //    main.ShowDialog(); // chạy modal, chặn ở đây
+            string fullname = string.Empty;
+            try
+            {
+                using (MySqlConnection conn = dbConn.GetConnection())
+                {
+                    string sql = "SELECT fullname FROM account WHERE username = @username AND password = @password";
+                    using (var cmd = new MySqlCommand(sql, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@username", username);
+                        cmd.Parameters.AddWithValue("@password", password);
+                        conn.Open();
+                        using (var reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                fullname = reader["fullname"].ToString();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu!", "Lỗi",
+                                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return;
+                            }
+                        }
+                    }
+                }
 
-            //    this.Show();  // khi MainMenu đóng → quay lại login
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu!", "Lỗi đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    txtUsername.Focus();
-            //}
-            this.Hide();   // ẩn login, KHÔNG dispose
+                MessageBox.Show($"Đăng nhập thành công!\nXin chào {fullname}",
+                                "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            frmMainMenu main = new frmMainMenu();
-            main.ShowDialog(); // chạy modal, chặn ở đây
-            this.Show();  // khi MainMenu đóng → quay lại login
+                this.Hide();
+                frmMainMenu main = new frmMainMenu();
+                main.ShowDialog();
+                this.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi kết nối cơ sở dữ liệu!\n" + ex.Message,
+                                "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
 
         private void sfButton1_Click(object sender, EventArgs e)
         {

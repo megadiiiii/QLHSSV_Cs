@@ -143,7 +143,7 @@ namespace BTL_QLHSSV_NETFW
                             kl.{C_KL_END} AS {C_KL_END}
                         FROM {T_KYLUAT} kl
                         LEFT JOIN {T_STUDENT} st ON kl.{C_KL_STU} = st.{C_STU_ID}
-                        ORDER BY kl.{C_KL_ID} DESC;
+                        ORDER BY kl.{C_KL_ID};
                     ";
                     using (MySqlCommand cmd = new MySqlCommand(sql, conn))
                     using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
@@ -174,8 +174,8 @@ namespace BTL_QLHSSV_NETFW
             string hinhThuc = (cbbKyLuatType.Text ?? "").Trim();
             string soQD = (txtSoQuyetDinh.Text ?? "").Trim();
             string lyDo = (txtReason.Text ?? "").Trim();
-            DateTime ngayBD = dtpKyLuatDate.Value.Date;
-            DateTime ngayKT = dateTimePicker1.Value.Date;
+            DateTime? ngayBD = dtpKyLuatDate.Value;
+            DateTime? ngayKT = dateTimePicker1.Value;
             if (string.IsNullOrWhiteSpace(studentId))
             {
                 MessageBox.Show("Vui lòng nhập/chọn Mã SV");
@@ -243,8 +243,8 @@ namespace BTL_QLHSSV_NETFW
             string hinhThuc = (cbbKyLuatType.Text ?? "").Trim();
             string soQD = (txtSoQuyetDinh.Text ?? "").Trim();
             string lyDo = (txtReason.Text ?? "").Trim();
-            DateTime ngayBD = dtpKyLuatDate.Value.Date;
-            DateTime ngayKT = dateTimePicker1.Value.Date;
+            DateTime? ngayBD = dtpKyLuatDate.Value;
+            DateTime? ngayKT = dateTimePicker1.Value;
             if (string.IsNullOrWhiteSpace(studentId))
             {
                 MessageBox.Show("Vui lòng nhập/chọn Mã SV");
@@ -365,7 +365,7 @@ namespace BTL_QLHSSV_NETFW
                         LEFT JOIN {T_STUDENT} st ON kl.{C_KL_STU} = st.{C_STU_ID}
                         WHERE (@hasId = 0 OR kl.{C_KL_ID} = @id)
                           AND (@stu = '' OR kl.{C_KL_STU} LIKE @stu_like)
-                        ORDER BY kl.{C_KL_ID} DESC;
+                        ORDER BY kl.{C_KL_ID};
                     ";
                     using (MySqlCommand cmd = new MySqlCommand(sql, conn))
                     {

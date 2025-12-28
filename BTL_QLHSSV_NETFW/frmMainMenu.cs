@@ -12,6 +12,7 @@ namespace BTL_QLHSSV_NETFW
 {
     public partial class frmMainMenu : Form
     {
+        private Form loginForm;
         public frmMainMenu()
         {
             InitializeComponent();
@@ -21,7 +22,7 @@ namespace BTL_QLHSSV_NETFW
 
         private void FormMainMenu_Load(object sender, EventArgs e)
         {
-           
+
         }
 
         private void navDashboard_Click(object sender, EventArgs e)
@@ -50,14 +51,13 @@ namespace BTL_QLHSSV_NETFW
             uC_Student1.BringToFront();
         }
 
-        private void uC_Student1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (MessageBox.Show("Bạn có chắc muốn thoát hệ thống?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+
         }
 
         private void frmMainMenu_FormClosing(object sender, FormClosingEventArgs e)
@@ -67,7 +67,7 @@ namespace BTL_QLHSSV_NETFW
 
         private void navClass_Click(object sender, EventArgs e)
         {
-                
+            uC_Class1.BringToFront();
         }
 
         private void navMajor_Click(object sender, EventArgs e)

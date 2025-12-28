@@ -301,7 +301,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Resource\Dump20251226.sql" />
+    <Content Include="Resource\Dump20251229%29 %281%29.sql" />
     <Content Include="Resource\password_hide.png" />
     <Content Include="Resource\password_show.png" />
   </ItemGroup>

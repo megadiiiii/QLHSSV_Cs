@@ -115,7 +115,7 @@
             // txtEndYearSearch
             // 
             this.txtEndYearSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtEndYearSearch.BeforeTouchSize = new System.Drawing.Size(190, 29);
+            this.txtEndYearSearch.BeforeTouchSize = new System.Drawing.Size(175, 29);
             this.txtEndYearSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtEndYearSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEndYearSearch.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -145,7 +145,7 @@
             // txtStartYearSearch
             // 
             this.txtStartYearSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtStartYearSearch.BeforeTouchSize = new System.Drawing.Size(190, 29);
+            this.txtStartYearSearch.BeforeTouchSize = new System.Drawing.Size(175, 29);
             this.txtStartYearSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtStartYearSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtStartYearSearch.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -163,7 +163,7 @@
             // txtCohortNameSearch
             // 
             this.txtCohortNameSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtCohortNameSearch.BeforeTouchSize = new System.Drawing.Size(190, 29);
+            this.txtCohortNameSearch.BeforeTouchSize = new System.Drawing.Size(175, 29);
             this.txtCohortNameSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtCohortNameSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCohortNameSearch.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -294,7 +294,7 @@
             // txtEndYear
             // 
             this.txtEndYear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtEndYear.BeforeTouchSize = new System.Drawing.Size(190, 29);
+            this.txtEndYear.BeforeTouchSize = new System.Drawing.Size(175, 29);
             this.txtEndYear.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtEndYear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEndYear.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -337,7 +337,7 @@
             // txtStartYear
             // 
             this.txtStartYear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtStartYear.BeforeTouchSize = new System.Drawing.Size(190, 29);
+            this.txtStartYear.BeforeTouchSize = new System.Drawing.Size(175, 29);
             this.txtStartYear.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtStartYear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtStartYear.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -367,7 +367,7 @@
             // txtCohortName
             // 
             this.txtCohortName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtCohortName.BeforeTouchSize = new System.Drawing.Size(190, 29);
+            this.txtCohortName.BeforeTouchSize = new System.Drawing.Size(175, 29);
             this.txtCohortName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtCohortName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCohortName.Cursor = System.Windows.Forms.Cursors.Arrow;

@@ -130,7 +130,7 @@
             // txtMajorNameSearch
             // 
             this.txtMajorNameSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtMajorNameSearch.BeforeTouchSize = new System.Drawing.Size(175, 45);
+            this.txtMajorNameSearch.BeforeTouchSize = new System.Drawing.Size(797, 29);
             this.txtMajorNameSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
             this.txtMajorNameSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMajorNameSearch.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -161,7 +161,7 @@
             // txtMajorIdSearch
             // 
             this.txtMajorIdSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtMajorIdSearch.BeforeTouchSize = new System.Drawing.Size(175, 45);
+            this.txtMajorIdSearch.BeforeTouchSize = new System.Drawing.Size(797, 29);
             this.txtMajorIdSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
             this.txtMajorIdSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMajorIdSearch.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -319,7 +319,7 @@
             // txtMajorName
             // 
             this.txtMajorName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtMajorName.BeforeTouchSize = new System.Drawing.Size(175, 45);
+            this.txtMajorName.BeforeTouchSize = new System.Drawing.Size(797, 29);
             this.txtMajorName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
             this.txtMajorName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMajorName.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -350,7 +350,7 @@
             // txtMajorId
             // 
             this.txtMajorId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtMajorId.BeforeTouchSize = new System.Drawing.Size(175, 45);
+            this.txtMajorId.BeforeTouchSize = new System.Drawing.Size(797, 29);
             this.txtMajorId.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
             this.txtMajorId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMajorId.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -368,6 +368,7 @@
             // 
             // cboFacuName
             // 
+            this.cboFacuName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.cboFacuName.DropDownPosition = Syncfusion.WinForms.Core.Enums.PopupRelativeAlignment.Center;
             this.cboFacuName.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboFacuName.Location = new System.Drawing.Point(119, 81);
@@ -437,7 +438,7 @@
             this.panel2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(1310, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.panel2.Padding = new System.Windows.Forms.Padding(7);
             this.panel2.Size = new System.Drawing.Size(30, 857);
             this.panel2.TabIndex = 36;
             // 

@@ -288,13 +288,11 @@ namespace BTL_QLHSSV_NETFW
         {
             if (e.RowIndex < 0)
             {
-                //txtId.ReadOnly = false;
                 return;
             }
             DataGridViewRow row = dgvStudentTable.Rows[e.RowIndex];
 
             txtId.Text = row.Cells["dgvID"].Value?.ToString();
-            //txtId.ReadOnly = true;
             txtLastName.Text = row.Cells["dgvLastName"].Value?.ToString();
             txtFirstName.Text = row.Cells["dgvFirstName"].Value?.ToString();
             if (row.Cells["dgvDob"].Value != DBNull.Value)

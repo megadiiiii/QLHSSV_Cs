@@ -40,6 +40,7 @@
             this.dgvRewardId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sfSkinManager1 = new Syncfusion.WinForms.Controls.SfSkinManager(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnExport = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
@@ -61,7 +62,6 @@
             this.txtMaqdSearch = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btnExport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTin)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaSV)).BeginInit();
@@ -165,6 +165,17 @@
             this.groupBox2.Text = "Chức năng";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
+            // btnExport
+            // 
+            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExport.Location = new System.Drawing.Point(87, 86);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(75, 31);
+            this.btnExport.TabIndex = 3;
+            this.btnExport.Text = "Export";
+            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
             // btnDelete
             // 
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -203,7 +214,7 @@
             // txtMaSV
             // 
             this.txtMaSV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtMaSV.BeforeTouchSize = new System.Drawing.Size(200, 29);
+            this.txtMaSV.BeforeTouchSize = new System.Drawing.Size(298, 29);
             this.txtMaSV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtMaSV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMaSV.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -235,7 +246,7 @@
             this.groupBox1.Size = new System.Drawing.Size(1087, 140);
             this.groupBox1.TabIndex = 38;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông tin khoa";
+            this.groupBox1.Text = "Thông tin khen thưởng";
             // 
             // txtDate
             // 
@@ -254,7 +265,7 @@
             // txtQuyetDinh
             // 
             this.txtQuyetDinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtQuyetDinh.BeforeTouchSize = new System.Drawing.Size(200, 29);
+            this.txtQuyetDinh.BeforeTouchSize = new System.Drawing.Size(298, 29);
             this.txtQuyetDinh.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtQuyetDinh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtQuyetDinh.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -296,7 +307,7 @@
             // txtLyDo
             // 
             this.txtLyDo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtLyDo.BeforeTouchSize = new System.Drawing.Size(200, 29);
+            this.txtLyDo.BeforeTouchSize = new System.Drawing.Size(298, 29);
             this.txtLyDo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtLyDo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtLyDo.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -383,7 +394,7 @@
             // txtMasvSearch
             // 
             this.txtMasvSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtMasvSearch.BeforeTouchSize = new System.Drawing.Size(200, 29);
+            this.txtMasvSearch.BeforeTouchSize = new System.Drawing.Size(298, 29);
             this.txtMasvSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtMasvSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMasvSearch.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -414,7 +425,7 @@
             // txtMaqdSearch
             // 
             this.txtMaqdSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtMaqdSearch.BeforeTouchSize = new System.Drawing.Size(200, 29);
+            this.txtMaqdSearch.BeforeTouchSize = new System.Drawing.Size(298, 29);
             this.txtMaqdSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtMaqdSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMaqdSearch.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -456,17 +467,6 @@
             this.groupBox4.TabIndex = 41;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Tìm kiếm";
-            // 
-            // btnExport
-            // 
-            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnExport.Location = new System.Drawing.Point(87, 86);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(75, 31);
-            this.btnExport.TabIndex = 3;
-            this.btnExport.Text = "Export";
-            this.btnExport.UseVisualStyleBackColor = true;
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // UC_KhenThuong
             // 

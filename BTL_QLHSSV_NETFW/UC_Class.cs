@@ -265,23 +265,35 @@ namespace BTL_QLHSSV_NETFW
             {
                 using (MySqlConnection conn = dbConn.GetConnection())
                 {
-                    string sql = @"select c.class_id, class_name, ch.cohort_name, m.major_name, f.facu_name
-                                   from class c
-                                   join major m on m.major_id = c.major_id
-                                   join faculties f on f.facu_id = m.facu_id
-                                   JOIN cohort ch on ch.cohort_id = c.cohort_id
-                                   where (@id='' or c.class_id like @id)
-                                     and (@name='' or c.class_name like @name)
-                                     and (@cohort='' or cohort like @cohort)";
+                    string sql = @"
+                SELECT 
+                    c.class_id,
+                    c.class_name,
+                    ch.cohort_name,
+                    m.major_name,
+                    f.facu_name,
+                    t.teacher_name,
+                    c.student_current,
+                    c.student_max
+                FROM class c
+                JOIN major m ON m.major_id = c.major_id
+                JOIN faculties f ON f.facu_id = m.facu_id
+                JOIN teacher t ON t.teacher_id = c.teacher_id
+                JOIN cohort ch ON ch.cohort_id = c.cohort_id
+                WHERE c.class_id LIKE @id
+                  AND c.class_name LIKE @name
+                ORDER BY ch.cohort_name, c.class_name
+            ";
 
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
                     cmd.Parameters.AddWithValue("@id", "%" + txtClassIDSearch.Text.Trim() + "%");
                     cmd.Parameters.AddWithValue("@name", "%" + txtClassNameSearch.Text.Trim() + "%");
-                    //cmd.Parameters.AddWithValue("@cohort", "%" + txtCohortSearch.Text.Trim() + "%");
 
                     MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
+
+                    dgvClass.AutoGenerateColumns = false;
                     dgvClass.DataSource = dt;
                 }
             }
@@ -290,6 +302,7 @@ namespace BTL_QLHSSV_NETFW
                 MessageBox.Show(ex.Message);
             }
         }
+
 
         private void panelRight_Paint(object sender, PaintEventArgs e)
         {

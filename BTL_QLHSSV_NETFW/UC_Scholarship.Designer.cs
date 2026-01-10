@@ -30,12 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.cboFacuNameSearch = new Syncfusion.WinForms.ListView.SfComboBox();
-            this.autoLabel6 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.txtMajorNameSearch = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.autoLabel2 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.txtMajorIdSearch = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.txtStudentIdSearch = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.autoLabel3 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnExport = new System.Windows.Forms.Button();
@@ -43,95 +39,52 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.autoLabel1 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.txtMajorId = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
-            this.cboFacuName = new Syncfusion.WinForms.ListView.SfComboBox();
             this.autoLabel4 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.button1 = new System.Windows.Forms.Button();
-            this.autoLabel11 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.dgvMajor = new System.Windows.Forms.DataGridView();
-            this.dgvMajorId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvMajorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvFacuId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvFacuName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtMajorName = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.dgvScholarship = new System.Windows.Forms.DataGridView();
+            this.dgvId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvStudentId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvStudentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvScoreLevel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvDrlLevel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvScholarshipLevel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvSemester = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtFullName = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.autoLabel5 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cboScholarshipLevel = new System.Windows.Forms.ComboBox();
+            this.cboDrlLevel = new System.Windows.Forms.ComboBox();
+            this.cboScoreLevel = new System.Windows.Forms.ComboBox();
+            this.cboSemester = new System.Windows.Forms.ComboBox();
+            this.autoLabel9 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.autoLabel10 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.autoLabel8 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.autoLabel7 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.cboStudentId = new Syncfusion.WinForms.ListView.SfComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.sfSkinManager1 = new Syncfusion.WinForms.Controls.SfSkinManager(this.components);
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cboFacuNameSearch)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMajorNameSearch)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMajorIdSearch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStudentIdSearch)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMajorId)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboFacuName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMajor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMajorName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvScholarship)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFullName)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cboStudentId)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.cboFacuNameSearch);
-            this.groupBox3.Controls.Add(this.autoLabel6);
-            this.groupBox3.Controls.Add(this.txtMajorNameSearch);
             this.groupBox3.Controls.Add(this.btnSearch);
-            this.groupBox3.Controls.Add(this.autoLabel2);
-            this.groupBox3.Controls.Add(this.txtMajorIdSearch);
+            this.groupBox3.Controls.Add(this.txtStudentIdSearch);
             this.groupBox3.Controls.Add(this.autoLabel3);
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(36, 227);
+            this.groupBox3.Location = new System.Drawing.Point(36, 294);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1268, 132);
+            this.groupBox3.Size = new System.Drawing.Size(1268, 79);
             this.groupBox3.TabIndex = 48;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tìm kiếm";
-            // 
-            // cboFacuNameSearch
-            // 
-            this.cboFacuNameSearch.DropDownPosition = Syncfusion.WinForms.Core.Enums.PopupRelativeAlignment.Center;
-            this.cboFacuNameSearch.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboFacuNameSearch.Location = new System.Drawing.Point(119, 82);
-            this.cboFacuNameSearch.Name = "cboFacuNameSearch";
-            this.cboFacuNameSearch.Size = new System.Drawing.Size(426, 26);
-            this.cboFacuNameSearch.Style.EditorStyle.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboFacuNameSearch.Style.ReadOnlyEditorStyle.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboFacuNameSearch.Style.TokenStyle.CloseButtonBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.cboFacuNameSearch.Style.TokenStyle.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboFacuNameSearch.TabIndex = 39;
-            this.cboFacuNameSearch.TabStop = false;
-            // 
-            // autoLabel6
-            // 
-            this.autoLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.autoLabel6.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.autoLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.autoLabel6.Location = new System.Drawing.Point(12, 85);
-            this.autoLabel6.Name = "autoLabel6";
-            this.autoLabel6.Size = new System.Drawing.Size(44, 21);
-            this.autoLabel6.TabIndex = 38;
-            this.autoLabel6.Text = "Khoa";
-            this.autoLabel6.ThemeName = "Managed";
-            // 
-            // txtMajorNameSearch
-            // 
-            this.txtMajorNameSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtMajorNameSearch.BeforeTouchSize = new System.Drawing.Size(444, 29);
-            this.txtMajorNameSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
-            this.txtMajorNameSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMajorNameSearch.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.txtMajorNameSearch.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMajorNameSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.txtMajorNameSearch.Location = new System.Drawing.Point(494, 36);
-            this.txtMajorNameSearch.MinimumSize = new System.Drawing.Size(24, 20);
-            this.txtMajorNameSearch.Name = "txtMajorNameSearch";
-            this.txtMajorNameSearch.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
-            this.txtMajorNameSearch.Office2010ColorScheme = Syncfusion.Windows.Forms.Office2010Theme.Black;
-            this.txtMajorNameSearch.Size = new System.Drawing.Size(444, 29);
-            this.txtMajorNameSearch.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2016Colorful;
-            this.txtMajorNameSearch.TabIndex = 41;
-            this.txtMajorNameSearch.ThemeName = "Office2016Colorful";
             // 
             // btnSearch
             // 
@@ -144,37 +97,26 @@
             this.btnSearch.TabIndex = 5;
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // autoLabel2
+            // txtStudentIdSearch
             // 
-            this.autoLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.autoLabel2.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.autoLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.autoLabel2.Location = new System.Drawing.Point(387, 40);
-            this.autoLabel2.Name = "autoLabel2";
-            this.autoLabel2.Size = new System.Drawing.Size(80, 21);
-            this.autoLabel2.TabIndex = 40;
-            this.autoLabel2.Text = "Tên ngành";
-            this.autoLabel2.ThemeName = "Managed";
-            // 
-            // txtMajorIdSearch
-            // 
-            this.txtMajorIdSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtMajorIdSearch.BeforeTouchSize = new System.Drawing.Size(444, 29);
-            this.txtMajorIdSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
-            this.txtMajorIdSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMajorIdSearch.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.txtMajorIdSearch.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMajorIdSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.txtMajorIdSearch.Location = new System.Drawing.Point(119, 36);
-            this.txtMajorIdSearch.MinimumSize = new System.Drawing.Size(24, 20);
-            this.txtMajorIdSearch.Name = "txtMajorIdSearch";
-            this.txtMajorIdSearch.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
-            this.txtMajorIdSearch.Office2010ColorScheme = Syncfusion.Windows.Forms.Office2010Theme.Black;
-            this.txtMajorIdSearch.Size = new System.Drawing.Size(190, 29);
-            this.txtMajorIdSearch.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2016Colorful;
-            this.txtMajorIdSearch.TabIndex = 39;
-            this.txtMajorIdSearch.ThemeName = "Office2016Colorful";
+            this.txtStudentIdSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtStudentIdSearch.BeforeTouchSize = new System.Drawing.Size(300, 29);
+            this.txtStudentIdSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
+            this.txtStudentIdSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtStudentIdSearch.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.txtStudentIdSearch.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStudentIdSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.txtStudentIdSearch.Location = new System.Drawing.Point(169, 34);
+            this.txtStudentIdSearch.MinimumSize = new System.Drawing.Size(24, 20);
+            this.txtStudentIdSearch.Name = "txtStudentIdSearch";
+            this.txtStudentIdSearch.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
+            this.txtStudentIdSearch.Office2010ColorScheme = Syncfusion.Windows.Forms.Office2010Theme.Black;
+            this.txtStudentIdSearch.Size = new System.Drawing.Size(797, 29);
+            this.txtStudentIdSearch.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2016Colorful;
+            this.txtStudentIdSearch.TabIndex = 39;
+            this.txtStudentIdSearch.ThemeName = "Office2016Colorful";
             // 
             // autoLabel3
             // 
@@ -183,9 +125,9 @@
             this.autoLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.autoLabel3.Location = new System.Drawing.Point(12, 40);
             this.autoLabel3.Name = "autoLabel3";
-            this.autoLabel3.Size = new System.Drawing.Size(79, 21);
+            this.autoLabel3.Size = new System.Drawing.Size(53, 21);
             this.autoLabel3.TabIndex = 38;
-            this.autoLabel3.Text = "Mã ngành";
+            this.autoLabel3.Text = "Mã SV";
             this.autoLabel3.ThemeName = "Managed";
             // 
             // groupBox2
@@ -197,7 +139,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(1052, 89);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(252, 132);
+            this.groupBox2.Size = new System.Drawing.Size(252, 181);
             this.groupBox2.TabIndex = 46;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
@@ -213,6 +155,7 @@
             this.btnExport.Text = "Xuất Excel";
             this.btnExport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // btnDelete
             // 
@@ -224,6 +167,7 @@
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnSave
             // 
@@ -236,6 +180,7 @@
             this.btnSave.Text = "Lưu";
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnEdit
             // 
@@ -246,6 +191,7 @@
             this.btnEdit.TabIndex = 1;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // autoLabel1
             // 
@@ -261,39 +207,6 @@
             this.autoLabel1.Text = "Quản lý học bổng";
             this.autoLabel1.ThemeName = "Managed";
             // 
-            // txtMajorId
-            // 
-            this.txtMajorId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtMajorId.BeforeTouchSize = new System.Drawing.Size(444, 29);
-            this.txtMajorId.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
-            this.txtMajorId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMajorId.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.txtMajorId.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMajorId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.txtMajorId.Location = new System.Drawing.Point(119, 30);
-            this.txtMajorId.MinimumSize = new System.Drawing.Size(24, 20);
-            this.txtMajorId.Name = "txtMajorId";
-            this.txtMajorId.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
-            this.txtMajorId.Office2010ColorScheme = Syncfusion.Windows.Forms.Office2010Theme.Black;
-            this.txtMajorId.Size = new System.Drawing.Size(190, 29);
-            this.txtMajorId.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2016Colorful;
-            this.txtMajorId.TabIndex = 35;
-            this.txtMajorId.ThemeName = "Office2016Colorful";
-            // 
-            // cboFacuName
-            // 
-            this.cboFacuName.DropDownPosition = Syncfusion.WinForms.Core.Enums.PopupRelativeAlignment.Center;
-            this.cboFacuName.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboFacuName.Location = new System.Drawing.Point(119, 81);
-            this.cboFacuName.Name = "cboFacuName";
-            this.cboFacuName.Size = new System.Drawing.Size(426, 26);
-            this.cboFacuName.Style.EditorStyle.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboFacuName.Style.ReadOnlyEditorStyle.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboFacuName.Style.TokenStyle.CloseButtonBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.cboFacuName.Style.TokenStyle.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboFacuName.TabIndex = 31;
-            this.cboFacuName.TabStop = false;
-            // 
             // autoLabel4
             // 
             this.autoLabel4.BackColor = System.Drawing.Color.Transparent;
@@ -301,9 +214,9 @@
             this.autoLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.autoLabel4.Location = new System.Drawing.Point(12, 34);
             this.autoLabel4.Name = "autoLabel4";
-            this.autoLabel4.Size = new System.Drawing.Size(79, 21);
+            this.autoLabel4.Size = new System.Drawing.Size(53, 21);
             this.autoLabel4.TabIndex = 34;
-            this.autoLabel4.Text = "Mã ngành";
+            this.autoLabel4.Text = "Mã SV";
             this.autoLabel4.ThemeName = "Managed";
             // 
             // button1
@@ -313,110 +226,248 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Location = new System.Drawing.Point(1052, 21);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(0, 31);
+            this.button1.Size = new System.Drawing.Size(14, 31);
             this.button1.TabIndex = 5;
             this.button1.Text = "Xóa";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // autoLabel11
+            // dgvScholarship
             // 
-            this.autoLabel11.BackColor = System.Drawing.Color.Transparent;
-            this.autoLabel11.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.autoLabel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.autoLabel11.Location = new System.Drawing.Point(12, 84);
-            this.autoLabel11.Name = "autoLabel11";
-            this.autoLabel11.Size = new System.Drawing.Size(44, 21);
-            this.autoLabel11.TabIndex = 30;
-            this.autoLabel11.Text = "Khoa";
-            this.autoLabel11.ThemeName = "Managed";
+            this.dgvScholarship.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvScholarship.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvScholarship.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvId,
+            this.dgvStudentId,
+            this.dgvStudentName,
+            this.dgvScoreLevel,
+            this.dgvDrlLevel,
+            this.dgvScholarshipLevel,
+            this.dgvSemester});
+            this.dgvScholarship.Location = new System.Drawing.Point(36, 391);
+            this.dgvScholarship.Name = "dgvScholarship";
+            this.dgvScholarship.RowHeadersWidth = 72;
+            this.dgvScholarship.Size = new System.Drawing.Size(1268, 195);
+            this.dgvScholarship.TabIndex = 47;
+            this.dgvScholarship.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvScholarship_CellClick);
             // 
-            // dgvMajor
+            // dgvId
             // 
-            this.dgvMajor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvMajor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMajor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dgvMajorId,
-            this.dgvMajorName,
-            this.dgvFacuId,
-            this.dgvFacuName});
-            this.dgvMajor.Location = new System.Drawing.Point(36, 401);
-            this.dgvMajor.Name = "dgvMajor";
-            this.dgvMajor.RowHeadersWidth = 72;
-            this.dgvMajor.Size = new System.Drawing.Size(1263, 195);
-            this.dgvMajor.TabIndex = 47;
+            this.dgvId.HeaderText = "ID";
+            this.dgvId.Name = "dgvId";
+            this.dgvId.Visible = false;
             // 
-            // dgvMajorId
+            // dgvStudentId
             // 
-            this.dgvMajorId.HeaderText = "Mã ngành";
-            this.dgvMajorId.MinimumWidth = 9;
-            this.dgvMajorId.Name = "dgvMajorId";
+            this.dgvStudentId.HeaderText = "Mã SV";
+            this.dgvStudentId.MinimumWidth = 9;
+            this.dgvStudentId.Name = "dgvStudentId";
             // 
-            // dgvMajorName
+            // dgvStudentName
             // 
-            this.dgvMajorName.HeaderText = "Tên ngành";
-            this.dgvMajorName.MinimumWidth = 9;
-            this.dgvMajorName.Name = "dgvMajorName";
+            this.dgvStudentName.HeaderText = "Tên SV";
+            this.dgvStudentName.MinimumWidth = 9;
+            this.dgvStudentName.Name = "dgvStudentName";
             // 
-            // dgvFacuId
+            // dgvScoreLevel
             // 
-            this.dgvFacuId.HeaderText = "Mã khoa";
-            this.dgvFacuId.MinimumWidth = 9;
-            this.dgvFacuId.Name = "dgvFacuId";
+            this.dgvScoreLevel.HeaderText = "Học lực";
+            this.dgvScoreLevel.MinimumWidth = 9;
+            this.dgvScoreLevel.Name = "dgvScoreLevel";
             // 
-            // dgvFacuName
+            // dgvDrlLevel
             // 
-            this.dgvFacuName.HeaderText = "Khoa";
-            this.dgvFacuName.MinimumWidth = 9;
-            this.dgvFacuName.Name = "dgvFacuName";
+            this.dgvDrlLevel.HeaderText = "Rèn luyện";
+            this.dgvDrlLevel.MinimumWidth = 9;
+            this.dgvDrlLevel.Name = "dgvDrlLevel";
             // 
-            // txtMajorName
+            // dgvScholarshipLevel
             // 
-            this.txtMajorName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtMajorName.BeforeTouchSize = new System.Drawing.Size(444, 29);
-            this.txtMajorName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
-            this.txtMajorName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMajorName.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.txtMajorName.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMajorName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.txtMajorName.Location = new System.Drawing.Point(494, 30);
-            this.txtMajorName.MinimumSize = new System.Drawing.Size(24, 20);
-            this.txtMajorName.Name = "txtMajorName";
-            this.txtMajorName.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
-            this.txtMajorName.Office2010ColorScheme = Syncfusion.Windows.Forms.Office2010Theme.Black;
-            this.txtMajorName.Size = new System.Drawing.Size(444, 29);
-            this.txtMajorName.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2016Colorful;
-            this.txtMajorName.TabIndex = 37;
-            this.txtMajorName.ThemeName = "Office2016Colorful";
+            this.dgvScholarshipLevel.HeaderText = "Mức học bổng";
+            this.dgvScholarshipLevel.Name = "dgvScholarshipLevel";
+            // 
+            // dgvSemester
+            // 
+            this.dgvSemester.HeaderText = "Học kì";
+            this.dgvSemester.Name = "dgvSemester";
+            // 
+            // txtFullName
+            // 
+            this.txtFullName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtFullName.BeforeTouchSize = new System.Drawing.Size(300, 29);
+            this.txtFullName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
+            this.txtFullName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtFullName.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.txtFullName.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFullName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.txtFullName.Location = new System.Drawing.Point(666, 28);
+            this.txtFullName.MinimumSize = new System.Drawing.Size(24, 20);
+            this.txtFullName.Name = "txtFullName";
+            this.txtFullName.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
+            this.txtFullName.Office2010ColorScheme = Syncfusion.Windows.Forms.Office2010Theme.Black;
+            this.txtFullName.Size = new System.Drawing.Size(300, 29);
+            this.txtFullName.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2016Colorful;
+            this.txtFullName.TabIndex = 37;
+            this.txtFullName.ThemeName = "Office2016Colorful";
             // 
             // autoLabel5
             // 
             this.autoLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.autoLabel5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.autoLabel5.Font = new System.Drawing.Font("Segoe UI Light", 12F);
             this.autoLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.autoLabel5.Location = new System.Drawing.Point(387, 34);
+            this.autoLabel5.Location = new System.Drawing.Point(509, 34);
             this.autoLabel5.Name = "autoLabel5";
-            this.autoLabel5.Size = new System.Drawing.Size(81, 21);
+            this.autoLabel5.Size = new System.Drawing.Size(54, 21);
             this.autoLabel5.TabIndex = 36;
-            this.autoLabel5.Text = "Tên ngành";
+            this.autoLabel5.Text = "Tên SV";
             this.autoLabel5.ThemeName = "Managed";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtMajorName);
+            this.groupBox1.Controls.Add(this.cboScholarshipLevel);
+            this.groupBox1.Controls.Add(this.cboDrlLevel);
+            this.groupBox1.Controls.Add(this.cboScoreLevel);
+            this.groupBox1.Controls.Add(this.cboSemester);
+            this.groupBox1.Controls.Add(this.autoLabel9);
+            this.groupBox1.Controls.Add(this.autoLabel10);
+            this.groupBox1.Controls.Add(this.autoLabel8);
+            this.groupBox1.Controls.Add(this.autoLabel7);
+            this.groupBox1.Controls.Add(this.cboStudentId);
+            this.groupBox1.Controls.Add(this.txtFullName);
             this.groupBox1.Controls.Add(this.autoLabel5);
-            this.groupBox1.Controls.Add(this.txtMajorId);
-            this.groupBox1.Controls.Add(this.cboFacuName);
             this.groupBox1.Controls.Add(this.autoLabel4);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.autoLabel11);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(36, 89);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(972, 132);
+            this.groupBox1.Size = new System.Drawing.Size(986, 181);
             this.groupBox1.TabIndex = 45;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chuyên ngành";
+            // 
+            // cboScholarshipLevel
+            // 
+            this.cboScholarshipLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboScholarshipLevel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cboScholarshipLevel.Font = new System.Drawing.Font("Segoe UI Light", 12F);
+            this.cboScholarshipLevel.FormattingEnabled = true;
+            this.cboScholarshipLevel.Items.AddRange(new object[] {
+            "Khá",
+            "Giỏi",
+            "Xuất sắc"});
+            this.cboScholarshipLevel.Location = new System.Drawing.Point(169, 135);
+            this.cboScholarshipLevel.Name = "cboScholarshipLevel";
+            this.cboScholarshipLevel.Size = new System.Drawing.Size(300, 29);
+            this.cboScholarshipLevel.TabIndex = 51;
+            // 
+            // cboDrlLevel
+            // 
+            this.cboDrlLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboDrlLevel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cboDrlLevel.Font = new System.Drawing.Font("Segoe UI Light", 12F);
+            this.cboDrlLevel.FormattingEnabled = true;
+            this.cboDrlLevel.Items.AddRange(new object[] {
+            "Khá",
+            "Tốt",
+            "Xuất sắc"});
+            this.cboDrlLevel.Location = new System.Drawing.Point(666, 81);
+            this.cboDrlLevel.Name = "cboDrlLevel";
+            this.cboDrlLevel.Size = new System.Drawing.Size(300, 29);
+            this.cboDrlLevel.TabIndex = 50;
+            // 
+            // cboScoreLevel
+            // 
+            this.cboScoreLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboScoreLevel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cboScoreLevel.Font = new System.Drawing.Font("Segoe UI Light", 12F);
+            this.cboScoreLevel.FormattingEnabled = true;
+            this.cboScoreLevel.Items.AddRange(new object[] {
+            "Khá",
+            "Giỏi",
+            "Xuất sắc"});
+            this.cboScoreLevel.Location = new System.Drawing.Point(169, 81);
+            this.cboScoreLevel.Name = "cboScoreLevel";
+            this.cboScoreLevel.Size = new System.Drawing.Size(300, 29);
+            this.cboScoreLevel.TabIndex = 49;
+            // 
+            // cboSemester
+            // 
+            this.cboSemester.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboSemester.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cboSemester.Font = new System.Drawing.Font("Segoe UI Light", 12F);
+            this.cboSemester.FormattingEnabled = true;
+            this.cboSemester.Items.AddRange(new object[] {
+            "Kì 1",
+            "Kì 2",
+            "Kì 3",
+            "Kì 4",
+            "Kì 5",
+            "Kì 6",
+            "Kì 7",
+            "Kì 8"});
+            this.cboSemester.Location = new System.Drawing.Point(666, 129);
+            this.cboSemester.Name = "cboSemester";
+            this.cboSemester.Size = new System.Drawing.Size(300, 29);
+            this.cboSemester.TabIndex = 47;
+            // 
+            // autoLabel9
+            // 
+            this.autoLabel9.BackColor = System.Drawing.Color.Transparent;
+            this.autoLabel9.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.autoLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.autoLabel9.Location = new System.Drawing.Point(509, 135);
+            this.autoLabel9.Name = "autoLabel9";
+            this.autoLabel9.Size = new System.Drawing.Size(51, 21);
+            this.autoLabel9.TabIndex = 45;
+            this.autoLabel9.Text = "Học kì";
+            this.autoLabel9.ThemeName = "Managed";
+            // 
+            // autoLabel10
+            // 
+            this.autoLabel10.BackColor = System.Drawing.Color.Transparent;
+            this.autoLabel10.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.autoLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.autoLabel10.Location = new System.Drawing.Point(12, 135);
+            this.autoLabel10.Name = "autoLabel10";
+            this.autoLabel10.Size = new System.Drawing.Size(130, 21);
+            this.autoLabel10.TabIndex = 43;
+            this.autoLabel10.Text = "Kết quả học bổng";
+            this.autoLabel10.ThemeName = "Managed";
+            // 
+            // autoLabel8
+            // 
+            this.autoLabel8.BackColor = System.Drawing.Color.Transparent;
+            this.autoLabel8.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.autoLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.autoLabel8.Location = new System.Drawing.Point(509, 85);
+            this.autoLabel8.Name = "autoLabel8";
+            this.autoLabel8.Size = new System.Drawing.Size(127, 21);
+            this.autoLabel8.TabIndex = 41;
+            this.autoLabel8.Text = "Kết quả rèn luyện";
+            this.autoLabel8.ThemeName = "Managed";
+            // 
+            // autoLabel7
+            // 
+            this.autoLabel7.BackColor = System.Drawing.Color.Transparent;
+            this.autoLabel7.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.autoLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.autoLabel7.Location = new System.Drawing.Point(12, 85);
+            this.autoLabel7.Name = "autoLabel7";
+            this.autoLabel7.Size = new System.Drawing.Size(116, 21);
+            this.autoLabel7.TabIndex = 39;
+            this.autoLabel7.Text = "Kết quả học tập";
+            this.autoLabel7.ThemeName = "Managed";
+            // 
+            // cboStudentId
+            // 
+            this.cboStudentId.DropDownPosition = Syncfusion.WinForms.Core.Enums.PopupRelativeAlignment.Center;
+            this.cboStudentId.Location = new System.Drawing.Point(169, 28);
+            this.cboStudentId.Name = "cboStudentId";
+            this.cboStudentId.Size = new System.Drawing.Size(300, 29);
+            this.cboStudentId.Style.TokenStyle.CloseButtonBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cboStudentId.TabIndex = 38;
+            this.cboStudentId.TabStop = false;
+            this.cboStudentId.SelectedValueChanged += new System.EventHandler(this.cboStudentId_SelectedValueChanged);
             // 
             // panel2
             // 
@@ -450,24 +501,22 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.autoLabel1);
-            this.Controls.Add(this.dgvMajor);
+            this.Controls.Add(this.dgvScholarship);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "UC_Scholarship";
             this.Size = new System.Drawing.Size(1340, 857);
+            this.Load += new System.EventHandler(this.UC_Scholarship_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cboFacuNameSearch)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMajorNameSearch)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMajorIdSearch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStudentIdSearch)).EndInit();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtMajorId)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboFacuName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMajor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMajorName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvScholarship)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFullName)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cboStudentId)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -476,12 +525,8 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox3;
-        private Syncfusion.WinForms.ListView.SfComboBox cboFacuNameSearch;
-        private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel6;
-        private Syncfusion.Windows.Forms.Tools.TextBoxExt txtMajorNameSearch;
         private System.Windows.Forms.Button btnSearch;
-        private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel2;
-        private Syncfusion.Windows.Forms.Tools.TextBoxExt txtMajorIdSearch;
+        private Syncfusion.Windows.Forms.Tools.TextBoxExt txtStudentIdSearch;
         private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel3;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnExport;
@@ -489,21 +534,30 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnEdit;
         private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel1;
-        private Syncfusion.Windows.Forms.Tools.TextBoxExt txtMajorId;
-        private Syncfusion.WinForms.ListView.SfComboBox cboFacuName;
         private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel4;
         private System.Windows.Forms.Button button1;
-        private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel11;
-        private System.Windows.Forms.DataGridView dgvMajor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvMajorId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvMajorName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvFacuId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvFacuName;
-        private Syncfusion.Windows.Forms.Tools.TextBoxExt txtMajorName;
+        private System.Windows.Forms.DataGridView dgvScholarship;
+        private Syncfusion.Windows.Forms.Tools.TextBoxExt txtFullName;
         private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel5;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private Syncfusion.WinForms.Controls.SfSkinManager sfSkinManager1;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel9;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel10;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel8;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel7;
+        private Syncfusion.WinForms.ListView.SfComboBox cboStudentId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvStudentId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvStudentName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvScoreLevel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvDrlLevel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvScholarshipLevel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvSemester;
+        private System.Windows.Forms.ComboBox cboScholarshipLevel;
+        private System.Windows.Forms.ComboBox cboDrlLevel;
+        private System.Windows.Forms.ComboBox cboScoreLevel;
+        private System.Windows.Forms.ComboBox cboSemester;
     }
 }

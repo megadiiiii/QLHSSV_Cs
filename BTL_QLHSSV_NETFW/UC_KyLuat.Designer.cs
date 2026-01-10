@@ -16,11 +16,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnExport = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtTenSinhVien = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.dateTimePicker1 = new Syncfusion.WinForms.Input.SfDateTimeEdit();
             this.dtpKyLuatDate = new Syncfusion.WinForms.Input.SfDateTimeEdit();
             this.txtReason = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
@@ -55,10 +57,9 @@
             this.autoLabel2 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.txtKyLuatIdSearch = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.autoLabel3 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.btnExport = new System.Windows.Forms.Button();
-            this.txtTenSinhVien = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenSinhVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtReason)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoQuyetDinh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKyLuatId)).BeginInit();
@@ -66,7 +67,6 @@
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtStudentIdSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKyLuatIdSearch)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTenSinhVien)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -83,6 +83,17 @@
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
+            // 
+            // btnExport
+            // 
+            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExport.Location = new System.Drawing.Point(8, 130);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(75, 31);
+            this.btnExport.TabIndex = 4;
+            this.btnExport.Text = "Export";
+            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // btnReset
             // 
@@ -150,6 +161,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin kỉ luật";
             // 
+            // txtTenSinhVien
+            // 
+            this.txtTenSinhVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
+            this.txtTenSinhVien.BeforeTouchSize = new System.Drawing.Size(797, 29);
+            this.txtTenSinhVien.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
+            this.txtTenSinhVien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTenSinhVien.Font = new System.Drawing.Font("Segoe UI Light", 12F);
+            this.txtTenSinhVien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.txtTenSinhVien.Location = new System.Drawing.Point(491, 83);
+            this.txtTenSinhVien.MinimumSize = new System.Drawing.Size(24, 20);
+            this.txtTenSinhVien.Name = "txtTenSinhVien";
+            this.txtTenSinhVien.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
+            this.txtTenSinhVien.Size = new System.Drawing.Size(173, 29);
+            this.txtTenSinhVien.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2007;
+            this.txtTenSinhVien.TabIndex = 49;
+            this.txtTenSinhVien.ThemeName = "Office2007";
+            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.AllowValueChangeOnMouseWheel = true;
@@ -181,7 +209,7 @@
             // txtReason
             // 
             this.txtReason.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtReason.BeforeTouchSize = new System.Drawing.Size(545, 29);
+            this.txtReason.BeforeTouchSize = new System.Drawing.Size(797, 29);
             this.txtReason.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtReason.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtReason.Font = new System.Drawing.Font("Segoe UI Light", 12F);
@@ -224,6 +252,7 @@
             // 
             this.cboStudentId.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cboStudentId.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.cboStudentId.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cboStudentId.FormattingEnabled = true;
             this.cboStudentId.IntegralHeight = false;
             this.cboStudentId.Location = new System.Drawing.Point(119, 84);
@@ -234,7 +263,7 @@
             // txtSoQuyetDinh
             // 
             this.txtSoQuyetDinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtSoQuyetDinh.BeforeTouchSize = new System.Drawing.Size(545, 29);
+            this.txtSoQuyetDinh.BeforeTouchSize = new System.Drawing.Size(797, 29);
             this.txtSoQuyetDinh.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtSoQuyetDinh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSoQuyetDinh.Font = new System.Drawing.Font("Segoe UI Light", 12F);
@@ -275,6 +304,7 @@
             // cbbKyLuatType
             // 
             this.cbbKyLuatType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbKyLuatType.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cbbKyLuatType.Font = new System.Drawing.Font("Segoe UI Light", 12F);
             this.cbbKyLuatType.FormattingEnabled = true;
             this.cbbKyLuatType.Location = new System.Drawing.Point(491, 38);
@@ -321,7 +351,7 @@
             // txtKyLuatId
             // 
             this.txtKyLuatId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtKyLuatId.BeforeTouchSize = new System.Drawing.Size(173, 29);
+            this.txtKyLuatId.BeforeTouchSize = new System.Drawing.Size(797, 29);
             this.txtKyLuatId.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtKyLuatId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtKyLuatId.Font = new System.Drawing.Font("Segoe UI Light", 12F);
@@ -478,7 +508,7 @@
             // txtStudentIdSearch
             // 
             this.txtStudentIdSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtStudentIdSearch.BeforeTouchSize = new System.Drawing.Size(173, 29);
+            this.txtStudentIdSearch.BeforeTouchSize = new System.Drawing.Size(797, 29);
             this.txtStudentIdSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtStudentIdSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtStudentIdSearch.Font = new System.Drawing.Font("Segoe UI Light", 12F);
@@ -507,7 +537,7 @@
             // txtKyLuatIdSearch
             // 
             this.txtKyLuatIdSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtKyLuatIdSearch.BeforeTouchSize = new System.Drawing.Size(173, 29);
+            this.txtKyLuatIdSearch.BeforeTouchSize = new System.Drawing.Size(797, 29);
             this.txtKyLuatIdSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtKyLuatIdSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtKyLuatIdSearch.Font = new System.Drawing.Font("Segoe UI Light", 12F);
@@ -533,34 +563,6 @@
             this.autoLabel3.Text = "Mã kỉ luật";
             this.autoLabel3.ThemeName = "Managed";
             // 
-            // btnExport
-            // 
-            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnExport.Location = new System.Drawing.Point(8, 130);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(75, 31);
-            this.btnExport.TabIndex = 4;
-            this.btnExport.Text = "Export";
-            this.btnExport.UseVisualStyleBackColor = true;
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
-            // 
-            // txtTenSinhVien
-            // 
-            this.txtTenSinhVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtTenSinhVien.BeforeTouchSize = new System.Drawing.Size(545, 29);
-            this.txtTenSinhVien.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
-            this.txtTenSinhVien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTenSinhVien.Font = new System.Drawing.Font("Segoe UI Light", 12F);
-            this.txtTenSinhVien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.txtTenSinhVien.Location = new System.Drawing.Point(491, 83);
-            this.txtTenSinhVien.MinimumSize = new System.Drawing.Size(24, 20);
-            this.txtTenSinhVien.Name = "txtTenSinhVien";
-            this.txtTenSinhVien.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
-            this.txtTenSinhVien.Size = new System.Drawing.Size(173, 29);
-            this.txtTenSinhVien.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2007;
-            this.txtTenSinhVien.TabIndex = 49;
-            this.txtTenSinhVien.ThemeName = "Office2007";
-            // 
             // UC_KyLuat
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -574,9 +576,11 @@
             this.Font = new System.Drawing.Font("Segoe UI Light", 12F);
             this.Name = "UC_KyLuat";
             this.Size = new System.Drawing.Size(1340, 857);
+            this.Load += new System.EventHandler(this.UC_KyLuat_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenSinhVien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtReason)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoQuyetDinh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKyLuatId)).EndInit();
@@ -585,7 +589,6 @@
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtStudentIdSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKyLuatIdSearch)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTenSinhVien)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

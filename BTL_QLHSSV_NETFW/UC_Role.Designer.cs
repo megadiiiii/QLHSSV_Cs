@@ -93,7 +93,7 @@
             this.groupBox1.Size = new System.Drawing.Size(972, 132);
             this.groupBox1.TabIndex = 52;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông tin chuyên ngành";
+            this.groupBox1.Text = "Thông tin ";
             // 
             // txtMajorName
             // 

@@ -31,8 +31,17 @@
             this.dgvCohort = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvMajor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvFacu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTeacher = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvCurrentStudent = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvMaxStudent = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtCohort = new System.Windows.Forms.NumericUpDown();
+            this.txtMaxStudent = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.autoLabel8 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.txtCurrentStudent = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.autoLabel2 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.cboTeacher = new System.Windows.Forms.ComboBox();
+            this.autoLabel7 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.cboCohort = new System.Windows.Forms.ComboBox();
             this.txtClassName = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.autoLabel5 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.autoLabel4 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
@@ -47,20 +56,18 @@
             this.sfSkinManager1 = new Syncfusion.WinForms.Controls.SfSkinManager(this.components);
             this.btnSearch = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txtCohortSearch = new System.Windows.Forms.NumericUpDown();
             this.txtClassNameSearch = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
-            this.autoLabel2 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.autoLabel3 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.txtClassIDSearch = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.autoLabel6 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClass)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCohort)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaxStudent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCurrentStudent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtClassName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtClassID)).BeginInit();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCohortSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtClassNameSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtClassIDSearch)).BeginInit();
             this.SuspendLayout();
@@ -74,7 +81,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(1052, 89);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(252, 173);
+            this.groupBox2.Size = new System.Drawing.Size(252, 229);
             this.groupBox2.TabIndex = 46;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
@@ -90,6 +97,7 @@
             this.btnExport.Text = "Xuất Excel";
             this.btnExport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // btnDelete
             // 
@@ -162,8 +170,11 @@
             this.dgvClassName,
             this.dgvCohort,
             this.dgvMajor,
-            this.dgvFacu});
-            this.dgvClass.Location = new System.Drawing.Point(36, 395);
+            this.dgvFacu,
+            this.dgvTeacher,
+            this.dgvCurrentStudent,
+            this.dgvMaxStudent});
+            this.dgvClass.Location = new System.Drawing.Point(36, 451);
             this.dgvClass.Name = "dgvClass";
             this.dgvClass.RowHeadersWidth = 72;
             this.dgvClass.Size = new System.Drawing.Size(1268, 324);
@@ -195,9 +206,30 @@
             this.dgvFacu.HeaderText = "Khoa";
             this.dgvFacu.Name = "dgvFacu";
             // 
+            // dgvTeacher
+            // 
+            this.dgvTeacher.HeaderText = "GVCN/CVHT";
+            this.dgvTeacher.Name = "dgvTeacher";
+            // 
+            // dgvCurrentStudent
+            // 
+            this.dgvCurrentStudent.HeaderText = "Số SV hiện tại";
+            this.dgvCurrentStudent.Name = "dgvCurrentStudent";
+            // 
+            // dgvMaxStudent
+            // 
+            this.dgvMaxStudent.HeaderText = "Số SV tối đa";
+            this.dgvMaxStudent.Name = "dgvMaxStudent";
+            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtCohort);
+            this.groupBox1.Controls.Add(this.txtMaxStudent);
+            this.groupBox1.Controls.Add(this.autoLabel8);
+            this.groupBox1.Controls.Add(this.txtCurrentStudent);
+            this.groupBox1.Controls.Add(this.autoLabel2);
+            this.groupBox1.Controls.Add(this.cboTeacher);
+            this.groupBox1.Controls.Add(this.autoLabel7);
+            this.groupBox1.Controls.Add(this.cboCohort);
             this.groupBox1.Controls.Add(this.txtClassName);
             this.groupBox1.Controls.Add(this.autoLabel5);
             this.groupBox1.Controls.Add(this.autoLabel4);
@@ -211,43 +243,113 @@
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(36, 89);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1010, 173);
+            this.groupBox1.Size = new System.Drawing.Size(1010, 229);
             this.groupBox1.TabIndex = 45;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin lớp";
             // 
-            // txtCohort
+            // txtMaxStudent
             // 
-            this.txtCohort.Location = new System.Drawing.Point(876, 81);
-            this.txtCohort.Name = "txtCohort";
-            this.txtCohort.Size = new System.Drawing.Size(56, 29);
-            this.txtCohort.TabIndex = 55;
-            this.txtCohort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtCohort.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.txtMaxStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
+            this.txtMaxStudent.BeforeTouchSize = new System.Drawing.Size(304, 29);
+            this.txtMaxStudent.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
+            this.txtMaxStudent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMaxStudent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.txtMaxStudent.Location = new System.Drawing.Point(625, 178);
+            this.txtMaxStudent.MinimumSize = new System.Drawing.Size(14, 10);
+            this.txtMaxStudent.Name = "txtMaxStudent";
+            this.txtMaxStudent.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
+            this.txtMaxStudent.Size = new System.Drawing.Size(379, 29);
+            this.txtMaxStudent.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2007;
+            this.txtMaxStudent.TabIndex = 61;
+            this.txtMaxStudent.ThemeName = "Office2007";
+            // 
+            // autoLabel8
+            // 
+            this.autoLabel8.Location = new System.Drawing.Point(504, 182);
+            this.autoLabel8.Name = "autoLabel8";
+            this.autoLabel8.Size = new System.Drawing.Size(91, 21);
+            this.autoLabel8.TabIndex = 62;
+            this.autoLabel8.Text = "Số SV tối đa";
+            this.autoLabel8.ThemeName = "Managed";
+            // 
+            // txtCurrentStudent
+            // 
+            this.txtCurrentStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
+            this.txtCurrentStudent.BeforeTouchSize = new System.Drawing.Size(304, 29);
+            this.txtCurrentStudent.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
+            this.txtCurrentStudent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCurrentStudent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.txtCurrentStudent.Location = new System.Drawing.Point(133, 178);
+            this.txtCurrentStudent.MinimumSize = new System.Drawing.Size(14, 10);
+            this.txtCurrentStudent.Name = "txtCurrentStudent";
+            this.txtCurrentStudent.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
+            this.txtCurrentStudent.ReadOnly = true;
+            this.txtCurrentStudent.Size = new System.Drawing.Size(304, 29);
+            this.txtCurrentStudent.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2007;
+            this.txtCurrentStudent.TabIndex = 59;
+            this.txtCurrentStudent.ThemeName = "Office2007";
+            // 
+            // autoLabel2
+            // 
+            this.autoLabel2.Location = new System.Drawing.Point(12, 182);
+            this.autoLabel2.Name = "autoLabel2";
+            this.autoLabel2.Size = new System.Drawing.Size(102, 21);
+            this.autoLabel2.TabIndex = 60;
+            this.autoLabel2.Text = "Số SV hiện tại";
+            this.autoLabel2.ThemeName = "Managed";
+            // 
+            // cboTeacher
+            // 
+            this.cboTeacher.BackColor = System.Drawing.SystemColors.Control;
+            this.cboTeacher.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cboTeacher.FormattingEnabled = true;
+            this.cboTeacher.Location = new System.Drawing.Point(625, 131);
+            this.cboTeacher.Name = "cboTeacher";
+            this.cboTeacher.Size = new System.Drawing.Size(379, 29);
+            this.cboTeacher.TabIndex = 58;
+            this.cboTeacher.Text = "Chọn GV";
+            // 
+            // autoLabel7
+            // 
+            this.autoLabel7.Location = new System.Drawing.Point(504, 135);
+            this.autoLabel7.Name = "autoLabel7";
+            this.autoLabel7.Size = new System.Drawing.Size(96, 21);
+            this.autoLabel7.TabIndex = 57;
+            this.autoLabel7.Text = "GVCN/CVHT";
+            this.autoLabel7.ThemeName = "Managed";
+            // 
+            // cboCohort
+            // 
+            this.cboCohort.BackColor = System.Drawing.SystemColors.Control;
+            this.cboCohort.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cboCohort.FormattingEnabled = true;
+            this.cboCohort.Location = new System.Drawing.Point(133, 131);
+            this.cboCohort.Name = "cboCohort";
+            this.cboCohort.Size = new System.Drawing.Size(304, 29);
+            this.cboCohort.TabIndex = 56;
+            this.cboCohort.Text = "Chọn khóa đào tạo";
             // 
             // txtClassName
             // 
             this.txtClassName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtClassName.BeforeTouchSize = new System.Drawing.Size(175, 29);
+            this.txtClassName.BeforeTouchSize = new System.Drawing.Size(304, 29);
             this.txtClassName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtClassName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtClassName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.txtClassName.Location = new System.Drawing.Point(440, 81);
+            this.txtClassName.Location = new System.Drawing.Point(625, 85);
             this.txtClassName.MinimumSize = new System.Drawing.Size(14, 10);
             this.txtClassName.Name = "txtClassName";
             this.txtClassName.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
-            this.txtClassName.Size = new System.Drawing.Size(371, 29);
+            this.txtClassName.ReadOnly = true;
+            this.txtClassName.Size = new System.Drawing.Size(379, 29);
             this.txtClassName.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2007;
             this.txtClassName.TabIndex = 53;
             this.txtClassName.ThemeName = "Office2007";
             // 
             // autoLabel5
             // 
-            this.autoLabel5.Location = new System.Drawing.Point(826, 85);
+            this.autoLabel5.Location = new System.Drawing.Point(12, 135);
             this.autoLabel5.Name = "autoLabel5";
             this.autoLabel5.Size = new System.Drawing.Size(44, 21);
             this.autoLabel5.TabIndex = 54;
@@ -256,7 +358,7 @@
             // 
             // autoLabel4
             // 
-            this.autoLabel4.Location = new System.Drawing.Point(331, 85);
+            this.autoLabel4.Location = new System.Drawing.Point(504, 89);
             this.autoLabel4.Name = "autoLabel4";
             this.autoLabel4.Size = new System.Drawing.Size(57, 21);
             this.autoLabel4.TabIndex = 54;
@@ -266,15 +368,16 @@
             // txtClassID
             // 
             this.txtClassID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtClassID.BeforeTouchSize = new System.Drawing.Size(175, 29);
+            this.txtClassID.BeforeTouchSize = new System.Drawing.Size(304, 29);
             this.txtClassID.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtClassID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtClassID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.txtClassID.Location = new System.Drawing.Point(119, 81);
+            this.txtClassID.Location = new System.Drawing.Point(133, 85);
             this.txtClassID.MinimumSize = new System.Drawing.Size(14, 10);
             this.txtClassID.Name = "txtClassID";
             this.txtClassID.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
-            this.txtClassID.Size = new System.Drawing.Size(175, 29);
+            this.txtClassID.ReadOnly = true;
+            this.txtClassID.Size = new System.Drawing.Size(304, 29);
             this.txtClassID.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2007;
             this.txtClassID.TabIndex = 49;
             this.txtClassID.ThemeName = "Office2007";
@@ -287,15 +390,15 @@
             this.cboMajor.Items.AddRange(new object[] {
             "Logistics và quản lý chuỗi cung ứng (tăng cường tiếng Nhật, định hướng làm việc t" +
                 "ại Nhật Bản)"});
-            this.cboMajor.Location = new System.Drawing.Point(440, 35);
+            this.cboMajor.Location = new System.Drawing.Point(625, 35);
             this.cboMajor.Name = "cboMajor";
-            this.cboMajor.Size = new System.Drawing.Size(492, 29);
+            this.cboMajor.Size = new System.Drawing.Size(379, 29);
             this.cboMajor.TabIndex = 49;
             this.cboMajor.Text = "Ngành";
             // 
             // autoLabel10
             // 
-            this.autoLabel10.Location = new System.Drawing.Point(12, 85);
+            this.autoLabel10.Location = new System.Drawing.Point(12, 89);
             this.autoLabel10.Name = "autoLabel10";
             this.autoLabel10.Size = new System.Drawing.Size(56, 21);
             this.autoLabel10.TabIndex = 50;
@@ -307,9 +410,9 @@
             this.cboFacu.BackColor = System.Drawing.SystemColors.Control;
             this.cboFacu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cboFacu.FormattingEnabled = true;
-            this.cboFacu.Location = new System.Drawing.Point(119, 35);
+            this.cboFacu.Location = new System.Drawing.Point(133, 35);
             this.cboFacu.Name = "cboFacu";
-            this.cboFacu.Size = new System.Drawing.Size(175, 29);
+            this.cboFacu.Size = new System.Drawing.Size(304, 29);
             this.cboFacu.TabIndex = 50;
             this.cboFacu.Text = "Khoa/Viện";
             this.cboFacu.SelectedIndexChanged += new System.EventHandler(this.cboFacu_SelectedIndexChanged);
@@ -325,7 +428,7 @@
             // 
             // autoLabel19
             // 
-            this.autoLabel19.Location = new System.Drawing.Point(331, 39);
+            this.autoLabel19.Location = new System.Drawing.Point(504, 39);
             this.autoLabel19.Name = "autoLabel19";
             this.autoLabel19.Size = new System.Drawing.Size(56, 21);
             this.autoLabel19.TabIndex = 51;
@@ -363,9 +466,9 @@
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSearch.Location = new System.Drawing.Point(1024, 34);
+            this.btnSearch.Location = new System.Drawing.Point(1024, 36);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(87, 31);
+            this.btnSearch.Size = new System.Drawing.Size(87, 29);
             this.btnSearch.TabIndex = 5;
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -373,62 +476,38 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.txtCohortSearch);
             this.groupBox3.Controls.Add(this.txtClassNameSearch);
-            this.groupBox3.Controls.Add(this.autoLabel2);
             this.groupBox3.Controls.Add(this.autoLabel3);
             this.groupBox3.Controls.Add(this.txtClassIDSearch);
             this.groupBox3.Controls.Add(this.autoLabel6);
             this.groupBox3.Controls.Add(this.btnSearch);
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(36, 268);
+            this.groupBox3.Location = new System.Drawing.Point(36, 324);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1268, 91);
+            this.groupBox3.Size = new System.Drawing.Size(1268, 86);
             this.groupBox3.TabIndex = 48;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tìm kiếm";
             // 
-            // txtCohortSearch
-            // 
-            this.txtCohortSearch.Location = new System.Drawing.Point(876, 36);
-            this.txtCohortSearch.Name = "txtCohortSearch";
-            this.txtCohortSearch.Size = new System.Drawing.Size(56, 29);
-            this.txtCohortSearch.TabIndex = 66;
-            this.txtCohortSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtCohortSearch.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
             // txtClassNameSearch
             // 
             this.txtClassNameSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtClassNameSearch.BeforeTouchSize = new System.Drawing.Size(175, 29);
+            this.txtClassNameSearch.BeforeTouchSize = new System.Drawing.Size(304, 29);
             this.txtClassNameSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtClassNameSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtClassNameSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.txtClassNameSearch.Location = new System.Drawing.Point(440, 36);
+            this.txtClassNameSearch.Location = new System.Drawing.Point(625, 36);
             this.txtClassNameSearch.MinimumSize = new System.Drawing.Size(14, 10);
             this.txtClassNameSearch.Name = "txtClassNameSearch";
             this.txtClassNameSearch.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
-            this.txtClassNameSearch.Size = new System.Drawing.Size(371, 29);
+            this.txtClassNameSearch.Size = new System.Drawing.Size(379, 29);
             this.txtClassNameSearch.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2007;
             this.txtClassNameSearch.TabIndex = 63;
             this.txtClassNameSearch.ThemeName = "Office2007";
             // 
-            // autoLabel2
-            // 
-            this.autoLabel2.Location = new System.Drawing.Point(826, 40);
-            this.autoLabel2.Name = "autoLabel2";
-            this.autoLabel2.Size = new System.Drawing.Size(44, 21);
-            this.autoLabel2.TabIndex = 64;
-            this.autoLabel2.Text = "Khóa";
-            this.autoLabel2.ThemeName = "Managed";
-            // 
             // autoLabel3
             // 
-            this.autoLabel3.Location = new System.Drawing.Point(331, 40);
+            this.autoLabel3.Location = new System.Drawing.Point(504, 40);
             this.autoLabel3.Name = "autoLabel3";
             this.autoLabel3.Size = new System.Drawing.Size(57, 21);
             this.autoLabel3.TabIndex = 65;
@@ -438,15 +517,15 @@
             // txtClassIDSearch
             // 
             this.txtClassIDSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtClassIDSearch.BeforeTouchSize = new System.Drawing.Size(175, 29);
+            this.txtClassIDSearch.BeforeTouchSize = new System.Drawing.Size(304, 29);
             this.txtClassIDSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtClassIDSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtClassIDSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.txtClassIDSearch.Location = new System.Drawing.Point(119, 36);
+            this.txtClassIDSearch.Location = new System.Drawing.Point(133, 36);
             this.txtClassIDSearch.MinimumSize = new System.Drawing.Size(14, 10);
             this.txtClassIDSearch.Name = "txtClassIDSearch";
             this.txtClassIDSearch.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
-            this.txtClassIDSearch.Size = new System.Drawing.Size(175, 29);
+            this.txtClassIDSearch.Size = new System.Drawing.Size(304, 29);
             this.txtClassIDSearch.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2007;
             this.txtClassIDSearch.TabIndex = 57;
             this.txtClassIDSearch.ThemeName = "Office2007";
@@ -477,12 +556,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvClass)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCohort)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaxStudent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCurrentStudent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtClassName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtClassID)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCohortSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtClassNameSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtClassIDSearch)).EndInit();
             this.ResumeLayout(false);
@@ -509,22 +588,29 @@
         private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel19;
         private Syncfusion.Windows.Forms.Tools.TextBoxExt txtClassID;
         private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel10;
-        private System.Windows.Forms.NumericUpDown txtCohort;
         private Syncfusion.Windows.Forms.Tools.TextBoxExt txtClassName;
         private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel5;
         private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel4;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private Syncfusion.Windows.Forms.Tools.TextBoxExt txtClassNameSearch;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel3;
+        private Syncfusion.Windows.Forms.Tools.TextBoxExt txtClassIDSearch;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel6;
+        private System.Windows.Forms.ComboBox cboTeacher;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel7;
+        private System.Windows.Forms.ComboBox cboCohort;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvClassID;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvClassName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvCohort;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvMajor;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvFacu;
-        private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.NumericUpDown txtCohortSearch;
-        private Syncfusion.Windows.Forms.Tools.TextBoxExt txtClassNameSearch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTeacher;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvCurrentStudent;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvMaxStudent;
+        private Syncfusion.Windows.Forms.Tools.TextBoxExt txtMaxStudent;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel8;
+        private Syncfusion.Windows.Forms.Tools.TextBoxExt txtCurrentStudent;
         private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel2;
-        private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel3;
-        private Syncfusion.Windows.Forms.Tools.TextBoxExt txtClassIDSearch;
-        private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel6;
     }
 }

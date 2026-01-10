@@ -91,11 +91,12 @@ namespace BTL_QLHSSV_NETFW
                 {
                     conn.Open();
                     string sql = @"select student_id, student_lastName, student_firstName, dob, gender, s.class_id,
-                                c.class_name, cohort, major_name, facu_name, status, hometown, phone, email, id_no
+                                c.class_name, ch.cohort_name, major_name, facu_name, status, hometown, phone, email, citizen_id
                                 from student s
                                 join class c on c.class_id = s.class_id
                                 join major m on m.major_id = c.major_id
                                 join faculties f on f.facu_id = m.facu_id
+                                JOIN cohort ch on ch.cohort_id = c.cohort_id
                                 order by student_firstName asc";
                     using (var cmd = new MySqlCommand(sql, conn))
                     {
@@ -112,13 +113,13 @@ namespace BTL_QLHSSV_NETFW
                         dgvStudentTable.Columns["dgvGender"].DataPropertyName = "gender";
                         dgvStudentTable.Columns["dgvClassID"].DataPropertyName = "class_id";
                         dgvStudentTable.Columns["dgvClass"].DataPropertyName = "class_name";
-                        dgvStudentTable.Columns["dgvCohort"].DataPropertyName = "cohort";
+                        dgvStudentTable.Columns["dgvCohort"].DataPropertyName = "cohort_name";
                         dgvStudentTable.Columns["dgvMajor"].DataPropertyName = "major_name";
                         dgvStudentTable.Columns["dgvFacu"].DataPropertyName = "facu_name";
                         dgvStudentTable.Columns["dgvHometown"].DataPropertyName = "hometown";
                         dgvStudentTable.Columns["dgvPhone"].DataPropertyName = "phone";
                         dgvStudentTable.Columns["dgvEmail"].DataPropertyName = "email";
-                        dgvStudentTable.Columns["dgvIdNo"].DataPropertyName = "id_no";
+                        dgvStudentTable.Columns["dgvcitizenId"].DataPropertyName = "citizen_id";
                         dgvStudentTable.Columns["dgvStatus"].DataPropertyName = "status";
                         dgvStudentTable.DataSource = dt;
                     }
@@ -139,7 +140,7 @@ namespace BTL_QLHSSV_NETFW
             txtHometown.Clear();
             txtPhone.Clear();
             txtEmail.Clear();
-            txtIdNo.Clear();
+            txtcitizenId.Clear();
 
             cboGender.SelectedIndex = -1;
             cboStatus.SelectedIndex = -1;
@@ -151,7 +152,6 @@ namespace BTL_QLHSSV_NETFW
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string id = txtId.Text.Trim();
             string lastName = txtLastName.Text.Trim();
             string firstName = txtFirstName.Text.Trim();
 
@@ -173,7 +173,7 @@ namespace BTL_QLHSSV_NETFW
             string homeTown = txtHometown.Text.Trim();
             string phone = txtPhone.Text.Trim();
             string email = txtEmail.Text.Trim();
-            string idNo = txtIdNo.Text.Trim();
+            string citizenId = txtcitizenId.Text.Trim();
 
             if (cboFacu.SelectedIndex == -1 ||
                 cboMajor.SelectedIndex == -1 ||
@@ -186,8 +186,7 @@ namespace BTL_QLHSSV_NETFW
             string facuId = cboFacu.SelectedValue.ToString();
             string majorId = cboMajor.SelectedValue.ToString();
             string classId = cboClass.SelectedValue.ToString();
-            var test = facuId + majorId + classId;
-            MessageBox.Show(test);
+            string id = GenerateStudentId();
             if (cboStatus.SelectedIndex == -1)
             {
                 MessageBox.Show("Vui lòng chọn trạng thái", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -201,8 +200,8 @@ namespace BTL_QLHSSV_NETFW
                 using (var conn = dbConn.GetConnection())
                 {
                     conn.Open();
-                    string sql = @"INSERT INTO student (student_id, student_lastName, student_firstName, dob, gender, hometown, phone, email, id_no, class_id, status) 
-                                VALUES (@student_id, @lastName, @firstName, @dob, @gender, @hometown, @phone, @email, @idNo, @classId, @status)";
+                    string sql = @"INSERT INTO student (student_id, student_lastName, student_firstName, dob, gender, hometown, phone, email, citizen_id, class_id, status) 
+                                VALUES (@student_id, @lastName, @firstName, @dob, @gender, @hometown, @phone, @email, @citizenId, @classId, @status)";
                     using (var cmd = new MySqlCommand(sql, conn))
                     {
                         cmd.Parameters.AddWithValue("@student_id", id);
@@ -213,14 +212,14 @@ namespace BTL_QLHSSV_NETFW
                         cmd.Parameters.AddWithValue("@hometown", homeTown);
                         cmd.Parameters.AddWithValue("@phone", phone);
                         cmd.Parameters.AddWithValue("@email", email);
-                        cmd.Parameters.AddWithValue("@idNo", idNo);
+                        cmd.Parameters.AddWithValue("@citizenId", citizenId);
                         cmd.Parameters.AddWithValue("@classId", classId);
                         cmd.Parameters.AddWithValue("@status", status);
 
                         int row = cmd.ExecuteNonQuery();
                         if (row > 0)
                         {
-                            MessageBox.Show("Lưu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Lưu thành công sinh viên " + id, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             studentTableLoad();
                             clearInput();
                         }
@@ -269,6 +268,7 @@ namespace BTL_QLHSSV_NETFW
                         using (var da = new MySqlDataAdapter(cmd))
                         {
                             da.Fill(dt);
+
                         }
                     }
                 }
@@ -305,7 +305,7 @@ namespace BTL_QLHSSV_NETFW
             txtHometown.Text = row.Cells["dgvHometown"].Value?.ToString();
             txtPhone.Text = row.Cells["dgvPhone"].Value?.ToString();
             txtEmail.Text = row.Cells["dgvEmail"].Value?.ToString();
-            txtIdNo.Text = row.Cells["dgvIdNo"].Value?.ToString();
+            txtcitizenId.Text = row.Cells["dgvcitizenId"].Value?.ToString();
             cboStatus.Text = row.Cells["dgvStatus"].Value?.ToString();
             txtCohort.Text = row.Cells["dgvCohort"].Value?.ToString();
 
@@ -417,7 +417,7 @@ namespace BTL_QLHSSV_NETFW
                                hometown = @hometown,
                                phone = @phone,
                                email = @email,
-                               id_no = @idNo,
+                               citizen_id = @citizenId,
                                class_id = @classId,
                                status = @status
                            WHERE student_id = @student_id";
@@ -432,7 +432,7 @@ namespace BTL_QLHSSV_NETFW
                         cmd.Parameters.AddWithValue("@hometown", txtHometown.Text.Trim());
                         cmd.Parameters.AddWithValue("@phone", txtPhone.Text.Trim());
                         cmd.Parameters.AddWithValue("@email", txtEmail.Text.Trim());
-                        cmd.Parameters.AddWithValue("@idNo", txtIdNo.Text.Trim());
+                        cmd.Parameters.AddWithValue("@citizenId", txtcitizenId.Text.Trim());
                         cmd.Parameters.AddWithValue("@classId", cboClass.SelectedValue.ToString());
                         cmd.Parameters.AddWithValue("@status", cboStatus.SelectedItem?.ToString());
                         int row = cmd.ExecuteNonQuery();
@@ -487,11 +487,12 @@ namespace BTL_QLHSSV_NETFW
 
                 //Lấy data từ database
                 string sql = @"select student_id, student_lastName, student_firstName, dob, gender, s.class_id,
-                                c.class_name, cohort, major_name, facu_name, status, hometown, phone, email, id_no
+                                c.class_name, ch.cohort_name, major_name, facu_name, status, hometown, phone, email, citizen_id
                                 from student s
                                 join class c on c.class_id = s.class_id
                                 join major m on m.major_id = c.major_id
                                 join faculties f on f.facu_id = m.facu_id
+                                JOIN cohort ch on ch.cohort_id = c.cohort_id
                                 order by student_firstName asc";
                 using (var cmd = new MySqlCommand(sql, conn))
                 {
@@ -515,14 +516,14 @@ namespace BTL_QLHSSV_NETFW
                             }
                             ws.Cell(rowIndex, 6).Value = reader["gender"].ToString();
                             ws.Cell(rowIndex, 7).Value = reader["class_name"].ToString();
-                            ws.Cell(rowIndex, 8).Value = reader["cohort"].ToString();
+                            ws.Cell(rowIndex, 8).Value = reader["cohort_name"].ToString();
                             ws.Cell(rowIndex, 9).Value = reader["major_name"].ToString();
                             ws.Cell(rowIndex, 10).Value = reader["facu_name"].ToString();
                             ws.Cell(rowIndex, 11).Value = reader["status"].ToString();
                             ws.Cell(rowIndex, 12).Value = reader["hometown"].ToString();
                             ws.Cell(rowIndex, 13).Value = reader["phone"].ToString();
                             ws.Cell(rowIndex, 14).Value = reader["email"].ToString();
-                            ws.Cell(rowIndex, 15).Value = reader["id_no"].ToString();
+                            ws.Cell(rowIndex, 15).Value = reader["citizen_id"].ToString();
 
                             //Styling cột
                             ws.Range(rowIndex, 1, rowIndex, 15).Style.Font.FontSize = 13;
@@ -580,11 +581,12 @@ namespace BTL_QLHSSV_NETFW
             {
                 using (MySqlConnection conn = dbConn.GetConnection())
                 {
-                    string sql = @"select s.*, c.class_name, m.major_name, f.facu_name, cohort
+                    string sql = @"select s.*, c.class_name, m.major_name, f.facu_name, ch.cohort_name
                                     from student s
                                     join class c on c.class_id = s.class_id
                                     join major m on m.major_id = c.major_id
                                     join faculties f on f.facu_id = m.facu_id
+                                    JOIN cohort ch on ch.cohort_id = c.cohort_id
                                     WHERE (@id = '' OR s.student_id LIKE @id)
                                     AND (@name = '' OR CONCAT(s.student_lastName, ' ', s.student_firstName) LIKE @name)
                                     AND (@className = '' OR c.class_name LIKE @className)";
@@ -609,5 +611,122 @@ namespace BTL_QLHSSV_NETFW
                 MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void cboClass_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboClass.SelectedIndex == -1) return;
+
+            string classId = cboClass.SelectedValue?.ToString();
+            if (string.IsNullOrEmpty(classId)) return;
+
+            LoadCohortByClass(classId);
+        }
+
+        private void LoadCohortByClass(string classId)
+        {
+            try
+            {
+                using (var conn = dbConn.GetConnection())
+                {
+                    conn.Open();
+                    string sql = @"SELECT ch.cohort_name
+                          FROM class c
+                          JOIN cohort ch ON ch.cohort_id = c.cohort_id
+                          WHERE c.class_id = @classId";
+
+                    using (var cmd = new MySqlCommand(sql, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@classId", classId);
+                        var result = cmd.ExecuteScalar();
+
+                        if (result != null)
+                        {
+                            txtCohort.Text = result.ToString();
+                        }
+                        else
+                        {
+                            txtCohort.Clear();
+                        }
+                    }
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private string GenerateStudentId()
+        {
+            try
+            {
+                // Lấy thông tin từ ComboBox
+                if (cboClass.SelectedValue == null)
+                {
+                    MessageBox.Show("Vui lòng chọn lớp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return string.Empty;
+                }
+
+                string classId = cboClass.SelectedValue.ToString();
+
+                using (var conn = dbConn.GetConnection())
+                {
+                    conn.Open();
+
+                    // Lấy cohort_name và major_id từ class_id
+                    string sqlClassInfo = @"SELECT ch.cohort_name, c.major_id
+                                   FROM class c
+                                   JOIN cohort ch ON ch.cohort_id = c.cohort_id
+                                   WHERE c.class_id = @classId";
+
+                    string cohortName = "";
+                    string majorId = "";
+
+                    using (var cmd = new MySqlCommand(sqlClassInfo, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@classId", classId);
+                        using (var reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                cohortName = reader["cohort_name"].ToString(); // VD: "K74"
+                                majorId = reader["major_id"].ToString(); // VD: "HT" hoặc "DT"
+                            }
+                        }
+                    }
+
+                    if (string.IsNullOrEmpty(cohortName) || string.IsNullOrEmpty(majorId))
+                    {
+                        MessageBox.Show("Không tìm thấy thông tin khóa hoặc ngành", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return string.Empty;
+                    }
+
+                    // Đếm số sinh viên hiện có của khóa này (theo cohort_name)
+                    string sqlCount = @"SELECT COUNT(*) 
+                               FROM student s
+                               JOIN class c ON c.class_id = s.class_id
+                               JOIN cohort ch ON ch.cohort_id = c.cohort_id
+                               WHERE ch.cohort_name = @cohortName";
+
+                    int studentCount = 0;
+                    using (var cmd = new MySqlCommand(sqlCount, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@cohortName", cohortName);
+                        studentCount = Convert.ToInt32(cmd.ExecuteScalar());
+                    }
+
+                    // Tạo mã sinh viên: Khóa + Mã ngành + Số thứ tự (4 chữ số)
+                    // VD: K74HT0001, K74DT0010
+                    string studentId = $"{cohortName}{majorId}{(studentCount + 1):D4}";
+
+                    return studentId;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return string.Empty;
+            }
+        }
+    }
 }

@@ -89,11 +89,6 @@ namespace BTL_QLHSSV_NETFW
             }
         }
 
-        private void dgvFaculties_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void UC_Faculties_Load(object sender, EventArgs e)
         {
             loadTable();

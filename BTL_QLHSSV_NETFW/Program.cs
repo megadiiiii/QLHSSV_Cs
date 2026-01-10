@@ -19,7 +19,7 @@ namespace BTL_QLHSSV_NETFW
             //Application.EnableVisualStyles();
             ToolStripManager.RenderMode = ToolStripManagerRenderMode.Professional;
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin());
+            Application.Run(new QLHSSV());
         }
     }
 }

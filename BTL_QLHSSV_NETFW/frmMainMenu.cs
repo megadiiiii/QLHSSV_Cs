@@ -104,5 +104,10 @@ namespace BTL_QLHSSV_NETFW
         {
             
         }
+
+        private void navCohort_Click(object sender, EventArgs e)
+        {
+            uC_Cohort1.BringToFront();
+        }
     }
 }

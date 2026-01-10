@@ -49,7 +49,7 @@
             this.gradientPanelExt1 = new Syncfusion.Windows.Forms.Tools.GradientPanelExt();
             this.tcStudentInfo = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.txtIdNo = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.txtcitizenId = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.txtEmail = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.txtPhone = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.txtHometown = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
@@ -68,6 +68,8 @@
             this.autoLabel3 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.autoLabel2 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.txtCohort = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.autoLabel16 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.cboStatus = new System.Windows.Forms.ComboBox();
             this.autoLabel15 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.cboClass = new System.Windows.Forms.ComboBox();
@@ -77,6 +79,7 @@
             this.autoLabel14 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.autoLabel19 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.dgvStudentTable = new System.Windows.Forms.DataGridView();
+            this.bannerTextProvider1 = new Syncfusion.Windows.Forms.BannerTextProvider(this.components);
             this.dgvID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvFirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -91,10 +94,7 @@
             this.dgvHometown = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvIdNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.autoLabel16 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.txtCohort = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
-            this.bannerTextProvider1 = new Syncfusion.Windows.Forms.BannerTextProvider(this.components);
+            this.dgvcitizenId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtClassNameSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNameSearch)).BeginInit();
@@ -104,7 +104,7 @@
             this.gradientPanelExt1.SuspendLayout();
             this.tcStudentInfo.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIdNo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtcitizenId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHometown)).BeginInit();
@@ -112,8 +112,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtLastName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtId)).BeginInit();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStudentTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCohort)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudentTable)).BeginInit();
             this.SuspendLayout();
             // 
             // autoLabel1
@@ -349,7 +349,6 @@
             // 
             this.tcStudentInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tcStudentInfo.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.tcStudentInfo.Controls.Add(this.tabPage2);
             this.tcStudentInfo.Controls.Add(this.tabPage1);
             this.tcStudentInfo.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -362,7 +361,7 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.Transparent;
-            this.tabPage2.Controls.Add(this.txtIdNo);
+            this.tabPage2.Controls.Add(this.txtcitizenId);
             this.tabPage2.Controls.Add(this.txtEmail);
             this.tabPage2.Controls.Add(this.txtPhone);
             this.tabPage2.Controls.Add(this.txtHometown);
@@ -380,28 +379,28 @@
             this.tabPage2.Controls.Add(this.autoLabel4);
             this.tabPage2.Controls.Add(this.autoLabel3);
             this.tabPage2.Controls.Add(this.autoLabel2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 33);
+            this.tabPage2.Location = new System.Drawing.Point(4, 30);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1090, 139);
+            this.tabPage2.Size = new System.Drawing.Size(1090, 142);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Thông tin cá nhân";
             // 
-            // txtIdNo
+            // txtcitizenId
             // 
-            this.txtIdNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtIdNo.BeforeTouchSize = new System.Drawing.Size(215, 29);
-            this.txtIdNo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
-            this.txtIdNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtIdNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.txtIdNo.Location = new System.Drawing.Point(843, 95);
-            this.txtIdNo.MinimumSize = new System.Drawing.Size(14, 10);
-            this.txtIdNo.Name = "txtIdNo";
-            this.txtIdNo.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
-            this.txtIdNo.Size = new System.Drawing.Size(215, 29);
-            this.txtIdNo.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2007;
-            this.txtIdNo.TabIndex = 9;
-            this.txtIdNo.ThemeName = "Office2007";
+            this.txtcitizenId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
+            this.txtcitizenId.BeforeTouchSize = new System.Drawing.Size(215, 29);
+            this.txtcitizenId.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
+            this.txtcitizenId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtcitizenId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.txtcitizenId.Location = new System.Drawing.Point(843, 95);
+            this.txtcitizenId.MinimumSize = new System.Drawing.Size(14, 10);
+            this.txtcitizenId.Name = "txtcitizenId";
+            this.txtcitizenId.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
+            this.txtcitizenId.Size = new System.Drawing.Size(215, 29);
+            this.txtcitizenId.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2007;
+            this.txtcitizenId.TabIndex = 9;
+            this.txtcitizenId.ThemeName = "Office2007";
             // 
             // txtEmail
             // 
@@ -621,13 +620,37 @@
             this.tabPage1.Controls.Add(this.cboFacu);
             this.tabPage1.Controls.Add(this.autoLabel14);
             this.tabPage1.Controls.Add(this.autoLabel19);
-            this.tabPage1.Location = new System.Drawing.Point(4, 33);
+            this.tabPage1.Location = new System.Drawing.Point(4, 30);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1090, 139);
+            this.tabPage1.Size = new System.Drawing.Size(1090, 142);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Thông tin học tập";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // txtCohort
+            // 
+            this.txtCohort.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
+            this.txtCohort.BeforeTouchSize = new System.Drawing.Size(215, 29);
+            this.txtCohort.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
+            this.txtCohort.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCohort.Location = new System.Drawing.Point(494, 56);
+            this.txtCohort.Name = "txtCohort";
+            this.txtCohort.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
+            this.txtCohort.ReadOnly = true;
+            this.txtCohort.Size = new System.Drawing.Size(215, 29);
+            this.txtCohort.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2007;
+            this.txtCohort.TabIndex = 53;
+            this.txtCohort.ThemeName = "Office2007";
+            // 
+            // autoLabel16
+            // 
+            this.autoLabel16.Location = new System.Drawing.Point(386, 64);
+            this.autoLabel16.Name = "autoLabel16";
+            this.autoLabel16.Size = new System.Drawing.Size(100, 21);
+            this.autoLabel16.TabIndex = 52;
+            this.autoLabel16.Text = "Khóa đào tạo";
+            this.autoLabel16.ThemeName = "Managed";
             // 
             // cboStatus
             // 
@@ -667,6 +690,7 @@
             this.cboClass.Size = new System.Drawing.Size(215, 29);
             this.cboClass.TabIndex = 13;
             this.cboClass.Text = "Lớp";
+            this.cboClass.SelectedIndexChanged += new System.EventHandler(this.cboClass_SelectedIndexChanged);
             // 
             // autoLabel30
             // 
@@ -738,7 +762,7 @@
             this.dgvHometown,
             this.dgvPhone,
             this.dgvEmail,
-            this.dgvIdNo});
+            this.dgvcitizenId});
             this.dgvStudentTable.Location = new System.Drawing.Point(36, 403);
             this.dgvStudentTable.Name = "dgvStudentTable";
             this.dgvStudentTable.RowHeadersWidth = 72;
@@ -844,36 +868,12 @@
             this.dgvEmail.Name = "dgvEmail";
             this.dgvEmail.Width = 82;
             // 
-            // dgvIdNo
+            // dgvcitizenId
             // 
-            this.dgvIdNo.HeaderText = "Số CCCD";
-            this.dgvIdNo.MinimumWidth = 9;
-            this.dgvIdNo.Name = "dgvIdNo";
-            this.dgvIdNo.Width = 115;
-            // 
-            // autoLabel16
-            // 
-            this.autoLabel16.Location = new System.Drawing.Point(386, 64);
-            this.autoLabel16.Name = "autoLabel16";
-            this.autoLabel16.Size = new System.Drawing.Size(100, 21);
-            this.autoLabel16.TabIndex = 52;
-            this.autoLabel16.Text = "Khóa đào tạo";
-            this.autoLabel16.ThemeName = "Managed";
-            // 
-            // txtCohort
-            // 
-            this.txtCohort.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtCohort.BeforeTouchSize = new System.Drawing.Size(215, 29);
-            this.txtCohort.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
-            this.txtCohort.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCohort.Location = new System.Drawing.Point(494, 56);
-            this.txtCohort.Name = "txtCohort";
-            this.txtCohort.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
-            this.txtCohort.ReadOnly = true;
-            this.txtCohort.Size = new System.Drawing.Size(215, 29);
-            this.txtCohort.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2007;
-            this.txtCohort.TabIndex = 53;
-            this.txtCohort.ThemeName = "Office2007";
+            this.dgvcitizenId.HeaderText = "Số CCCD";
+            this.dgvcitizenId.MinimumWidth = 9;
+            this.dgvcitizenId.Name = "dgvcitizenId";
+            this.dgvcitizenId.Width = 115;
             // 
             // UC_Student
             // 
@@ -901,7 +901,7 @@
             this.tcStudentInfo.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIdNo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtcitizenId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHometown)).EndInit();
@@ -910,8 +910,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtId)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStudentTable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCohort)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudentTable)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -935,7 +935,7 @@
         private Syncfusion.Windows.Forms.Tools.GradientPanelExt gradientPanelExt1;
         private System.Windows.Forms.TabControl tcStudentInfo;
         private System.Windows.Forms.TabPage tabPage2;
-        private Syncfusion.Windows.Forms.Tools.TextBoxExt txtIdNo;
+        private Syncfusion.Windows.Forms.Tools.TextBoxExt txtcitizenId;
         private Syncfusion.Windows.Forms.Tools.TextBoxExt txtEmail;
         private Syncfusion.Windows.Forms.Tools.TextBoxExt txtPhone;
         private Syncfusion.Windows.Forms.Tools.TextBoxExt txtHometown;
@@ -963,6 +963,13 @@
         private System.Windows.Forms.ComboBox cboStatus;
         private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel15;
         private System.Windows.Forms.DataGridView dgvStudentTable;
+        private System.Windows.Forms.Button btnExport;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnSave;
+        private Syncfusion.Windows.Forms.Tools.TextBoxExt txtCohort;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel16;
+        private Syncfusion.Windows.Forms.BannerTextProvider bannerTextProvider1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvID;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvLastName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvFirstName;
@@ -977,13 +984,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvHometown;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvPhone;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvEmail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvIdNo;
-        private System.Windows.Forms.Button btnExport;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button btnSave;
-        private Syncfusion.Windows.Forms.Tools.TextBoxExt txtCohort;
-        private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel16;
-        private Syncfusion.Windows.Forms.BannerTextProvider bannerTextProvider1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvcitizenId;
     }
 }

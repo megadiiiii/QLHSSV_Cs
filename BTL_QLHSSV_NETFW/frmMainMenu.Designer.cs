@@ -2,7 +2,7 @@
 
 namespace BTL_QLHSSV_NETFW
 {
-    partial class frmMainMenu
+    partial class QLHSSV
     {
         /// <summary>
         /// Required designer variable.
@@ -37,13 +37,16 @@ namespace BTL_QLHSSV_NETFW
             this.navClass = new Syncfusion.WinForms.Controls.SfButton();
             this.navStudent = new Syncfusion.WinForms.Controls.SfButton();
             this.navDashboard = new Syncfusion.WinForms.Controls.SfButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.navKhenThuong = new Syncfusion.WinForms.Controls.SfButton();
             this.navKyLuat = new Syncfusion.WinForms.Controls.SfButton();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.navScholarship = new Syncfusion.WinForms.Controls.SfButton();
+            this.navTeacher = new Syncfusion.WinForms.Controls.SfButton();
+            this.navSuspension = new Syncfusion.WinForms.Controls.SfButton();
+            this.navRole = new Syncfusion.WinForms.Controls.SfButton();
             this.btnExit = new Syncfusion.WinForms.Controls.SfButton();
             this.sfSkinManager1 = new Syncfusion.WinForms.Controls.SfSkinManager(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.uC_Dashboard1 = new BTL_QLHSSV_NETFW.UC_Dashboard();
             this.uC_Student1 = new BTL_QLHSSV_NETFW.UC_Student();
             this.uC_Class1 = new BTL_QLHSSV_NETFW.UC_Class();
@@ -51,11 +54,14 @@ namespace BTL_QLHSSV_NETFW
             this.uC_Major1 = new BTL_QLHSSV_NETFW.UC_Major();
             this.uC_KhenThuong1 = new BTL_QLHSSV_NETFW.UC_KhenThuong();
             this.uC_KyLuat1 = new BTL_QLHSSV_NETFW.UC_KyLuat();
+            this.uC_Scholarship1 = new BTL_QLHSSV_NETFW.UC_Scholarship();
+            this.uC_Teacher1 = new BTL_QLHSSV_NETFW.UC_Teacher();
+            this.uC_Suspension1 = new BTL_QLHSSV_NETFW.UC_Suspension();
+            this.uC_Role1 = new BTL_QLHSSV_NETFW.UC_Role();
             ((System.ComponentModel.ISupportInitialize)(this.gradientPanel1)).BeginInit();
             this.gradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gradientPanel1
@@ -70,6 +76,10 @@ namespace BTL_QLHSSV_NETFW
             this.gradientPanel1.Controls.Add(this.uC_Major1);
             this.gradientPanel1.Controls.Add(this.uC_KhenThuong1);
             this.gradientPanel1.Controls.Add(this.uC_KyLuat1);
+            this.gradientPanel1.Controls.Add(this.uC_Scholarship1);
+            this.gradientPanel1.Controls.Add(this.uC_Teacher1);
+            this.gradientPanel1.Controls.Add(this.uC_Suspension1);
+            this.gradientPanel1.Controls.Add(this.uC_Role1);
             this.gradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gradientPanel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gradientPanel1.Location = new System.Drawing.Point(240, 0);
@@ -189,14 +199,6 @@ namespace BTL_QLHSSV_NETFW
             this.navDashboard.ThemeName = "Office2019";
             this.navDashboard.Click += new System.EventHandler(this.navDashboard_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(237, 134);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
@@ -208,7 +210,10 @@ namespace BTL_QLHSSV_NETFW
             this.flowLayoutPanel1.Controls.Add(this.navMajor);
             this.flowLayoutPanel1.Controls.Add(this.navKhenThuong);
             this.flowLayoutPanel1.Controls.Add(this.navKyLuat);
-            this.flowLayoutPanel1.Controls.Add(this.pictureBox2);
+            this.flowLayoutPanel1.Controls.Add(this.navScholarship);
+            this.flowLayoutPanel1.Controls.Add(this.navTeacher);
+            this.flowLayoutPanel1.Controls.Add(this.navSuspension);
+            this.flowLayoutPanel1.Controls.Add(this.navRole);
             this.flowLayoutPanel1.Controls.Add(this.btnExit);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -260,20 +265,100 @@ namespace BTL_QLHSSV_NETFW
             this.navKyLuat.ThemeName = "Office2019";
             this.navKyLuat.Click += new System.EventHandler(this.navKyLuat_Click);
             // 
-            // pictureBox2
+            // navScholarship
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(3, 472);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(237, 343);
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
+            this.navScholarship.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.navScholarship.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.navScholarship.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.navScholarship.Location = new System.Drawing.Point(0, 469);
+            this.navScholarship.Margin = new System.Windows.Forms.Padding(0);
+            this.navScholarship.Name = "navScholarship";
+            this.navScholarship.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
+            this.navScholarship.Size = new System.Drawing.Size(240, 47);
+            this.navScholarship.Style.FocusedBackColor = System.Drawing.Color.Empty;
+            this.navScholarship.Style.HoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(106)))), ((int)(((byte)(255)))));
+            this.navScholarship.Style.HoverForeColor = System.Drawing.Color.White;
+            this.navScholarship.Style.PressedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(149)))), ((int)(((byte)(0)))));
+            this.navScholarship.Style.PressedForeColor = System.Drawing.Color.White;
+            this.navScholarship.TabIndex = 11;
+            this.navScholarship.Text = "Học bổng";
+            this.navScholarship.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.navScholarship.TextMargin = new System.Windows.Forms.Padding(5, 10, 5, 10);
+            this.navScholarship.ThemeName = "Office2019";
+            this.navScholarship.Click += new System.EventHandler(this.navScholarship_Click);
+            // 
+            // navTeacher
+            // 
+            this.navTeacher.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.navTeacher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.navTeacher.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.navTeacher.Location = new System.Drawing.Point(0, 516);
+            this.navTeacher.Margin = new System.Windows.Forms.Padding(0);
+            this.navTeacher.Name = "navTeacher";
+            this.navTeacher.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
+            this.navTeacher.Size = new System.Drawing.Size(240, 47);
+            this.navTeacher.Style.FocusedBackColor = System.Drawing.Color.Empty;
+            this.navTeacher.Style.HoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(106)))), ((int)(((byte)(255)))));
+            this.navTeacher.Style.HoverForeColor = System.Drawing.Color.White;
+            this.navTeacher.Style.PressedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(149)))), ((int)(((byte)(0)))));
+            this.navTeacher.Style.PressedForeColor = System.Drawing.Color.White;
+            this.navTeacher.TabIndex = 13;
+            this.navTeacher.Text = "Thông tin giảng viên";
+            this.navTeacher.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.navTeacher.TextMargin = new System.Windows.Forms.Padding(5, 10, 5, 10);
+            this.navTeacher.ThemeName = "Office2019";
+            this.navTeacher.Click += new System.EventHandler(this.navTeacher_Click);
+            // 
+            // navSuspension
+            // 
+            this.navSuspension.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.navSuspension.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.navSuspension.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.navSuspension.Location = new System.Drawing.Point(0, 563);
+            this.navSuspension.Margin = new System.Windows.Forms.Padding(0);
+            this.navSuspension.Name = "navSuspension";
+            this.navSuspension.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
+            this.navSuspension.Size = new System.Drawing.Size(240, 47);
+            this.navSuspension.Style.FocusedBackColor = System.Drawing.Color.Empty;
+            this.navSuspension.Style.HoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(106)))), ((int)(((byte)(255)))));
+            this.navSuspension.Style.HoverForeColor = System.Drawing.Color.White;
+            this.navSuspension.Style.PressedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(149)))), ((int)(((byte)(0)))));
+            this.navSuspension.Style.PressedForeColor = System.Drawing.Color.White;
+            this.navSuspension.TabIndex = 15;
+            this.navSuspension.Text = "Bảo lưu";
+            this.navSuspension.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.navSuspension.TextMargin = new System.Windows.Forms.Padding(5, 10, 5, 10);
+            this.navSuspension.ThemeName = "Office2019";
+            this.navSuspension.Click += new System.EventHandler(this.navSuspension_Click);
+            // 
+            // navRole
+            // 
+            this.navRole.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.navRole.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.navRole.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.navRole.Location = new System.Drawing.Point(0, 610);
+            this.navRole.Margin = new System.Windows.Forms.Padding(0);
+            this.navRole.Name = "navRole";
+            this.navRole.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
+            this.navRole.Size = new System.Drawing.Size(240, 47);
+            this.navRole.Style.FocusedBackColor = System.Drawing.Color.Empty;
+            this.navRole.Style.HoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(106)))), ((int)(((byte)(255)))));
+            this.navRole.Style.HoverForeColor = System.Drawing.Color.White;
+            this.navRole.Style.PressedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(149)))), ((int)(((byte)(0)))));
+            this.navRole.Style.PressedForeColor = System.Drawing.Color.White;
+            this.navRole.TabIndex = 16;
+            this.navRole.Text = "Cán bộ lớp";
+            this.navRole.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.navRole.TextMargin = new System.Windows.Forms.Padding(5, 10, 5, 10);
+            this.navRole.ThemeName = "Office2019";
+            this.navRole.Click += new System.EventHandler(this.navRole_Click);
             // 
             // btnExit
             // 
             this.btnExit.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnExit.Location = new System.Drawing.Point(0, 818);
+            this.btnExit.Location = new System.Drawing.Point(0, 657);
             this.btnExit.Margin = new System.Windows.Forms.Padding(0);
             this.btnExit.Name = "btnExit";
             this.btnExit.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
@@ -283,13 +368,13 @@ namespace BTL_QLHSSV_NETFW
             this.btnExit.Style.HoverForeColor = System.Drawing.Color.White;
             this.btnExit.Style.PressedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(149)))), ((int)(((byte)(0)))));
             this.btnExit.Style.PressedForeColor = System.Drawing.Color.White;
-            this.btnExit.TabIndex = 10;
+            this.btnExit.TabIndex = 17;
             this.btnExit.Text = "Thoát";
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExit.TextMargin = new System.Windows.Forms.Padding(5, 10, 5, 10);
             this.btnExit.ThemeName = "Office2019";
             this.btnExit.UseWaitCursor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnLogout_Click);
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // sfSkinManager1
             // 
@@ -297,6 +382,14 @@ namespace BTL_QLHSSV_NETFW
             this.sfSkinManager1.Controls = null;
             this.sfSkinManager1.ThemeName = "Office2019";
             this.sfSkinManager1.VisualTheme = Syncfusion.Windows.Forms.VisualTheme.Managed;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(237, 134);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // uC_Dashboard1
             // 
@@ -364,7 +457,41 @@ namespace BTL_QLHSSV_NETFW
             this.uC_KyLuat1.Size = new System.Drawing.Size(1340, 857);
             this.uC_KyLuat1.TabIndex = 5;
             // 
-            // frmMainMenu
+            // uC_Scholarship1
+            // 
+            this.uC_Scholarship1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_Scholarship1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Scholarship1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.uC_Scholarship1.Name = "uC_Scholarship1";
+            this.uC_Scholarship1.Size = new System.Drawing.Size(1340, 857);
+            this.uC_Scholarship1.TabIndex = 7;
+            // 
+            // uC_Teacher1
+            // 
+            this.uC_Teacher1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_Teacher1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Teacher1.Name = "uC_Teacher1";
+            this.uC_Teacher1.Size = new System.Drawing.Size(1340, 857);
+            this.uC_Teacher1.TabIndex = 9;
+            // 
+            // uC_Suspension1
+            // 
+            this.uC_Suspension1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_Suspension1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Suspension1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.uC_Suspension1.Name = "uC_Suspension1";
+            this.uC_Suspension1.Size = new System.Drawing.Size(1340, 857);
+            this.uC_Suspension1.TabIndex = 10;
+            // 
+            // uC_Role1
+            // 
+            this.uC_Role1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_Role1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Role1.Name = "uC_Role1";
+            this.uC_Role1.Size = new System.Drawing.Size(1340, 857);
+            this.uC_Role1.TabIndex = 8;
+            // 
+            // QLHSSV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -374,15 +501,14 @@ namespace BTL_QLHSSV_NETFW
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "frmMainMenu";
-            this.Text = "Form1";
+            this.Name = "QLHSSV";
+            this.Text = "QLHSSV";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMainMenu_FormClosing);
             this.Load += new System.EventHandler(this.FormMainMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gradientPanel1)).EndInit();
             this.gradientPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -402,13 +528,20 @@ namespace BTL_QLHSSV_NETFW
         private UC_Faculties uC_Faculties1;
         private Syncfusion.WinForms.Controls.SfButton navKhenThuong;
         private Syncfusion.WinForms.Controls.SfButton navKyLuat;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private Syncfusion.WinForms.Controls.SfButton btnExit;
         private Syncfusion.WinForms.Controls.SfSkinManager sfSkinManager1;
         private UC_Major uC_Major1;
         private UC_KhenThuong uC_KhenThuong1;
         private UC_KyLuat uC_KyLuat1;
         private UC_Class uC_Class1;
+        private Syncfusion.WinForms.Controls.SfButton navScholarship;
+        private Syncfusion.WinForms.Controls.SfButton navTeacher;
+        private Syncfusion.WinForms.Controls.SfButton navSuspension;
+        private Syncfusion.WinForms.Controls.SfButton navRole;
+        private Syncfusion.WinForms.Controls.SfButton btnExit;
+        private UC_Scholarship uC_Scholarship1;
+        private UC_Teacher uC_Teacher1;
+        private UC_Role uC_Role1;
+        private UC_Suspension uC_Suspension1;
     }
 }
 

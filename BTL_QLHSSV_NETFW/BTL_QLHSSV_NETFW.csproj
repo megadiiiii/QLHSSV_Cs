@@ -205,6 +205,12 @@
     <Compile Include="UC_Class.Designer.cs">
       <DependentUpon>UC_Class.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_Cohort.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Cohort.Designer.cs">
+      <DependentUpon>UC_Cohort.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_Dashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -235,11 +241,35 @@
     <Compile Include="UC_Major.Designer.cs">
       <DependentUpon>UC_Major.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_Role.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Role.Designer.cs">
+      <DependentUpon>UC_Role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Scholarship.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Scholarship.Designer.cs">
+      <DependentUpon>UC_Scholarship.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_Student.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UC_Student.Designer.cs">
       <DependentUpon>UC_Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Suspension.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Suspension.Designer.cs">
+      <DependentUpon>UC_Suspension.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Teacher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Teacher.Designer.cs">
+      <DependentUpon>UC_Teacher.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="frmMainMenu.resx">
       <DependentUpon>frmMainMenu.cs</DependentUpon>
@@ -267,6 +297,9 @@
     <EmbeddedResource Include="UC_Class.resx">
       <DependentUpon>UC_Class.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_Cohort.resx">
+      <DependentUpon>UC_Cohort.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_Dashboard.resx">
       <DependentUpon>UC_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -282,8 +315,20 @@
     <EmbeddedResource Include="UC_Major.resx">
       <DependentUpon>UC_Major.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_Role.resx">
+      <DependentUpon>UC_Role.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Scholarship.resx">
+      <DependentUpon>UC_Scholarship.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_Student.resx">
       <DependentUpon>UC_Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Suspension.resx">
+      <DependentUpon>UC_Suspension.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Teacher.resx">
+      <DependentUpon>UC_Teacher.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

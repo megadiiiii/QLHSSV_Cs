@@ -61,6 +61,7 @@
             this.txtMaqdSearch = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnExport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTin)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaSV)).BeginInit();
@@ -151,6 +152,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnExport);
             this.groupBox2.Controls.Add(this.btnDelete);
             this.groupBox2.Controls.Add(this.btnSave);
             this.groupBox2.Controls.Add(this.btnEdit);
@@ -201,7 +203,7 @@
             // txtMaSV
             // 
             this.txtMaSV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtMaSV.BeforeTouchSize = new System.Drawing.Size(175, 29);
+            this.txtMaSV.BeforeTouchSize = new System.Drawing.Size(200, 29);
             this.txtMaSV.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtMaSV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMaSV.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -252,7 +254,7 @@
             // txtQuyetDinh
             // 
             this.txtQuyetDinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtQuyetDinh.BeforeTouchSize = new System.Drawing.Size(175, 29);
+            this.txtQuyetDinh.BeforeTouchSize = new System.Drawing.Size(200, 29);
             this.txtQuyetDinh.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtQuyetDinh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtQuyetDinh.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -294,7 +296,7 @@
             // txtLyDo
             // 
             this.txtLyDo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtLyDo.BeforeTouchSize = new System.Drawing.Size(175, 29);
+            this.txtLyDo.BeforeTouchSize = new System.Drawing.Size(200, 29);
             this.txtLyDo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtLyDo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtLyDo.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -381,7 +383,7 @@
             // txtMasvSearch
             // 
             this.txtMasvSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtMasvSearch.BeforeTouchSize = new System.Drawing.Size(175, 29);
+            this.txtMasvSearch.BeforeTouchSize = new System.Drawing.Size(200, 29);
             this.txtMasvSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtMasvSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMasvSearch.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -412,7 +414,7 @@
             // txtMaqdSearch
             // 
             this.txtMaqdSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtMaqdSearch.BeforeTouchSize = new System.Drawing.Size(175, 29);
+            this.txtMaqdSearch.BeforeTouchSize = new System.Drawing.Size(200, 29);
             this.txtMaqdSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtMaqdSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMaqdSearch.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -454,6 +456,17 @@
             this.groupBox4.TabIndex = 41;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Tìm kiếm";
+            // 
+            // btnExport
+            // 
+            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExport.Location = new System.Drawing.Point(87, 86);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(75, 31);
+            this.btnExport.TabIndex = 3;
+            this.btnExport.Text = "Export";
+            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // UC_KhenThuong
             // 
@@ -517,5 +530,6 @@
         private Syncfusion.Windows.Forms.Tools.TextBoxExt txtMaqdSearch;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button btnExport;
     }
 }

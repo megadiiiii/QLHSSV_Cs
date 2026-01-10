@@ -26,7 +26,16 @@
             this.autoLabel1 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.button1 = new System.Windows.Forms.Button();
             this.dgvClass = new System.Windows.Forms.DataGridView();
+            this.dgvClassID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvClassName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvCohort = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvMajor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvFacu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtCohort = new System.Windows.Forms.NumericUpDown();
+            this.txtClassName = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.autoLabel5 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.autoLabel4 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.txtClassID = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.cboMajor = new System.Windows.Forms.ComboBox();
             this.autoLabel10 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
@@ -36,15 +45,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.sfSkinManager1 = new Syncfusion.WinForms.Controls.SfSkinManager(this.components);
-            this.txtClassName = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
-            this.autoLabel4 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.autoLabel5 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.txtCohort = new System.Windows.Forms.NumericUpDown();
-            this.dgvClassID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvClassName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvCohort = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvMajor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvFacu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSearch = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtCohortSearch = new System.Windows.Forms.NumericUpDown();
@@ -56,9 +56,9 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClass)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtClassID)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtClassName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCohort)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtClassName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtClassID)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCohortSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtClassNameSearch)).BeginInit();
@@ -74,7 +74,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(1052, 89);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(252, 132);
+            this.groupBox2.Size = new System.Drawing.Size(252, 173);
             this.groupBox2.TabIndex = 46;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
@@ -147,7 +147,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Location = new System.Drawing.Point(1052, 21);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(0, 31);
+            this.button1.Size = new System.Drawing.Size(38, 31);
             this.button1.TabIndex = 5;
             this.button1.Text = "Xóa";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -163,12 +163,37 @@
             this.dgvCohort,
             this.dgvMajor,
             this.dgvFacu});
-            this.dgvClass.Location = new System.Drawing.Point(36, 344);
+            this.dgvClass.Location = new System.Drawing.Point(36, 395);
             this.dgvClass.Name = "dgvClass";
             this.dgvClass.RowHeadersWidth = 72;
-            this.dgvClass.Size = new System.Drawing.Size(1268, 232);
+            this.dgvClass.Size = new System.Drawing.Size(1268, 324);
             this.dgvClass.TabIndex = 47;
             this.dgvClass.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClass_CellClick);
+            // 
+            // dgvClassID
+            // 
+            this.dgvClassID.HeaderText = "Mã lớp";
+            this.dgvClassID.Name = "dgvClassID";
+            // 
+            // dgvClassName
+            // 
+            this.dgvClassName.HeaderText = "Tên lớp";
+            this.dgvClassName.Name = "dgvClassName";
+            // 
+            // dgvCohort
+            // 
+            this.dgvCohort.HeaderText = "Khóa";
+            this.dgvCohort.Name = "dgvCohort";
+            // 
+            // dgvMajor
+            // 
+            this.dgvMajor.HeaderText = "Chuyên ngành";
+            this.dgvMajor.Name = "dgvMajor";
+            // 
+            // dgvFacu
+            // 
+            this.dgvFacu.HeaderText = "Khoa";
+            this.dgvFacu.Name = "dgvFacu";
             // 
             // groupBox1
             // 
@@ -186,10 +211,57 @@
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(36, 89);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(972, 132);
+            this.groupBox1.Size = new System.Drawing.Size(1010, 173);
             this.groupBox1.TabIndex = 45;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin lớp";
+            // 
+            // txtCohort
+            // 
+            this.txtCohort.Location = new System.Drawing.Point(876, 81);
+            this.txtCohort.Name = "txtCohort";
+            this.txtCohort.Size = new System.Drawing.Size(56, 29);
+            this.txtCohort.TabIndex = 55;
+            this.txtCohort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCohort.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // txtClassName
+            // 
+            this.txtClassName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
+            this.txtClassName.BeforeTouchSize = new System.Drawing.Size(175, 29);
+            this.txtClassName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
+            this.txtClassName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtClassName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.txtClassName.Location = new System.Drawing.Point(440, 81);
+            this.txtClassName.MinimumSize = new System.Drawing.Size(14, 10);
+            this.txtClassName.Name = "txtClassName";
+            this.txtClassName.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
+            this.txtClassName.Size = new System.Drawing.Size(371, 29);
+            this.txtClassName.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2007;
+            this.txtClassName.TabIndex = 53;
+            this.txtClassName.ThemeName = "Office2007";
+            // 
+            // autoLabel5
+            // 
+            this.autoLabel5.Location = new System.Drawing.Point(826, 85);
+            this.autoLabel5.Name = "autoLabel5";
+            this.autoLabel5.Size = new System.Drawing.Size(44, 21);
+            this.autoLabel5.TabIndex = 54;
+            this.autoLabel5.Text = "Khóa";
+            this.autoLabel5.ThemeName = "Managed";
+            // 
+            // autoLabel4
+            // 
+            this.autoLabel4.Location = new System.Drawing.Point(331, 85);
+            this.autoLabel4.Name = "autoLabel4";
+            this.autoLabel4.Size = new System.Drawing.Size(57, 21);
+            this.autoLabel4.TabIndex = 54;
+            this.autoLabel4.Text = "Tên lớp";
+            this.autoLabel4.ThemeName = "Managed";
             // 
             // txtClassID
             // 
@@ -286,78 +358,6 @@
             this.sfSkinManager1.ThemeName = "Office2019Theme";
             this.sfSkinManager1.VisualTheme = Syncfusion.Windows.Forms.VisualTheme.Managed;
             // 
-            // txtClassName
-            // 
-            this.txtClassName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtClassName.BeforeTouchSize = new System.Drawing.Size(175, 29);
-            this.txtClassName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
-            this.txtClassName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtClassName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.txtClassName.Location = new System.Drawing.Point(440, 81);
-            this.txtClassName.MinimumSize = new System.Drawing.Size(14, 10);
-            this.txtClassName.Name = "txtClassName";
-            this.txtClassName.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
-            this.txtClassName.Size = new System.Drawing.Size(371, 29);
-            this.txtClassName.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2007;
-            this.txtClassName.TabIndex = 53;
-            this.txtClassName.ThemeName = "Office2007";
-            // 
-            // autoLabel4
-            // 
-            this.autoLabel4.Location = new System.Drawing.Point(331, 85);
-            this.autoLabel4.Name = "autoLabel4";
-            this.autoLabel4.Size = new System.Drawing.Size(57, 21);
-            this.autoLabel4.TabIndex = 54;
-            this.autoLabel4.Text = "Tên lớp";
-            this.autoLabel4.ThemeName = "Managed";
-            // 
-            // autoLabel5
-            // 
-            this.autoLabel5.Location = new System.Drawing.Point(826, 85);
-            this.autoLabel5.Name = "autoLabel5";
-            this.autoLabel5.Size = new System.Drawing.Size(44, 21);
-            this.autoLabel5.TabIndex = 54;
-            this.autoLabel5.Text = "Khóa";
-            this.autoLabel5.ThemeName = "Managed";
-            // 
-            // txtCohort
-            // 
-            this.txtCohort.Location = new System.Drawing.Point(876, 81);
-            this.txtCohort.Name = "txtCohort";
-            this.txtCohort.Size = new System.Drawing.Size(56, 29);
-            this.txtCohort.TabIndex = 55;
-            this.txtCohort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtCohort.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // dgvClassID
-            // 
-            this.dgvClassID.HeaderText = "Mã lớp";
-            this.dgvClassID.Name = "dgvClassID";
-            // 
-            // dgvClassName
-            // 
-            this.dgvClassName.HeaderText = "Tên lớp";
-            this.dgvClassName.Name = "dgvClassName";
-            // 
-            // dgvCohort
-            // 
-            this.dgvCohort.HeaderText = "Khóa";
-            this.dgvCohort.Name = "dgvCohort";
-            // 
-            // dgvMajor
-            // 
-            this.dgvMajor.HeaderText = "Chuyên ngành";
-            this.dgvMajor.Name = "dgvMajor";
-            // 
-            // dgvFacu
-            // 
-            this.dgvFacu.HeaderText = "Khoa";
-            this.dgvFacu.Name = "dgvFacu";
-            // 
             // btnSearch
             // 
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -381,7 +381,7 @@
             this.groupBox3.Controls.Add(this.autoLabel6);
             this.groupBox3.Controls.Add(this.btnSearch);
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(36, 227);
+            this.groupBox3.Location = new System.Drawing.Point(36, 268);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(1268, 91);
             this.groupBox3.TabIndex = 48;
@@ -477,9 +477,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvClass)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtClassID)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtClassName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCohort)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtClassName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtClassID)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCohortSearch)).EndInit();

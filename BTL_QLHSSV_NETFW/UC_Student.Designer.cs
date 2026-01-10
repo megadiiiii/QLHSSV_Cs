@@ -41,6 +41,10 @@
             this.txtIDSearch = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.autoLabel11 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnExport = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.sfSkinManager1 = new Syncfusion.WinForms.Controls.SfSkinManager(this.components);
             this.gradientPanelExt1 = new Syncfusion.Windows.Forms.Tools.GradientPanelExt();
             this.tcStudentInfo = new System.Windows.Forms.TabControl();
@@ -88,10 +92,9 @@
             this.dgvPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvIdNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnExport = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
+            this.autoLabel16 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.txtCohort = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.bannerTextProvider1 = new Syncfusion.Windows.Forms.BannerTextProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtClassNameSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNameSearch)).BeginInit();
@@ -110,6 +113,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtId)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudentTable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCohort)).BeginInit();
             this.SuspendLayout();
             // 
             // autoLabel1
@@ -265,6 +269,60 @@
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
+            // 
+            // btnExport
+            // 
+            this.btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExport.Location = new System.Drawing.Point(16, 172);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(100, 31);
+            this.btnExport.TabIndex = 8;
+            this.btnExport.Text = "Xuất Excel";
+            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDelete.Location = new System.Drawing.Point(16, 124);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(100, 31);
+            this.btnDelete.TabIndex = 7;
+            this.btnDelete.Text = "Xóa";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEdit.Location = new System.Drawing.Point(16, 76);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(100, 31);
+            this.btnEdit.TabIndex = 6;
+            this.btnEdit.Text = "Sửa";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.Location = new System.Drawing.Point(16, 28);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(100, 31);
+            this.btnSave.TabIndex = 5;
+            this.btnSave.Text = "Lưu";
+            this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // sfSkinManager1
             // 
@@ -553,6 +611,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.txtCohort);
+            this.tabPage1.Controls.Add(this.autoLabel16);
             this.tabPage1.Controls.Add(this.cboStatus);
             this.tabPage1.Controls.Add(this.autoLabel15);
             this.tabPage1.Controls.Add(this.cboClass);
@@ -579,7 +639,7 @@
             "Bị đình chỉ",
             "Buộc thôi học",
             "Đã tốt nghiệp"});
-            this.cboStatus.Location = new System.Drawing.Point(494, 56);
+            this.cboStatus.Location = new System.Drawing.Point(843, 56);
             this.cboStatus.Name = "cboStatus";
             this.cboStatus.Size = new System.Drawing.Size(215, 29);
             this.cboStatus.TabIndex = 14;
@@ -587,7 +647,7 @@
             // 
             // autoLabel15
             // 
-            this.autoLabel15.Location = new System.Drawing.Point(386, 64);
+            this.autoLabel15.Location = new System.Drawing.Point(734, 64);
             this.autoLabel15.Name = "autoLabel15";
             this.autoLabel15.Size = new System.Drawing.Size(76, 21);
             this.autoLabel15.TabIndex = 50;
@@ -681,6 +741,7 @@
             this.dgvIdNo});
             this.dgvStudentTable.Location = new System.Drawing.Point(36, 403);
             this.dgvStudentTable.Name = "dgvStudentTable";
+            this.dgvStudentTable.RowHeadersWidth = 72;
             this.dgvStudentTable.Size = new System.Drawing.Size(1268, 413);
             this.dgvStudentTable.TabIndex = 10;
             this.dgvStudentTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudentTable_CellClick);
@@ -688,143 +749,131 @@
             // dgvID
             // 
             this.dgvID.HeaderText = "MSV";
+            this.dgvID.MinimumWidth = 9;
             this.dgvID.Name = "dgvID";
             this.dgvID.Width = 76;
             // 
             // dgvLastName
             // 
             this.dgvLastName.HeaderText = "Họ đệm";
+            this.dgvLastName.MinimumWidth = 9;
             this.dgvLastName.Name = "dgvLastName";
             this.dgvLastName.Width = 104;
             // 
             // dgvFirstName
             // 
             this.dgvFirstName.HeaderText = "Tên";
+            this.dgvFirstName.MinimumWidth = 9;
             this.dgvFirstName.Name = "dgvFirstName";
             this.dgvFirstName.Width = 69;
             // 
             // dgvDob
             // 
             this.dgvDob.HeaderText = "Ngày sinh";
+            this.dgvDob.MinimumWidth = 9;
             this.dgvDob.Name = "dgvDob";
             this.dgvDob.Width = 119;
             // 
             // dgvGender
             // 
             this.dgvGender.HeaderText = "Giới tính";
+            this.dgvGender.MinimumWidth = 9;
             this.dgvGender.Name = "dgvGender";
             this.dgvGender.Width = 103;
             // 
             // dgvClassID
             // 
             this.dgvClassID.HeaderText = "Mã lớp";
+            this.dgvClassID.MinimumWidth = 9;
             this.dgvClassID.Name = "dgvClassID";
             this.dgvClassID.Width = 92;
             // 
             // dgvClass
             // 
             this.dgvClass.HeaderText = "Lớp";
+            this.dgvClass.MinimumWidth = 9;
             this.dgvClass.Name = "dgvClass";
             this.dgvClass.Width = 67;
             // 
             // dgvCohort
             // 
             this.dgvCohort.HeaderText = "Khóa";
+            this.dgvCohort.MinimumWidth = 9;
             this.dgvCohort.Name = "dgvCohort";
             this.dgvCohort.Width = 79;
             // 
             // dgvFacu
             // 
             this.dgvFacu.HeaderText = "Khoa";
+            this.dgvFacu.MinimumWidth = 9;
             this.dgvFacu.Name = "dgvFacu";
             this.dgvFacu.Width = 79;
             // 
             // dgvMajor
             // 
             this.dgvMajor.HeaderText = "Chuyên ngành";
+            this.dgvMajor.MinimumWidth = 9;
             this.dgvMajor.Name = "dgvMajor";
             this.dgvMajor.Width = 160;
             // 
             // dgvStatus
             // 
             this.dgvStatus.HeaderText = "Trạng thái";
+            this.dgvStatus.MinimumWidth = 9;
             this.dgvStatus.Name = "dgvStatus";
             this.dgvStatus.Width = 119;
             // 
             // dgvHometown
             // 
             this.dgvHometown.HeaderText = "Quê quán";
+            this.dgvHometown.MinimumWidth = 9;
             this.dgvHometown.Name = "dgvHometown";
             this.dgvHometown.Width = 120;
             // 
             // dgvPhone
             // 
             this.dgvPhone.HeaderText = "SĐT";
+            this.dgvPhone.MinimumWidth = 9;
             this.dgvPhone.Name = "dgvPhone";
             this.dgvPhone.Width = 72;
             // 
             // dgvEmail
             // 
             this.dgvEmail.HeaderText = "Email";
+            this.dgvEmail.MinimumWidth = 9;
             this.dgvEmail.Name = "dgvEmail";
             this.dgvEmail.Width = 82;
             // 
             // dgvIdNo
             // 
             this.dgvIdNo.HeaderText = "Số CCCD";
+            this.dgvIdNo.MinimumWidth = 9;
             this.dgvIdNo.Name = "dgvIdNo";
             this.dgvIdNo.Width = 115;
             // 
-            // btnExport
+            // autoLabel16
             // 
-            this.btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnExport.Location = new System.Drawing.Point(16, 172);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(100, 31);
-            this.btnExport.TabIndex = 8;
-            this.btnExport.Text = "Xuất Excel";
-            this.btnExport.UseVisualStyleBackColor = true;
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            this.autoLabel16.Location = new System.Drawing.Point(386, 64);
+            this.autoLabel16.Name = "autoLabel16";
+            this.autoLabel16.Size = new System.Drawing.Size(100, 21);
+            this.autoLabel16.TabIndex = 52;
+            this.autoLabel16.Text = "Khóa đào tạo";
+            this.autoLabel16.ThemeName = "Managed";
             // 
-            // btnDelete
+            // txtCohort
             // 
-            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDelete.Location = new System.Drawing.Point(16, 124);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(100, 31);
-            this.btnDelete.TabIndex = 7;
-            this.btnDelete.Text = "Xóa";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEdit.Location = new System.Drawing.Point(16, 76);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(100, 31);
-            this.btnEdit.TabIndex = 6;
-            this.btnEdit.Text = "Sửa";
-            this.btnEdit.UseVisualStyleBackColor = true;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(16, 28);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(100, 31);
-            this.btnSave.TabIndex = 5;
-            this.btnSave.Text = "Lưu";
-            this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.txtCohort.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
+            this.txtCohort.BeforeTouchSize = new System.Drawing.Size(215, 29);
+            this.txtCohort.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
+            this.txtCohort.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCohort.Location = new System.Drawing.Point(494, 56);
+            this.txtCohort.Name = "txtCohort";
+            this.txtCohort.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
+            this.txtCohort.ReadOnly = true;
+            this.txtCohort.Size = new System.Drawing.Size(215, 29);
+            this.txtCohort.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2007;
+            this.txtCohort.TabIndex = 53;
+            this.txtCohort.ThemeName = "Office2007";
             // 
             // UC_Student
             // 
@@ -862,6 +911,7 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudentTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCohort)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -932,5 +982,8 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnSave;
+        private Syncfusion.Windows.Forms.Tools.TextBoxExt txtCohort;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel16;
+        private Syncfusion.Windows.Forms.BannerTextProvider bannerTextProvider1;
     }
 }

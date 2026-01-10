@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using ClosedXML.Excel;
+using MySql.Data.MySqlClient;
 using Syncfusion.XlsIO.Implementation.XmlSerialization;
 using System;
 using System.Collections.Generic;
@@ -200,5 +201,98 @@ namespace BTL_QLHSSV_NETFW
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            var wb = new XLWorkbook();
+            var ws = wb.Worksheets.Add("Khoa");
+            ws.Style.Font.FontName = "Times New Roman";
+
+            //Title
+            ws.Range(1, 1, 2, 5).Merge();
+            ws.Cell(1, 1).Value = "DANH SÁCH KHOA";
+            ws.Cell(1, 1).Style.Font.SetBold().Font.FontSize = 16;
+            ws.Cell(1, 1).Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
+            ws.Cell(1, 1).Style.Fill.SetBackgroundColor(XLColor.NoColor);
+
+            //Header
+            String[] headers = { "STT", "Mã khoa", "Tên khoa" };
+            for (int i = 0; i < headers.Length; i++)
+            {
+                ws.Cell(4, i + 1).Value = headers[i];
+
+                ws.Range(4, 1, 4, 3).Style.Font.SetBold().Font.FontSize = 14;
+                ws.Range(4, 1, 4, 3).Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
+                ws.Range(4, 1, 4, 3).Style.Fill.SetBackgroundColor(XLColor.LightGray);
             }
+
+
+            //Data
+            using (MySqlConnection conn = dbConn.GetConnection())
+            {
+
+                //Lấy data từ database
+                string sql = @"select * from faculties
+                ";
+                using (var cmd = new MySqlCommand(sql, conn))
+                {
+                    conn.Open();
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        int rowIndex = 5; //Số hàng bắt đầu ghi dữ liệu
+                        int no = 1; //STT
+                        while (reader.Read())
+                        {
+                            ws.Cell(rowIndex, 1).Value = no++;
+
+                            //Các cột dữ liệu
+                            ws.Cell(rowIndex, 2).Value = reader["facu_id"].ToString();
+                            ws.Cell(rowIndex, 3).Value = reader["facu_name"].ToString();
+
+
+                            //Styling cột
+                            ws.Range(rowIndex, 1, rowIndex, 3).Style.Font.FontSize = 13;
+                            ws.Range(rowIndex, 1, rowIndex, 3).Style.Font.SetBold(false);
+
+                            //Hàng tiếp theo
+                            rowIndex++;
+                        }
+                        //Filter & Sort
+                        var tableRange = ws.Range(4, 1, rowIndex - 1, 3);
+                        var table = tableRange.CreateTable();
+                        table.ShowAutoFilter = true;
+                        table.Theme = XLTableTheme.None;
+
+                        //Borders
+                        // Border toàn bộ bảng (từ header đến dòng cuối)
+                        var usedRange = ws.Range(4, 1, ws.LastRowUsed().RowNumber(), 5);
+
+                        usedRange.Style.Border.TopBorder = XLBorderStyleValues.Thin;
+                        usedRange.Style.Border.BottomBorder = XLBorderStyleValues.Thin;
+                        usedRange.Style.Border.LeftBorder = XLBorderStyleValues.Thin;
+                        usedRange.Style.Border.RightBorder = XLBorderStyleValues.Thin;
+                        usedRange.Style.Border.InsideBorder = XLBorderStyleValues.Thin;
+
+
+                    }
+                }
+
+                ws.Columns().AdjustToContents(); //Autofit content
+
+                //Lưu file
+                using (SaveFileDialog sfd = new SaveFileDialog())
+                {
+                    sfd.Filter = "Excel Files (*.xlsx)|*.xlsx";
+                    sfd.Title = "Lưu danh sách chuyên ngành";
+                    sfd.FileName = "Danh_sach_chuyen_nganh.xlsx"; // tên gợi ý
+
+                    if (sfd.ShowDialog() == DialogResult.OK)
+                    {
+                        wb.SaveAs(sfd.FileName);
+                        MessageBox.Show("Xuất file thành công!", "Thông báo");
+                    }
+                }
+            }
+        }
+    }
 }

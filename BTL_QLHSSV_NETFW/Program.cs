@@ -15,7 +15,7 @@ namespace BTL_QLHSSV_NETFW
         [STAThread]
         static void Main()
         {
-            SyncfusionLicenseProvider.RegisterLicense("Ngo9BigBOggjHTQxAR8/V1JFaF1cXGFCf0x+WmFZfVhgdVRMZFhbR3JPMyBoS35Rc0RhWXZfcXBQRmRcUkZwVEFc");
+            SyncfusionLicenseProvider.RegisterLicense("Ngo9BigBOggjHTQxAR8/V1JFaF1cXGtCf1FpRmJGdld5fUVHYVZUTXxaS00DNHVRdkdlWX5fcHRURmRYV01+XEdWYEg=");
             //Application.EnableVisualStyles();
             ToolStripManager.RenderMode = ToolStripManagerRenderMode.Professional;
             Application.SetCompatibleTextRenderingDefault(false);

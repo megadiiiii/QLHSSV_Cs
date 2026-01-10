@@ -74,7 +74,7 @@ namespace BTL_QLHSSV_NETFW
                                 "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 this.Hide();
-                frmMainMenu main = new frmMainMenu();
+                QLHSSV main = new QLHSSV();
                 main.ShowDialog();
                 this.Show();
             }

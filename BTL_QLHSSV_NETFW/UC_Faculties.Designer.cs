@@ -52,6 +52,7 @@
             this.autoLabel2 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.txtFacuIDSearch = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.autoLabel3 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.btnExport = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtFacuName)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -64,13 +65,14 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnExport);
             this.groupBox2.Controls.Add(this.btnDelete);
             this.groupBox2.Controls.Add(this.btnSave);
             this.groupBox2.Controls.Add(this.btnEdit);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(1052, 89);
+            this.groupBox2.Location = new System.Drawing.Point(964, 89);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(252, 88);
+            this.groupBox2.Size = new System.Drawing.Size(335, 88);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
@@ -126,7 +128,7 @@
             // txtFacuName
             // 
             this.txtFacuName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtFacuName.BeforeTouchSize = new System.Drawing.Size(175, 34);
+            this.txtFacuName.BeforeTouchSize = new System.Drawing.Size(545, 29);
             this.txtFacuName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtFacuName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFacuName.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -136,7 +138,7 @@
             this.txtFacuName.MinimumSize = new System.Drawing.Size(24, 20);
             this.txtFacuName.Name = "txtFacuName";
             this.txtFacuName.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
-            this.txtFacuName.Size = new System.Drawing.Size(250, 34);
+            this.txtFacuName.Size = new System.Drawing.Size(250, 29);
             this.txtFacuName.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2007;
             this.txtFacuName.TabIndex = 33;
             this.txtFacuName.ThemeName = "Office2007";
@@ -148,7 +150,7 @@
             this.autoLabel12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.autoLabel12.Location = new System.Drawing.Point(512, 40);
             this.autoLabel12.Name = "autoLabel12";
-            this.autoLabel12.Size = new System.Drawing.Size(86, 28);
+            this.autoLabel12.Size = new System.Drawing.Size(69, 21);
             this.autoLabel12.TabIndex = 32;
             this.autoLabel12.Text = "Tên khoa";
             this.autoLabel12.ThemeName = "Managed";
@@ -160,7 +162,7 @@
             this.autoLabel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.autoLabel11.Location = new System.Drawing.Point(12, 40);
             this.autoLabel11.Name = "autoLabel11";
-            this.autoLabel11.Size = new System.Drawing.Size(85, 28);
+            this.autoLabel11.Size = new System.Drawing.Size(68, 21);
             this.autoLabel11.TabIndex = 30;
             this.autoLabel11.Text = "Mã khoa";
             this.autoLabel11.ThemeName = "Managed";
@@ -175,7 +177,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(36, 89);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(972, 88);
+            this.groupBox1.Size = new System.Drawing.Size(922, 88);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin khoa";
@@ -184,7 +186,7 @@
             // txtFacuId
             // 
             this.txtFacuId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtFacuId.BeforeTouchSize = new System.Drawing.Size(175, 34);
+            this.txtFacuId.BeforeTouchSize = new System.Drawing.Size(545, 29);
             this.txtFacuId.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtFacuId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFacuId.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -195,7 +197,7 @@
             this.txtFacuId.Name = "txtFacuId";
             this.txtFacuId.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
             this.txtFacuId.Office2010ColorScheme = Syncfusion.Windows.Forms.Office2010Theme.Black;
-            this.txtFacuId.Size = new System.Drawing.Size(175, 34);
+            this.txtFacuId.Size = new System.Drawing.Size(175, 29);
             this.txtFacuId.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2007;
             this.txtFacuId.TabIndex = 31;
             this.txtFacuId.ThemeName = "Office2007";
@@ -228,7 +230,7 @@
             this.autoLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.autoLabel1.Location = new System.Drawing.Point(36, 36);
             this.autoLabel1.Name = "autoLabel1";
-            this.autoLabel1.Size = new System.Drawing.Size(208, 46);
+            this.autoLabel1.Size = new System.Drawing.Size(164, 37);
             this.autoLabel1.TabIndex = 11;
             this.autoLabel1.Text = "Quản lý khoa";
             this.autoLabel1.ThemeName = "Managed";
@@ -277,7 +279,7 @@
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(36, 180);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1268, 88);
+            this.groupBox3.Size = new System.Drawing.Size(1263, 88);
             this.groupBox3.TabIndex = 34;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tìm kiếm";
@@ -287,9 +289,9 @@
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSearch.Location = new System.Drawing.Point(1024, 40);
+            this.btnSearch.Location = new System.Drawing.Point(1017, 40);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(87, 31);
+            this.btnSearch.Size = new System.Drawing.Size(75, 31);
             this.btnSearch.TabIndex = 5;
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -298,7 +300,7 @@
             // txtFacuNameSearch
             // 
             this.txtFacuNameSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtFacuNameSearch.BeforeTouchSize = new System.Drawing.Size(175, 34);
+            this.txtFacuNameSearch.BeforeTouchSize = new System.Drawing.Size(545, 29);
             this.txtFacuNameSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtFacuNameSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFacuNameSearch.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -308,7 +310,7 @@
             this.txtFacuNameSearch.MinimumSize = new System.Drawing.Size(24, 20);
             this.txtFacuNameSearch.Name = "txtFacuNameSearch";
             this.txtFacuNameSearch.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
-            this.txtFacuNameSearch.Size = new System.Drawing.Size(250, 34);
+            this.txtFacuNameSearch.Size = new System.Drawing.Size(250, 29);
             this.txtFacuNameSearch.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2007;
             this.txtFacuNameSearch.TabIndex = 33;
             this.txtFacuNameSearch.ThemeName = "Office2007";
@@ -320,7 +322,7 @@
             this.autoLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.autoLabel2.Location = new System.Drawing.Point(512, 40);
             this.autoLabel2.Name = "autoLabel2";
-            this.autoLabel2.Size = new System.Drawing.Size(86, 28);
+            this.autoLabel2.Size = new System.Drawing.Size(69, 21);
             this.autoLabel2.TabIndex = 32;
             this.autoLabel2.Text = "Tên khoa";
             this.autoLabel2.ThemeName = "Managed";
@@ -328,7 +330,7 @@
             // txtFacuIDSearch
             // 
             this.txtFacuIDSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtFacuIDSearch.BeforeTouchSize = new System.Drawing.Size(175, 34);
+            this.txtFacuIDSearch.BeforeTouchSize = new System.Drawing.Size(545, 29);
             this.txtFacuIDSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtFacuIDSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFacuIDSearch.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -339,7 +341,7 @@
             this.txtFacuIDSearch.Name = "txtFacuIDSearch";
             this.txtFacuIDSearch.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
             this.txtFacuIDSearch.Office2010ColorScheme = Syncfusion.Windows.Forms.Office2010Theme.Black;
-            this.txtFacuIDSearch.Size = new System.Drawing.Size(175, 34);
+            this.txtFacuIDSearch.Size = new System.Drawing.Size(175, 29);
             this.txtFacuIDSearch.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2007;
             this.txtFacuIDSearch.TabIndex = 31;
             this.txtFacuIDSearch.ThemeName = "Office2007";
@@ -351,10 +353,21 @@
             this.autoLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.autoLabel3.Location = new System.Drawing.Point(12, 40);
             this.autoLabel3.Name = "autoLabel3";
-            this.autoLabel3.Size = new System.Drawing.Size(85, 28);
+            this.autoLabel3.Size = new System.Drawing.Size(68, 21);
             this.autoLabel3.TabIndex = 30;
             this.autoLabel3.Text = "Mã khoa";
             this.autoLabel3.ThemeName = "Managed";
+            // 
+            // btnExport
+            // 
+            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExport.Location = new System.Drawing.Point(251, 38);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(75, 31);
+            this.btnExport.TabIndex = 3;
+            this.btnExport.Text = "Export";
+            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // UC_Faculties
             // 
@@ -410,5 +423,6 @@
         private Syncfusion.Windows.Forms.Tools.TextBoxExt txtFacuIDSearch;
         private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel3;
         private Syncfusion.Windows.Forms.Tools.TextBoxExt txtFacuId;
+        private System.Windows.Forms.Button btnExport;
     }
 }

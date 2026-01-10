@@ -21,8 +21,9 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker1 = new Syncfusion.WinForms.Input.SfDateTimeEdit();
+            this.dtpKyLuatDate = new Syncfusion.WinForms.Input.SfDateTimeEdit();
             this.txtReason = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
-            this.txtTenSinhVien = new System.Windows.Forms.TextBox();
             this.autoLabel5 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.autoLabel4 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.cboStudentId = new System.Windows.Forms.ComboBox();
@@ -40,14 +41,6 @@
             this.autoLabel1 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.sfSkinManager1 = new Syncfusion.WinForms.Controls.SfSkinManager(this.components);
             this.dtgvKyLuat = new System.Windows.Forms.DataGridView();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.txtStudentIdSearch = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
-            this.autoLabel2 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.txtKyLuatIdSearch = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
-            this.autoLabel3 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.dateTimePicker1 = new Syncfusion.WinForms.Input.SfDateTimeEdit();
-            this.dtpKyLuatDate = new Syncfusion.WinForms.Input.SfDateTimeEdit();
             this.dtgvKyLuatId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtgvStudentId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtgvKyLuatTenSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,6 +49,14 @@
             this.dtgvReason = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtgvNgaybatdau = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtgvNgayketthuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtStudentIdSearch = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.autoLabel2 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.txtKyLuatIdSearch = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.autoLabel3 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.btnExport = new System.Windows.Forms.Button();
+            this.txtTenSinhVien = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtReason)).BeginInit();
@@ -65,10 +66,12 @@
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtStudentIdSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKyLuatIdSearch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenSinhVien)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnExport);
             this.groupBox2.Controls.Add(this.btnReset);
             this.groupBox2.Controls.Add(this.btnDelete);
             this.groupBox2.Controls.Add(this.btnSave);
@@ -123,10 +126,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtTenSinhVien);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.dtpKyLuatDate);
             this.groupBox1.Controls.Add(this.txtReason);
-            this.groupBox1.Controls.Add(this.txtTenSinhVien);
             this.groupBox1.Controls.Add(this.autoLabel5);
             this.groupBox1.Controls.Add(this.autoLabel4);
             this.groupBox1.Controls.Add(this.cboStudentId);
@@ -142,15 +145,43 @@
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Light", 12F);
             this.groupBox1.Location = new System.Drawing.Point(35, 87);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(972, 180);
+            this.groupBox1.Size = new System.Drawing.Size(1088, 180);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin kỉ luật";
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.AllowValueChangeOnMouseWheel = true;
+            this.dateTimePicker1.DateTimeIcon = null;
+            this.dateTimePicker1.DateTimePattern = Syncfusion.WinForms.Input.Enums.DateTimePattern.Custom;
+            this.dateTimePicker1.Format = "dd/MM/yyyy";
+            this.dateTimePicker1.Location = new System.Drawing.Point(892, 129);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(156, 29);
+            this.dateTimePicker1.TabIndex = 35;
+            this.dateTimePicker1.ThemeName = "Managed";
+            this.dateTimePicker1.ToolTipText = "";
+            this.dateTimePicker1.Value = new System.DateTime(2025, 12, 11, 0, 0, 0, 0);
+            // 
+            // dtpKyLuatDate
+            // 
+            this.dtpKyLuatDate.AllowValueChangeOnMouseWheel = true;
+            this.dtpKyLuatDate.DateTimeIcon = null;
+            this.dtpKyLuatDate.DateTimePattern = Syncfusion.WinForms.Input.Enums.DateTimePattern.Custom;
+            this.dtpKyLuatDate.Format = "dd/MM/yyyy";
+            this.dtpKyLuatDate.Location = new System.Drawing.Point(892, 83);
+            this.dtpKyLuatDate.Name = "dtpKyLuatDate";
+            this.dtpKyLuatDate.Size = new System.Drawing.Size(156, 29);
+            this.dtpKyLuatDate.TabIndex = 36;
+            this.dtpKyLuatDate.ThemeName = "Managed";
+            this.dtpKyLuatDate.ToolTipText = "";
+            this.dtpKyLuatDate.Value = new System.DateTime(2025, 12, 11, 0, 0, 0, 0);
+            // 
             // txtReason
             // 
             this.txtReason.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtReason.BeforeTouchSize = new System.Drawing.Size(175, 29);
+            this.txtReason.BeforeTouchSize = new System.Drawing.Size(545, 29);
             this.txtReason.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtReason.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtReason.Font = new System.Drawing.Font("Segoe UI Light", 12F);
@@ -160,24 +191,17 @@
             this.txtReason.Name = "txtReason";
             this.txtReason.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
             this.txtReason.ReadOnly = true;
-            this.txtReason.Size = new System.Drawing.Size(459, 29);
+            this.txtReason.Size = new System.Drawing.Size(545, 29);
             this.txtReason.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2007;
             this.txtReason.TabIndex = 48;
             this.txtReason.ThemeName = "Office2007";
-            // 
-            // txtTenSinhVien
-            // 
-            this.txtTenSinhVien.Location = new System.Drawing.Point(405, 84);
-            this.txtTenSinhVien.Name = "txtTenSinhVien";
-            this.txtTenSinhVien.Size = new System.Drawing.Size(173, 29);
-            this.txtTenSinhVien.TabIndex = 47;
             // 
             // autoLabel5
             // 
             this.autoLabel5.BackColor = System.Drawing.Color.Transparent;
             this.autoLabel5.Font = new System.Drawing.Font("Segoe UI Light", 12F);
             this.autoLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.autoLabel5.Location = new System.Drawing.Point(610, 136);
+            this.autoLabel5.Location = new System.Drawing.Point(750, 135);
             this.autoLabel5.Name = "autoLabel5";
             this.autoLabel5.Size = new System.Drawing.Size(101, 21);
             this.autoLabel5.TabIndex = 45;
@@ -189,7 +213,7 @@
             this.autoLabel4.BackColor = System.Drawing.Color.Transparent;
             this.autoLabel4.Font = new System.Drawing.Font("Segoe UI Light", 12F);
             this.autoLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.autoLabel4.Location = new System.Drawing.Point(321, 84);
+            this.autoLabel4.Location = new System.Drawing.Point(407, 83);
             this.autoLabel4.Name = "autoLabel4";
             this.autoLabel4.Size = new System.Drawing.Size(54, 21);
             this.autoLabel4.TabIndex = 44;
@@ -210,12 +234,12 @@
             // txtSoQuyetDinh
             // 
             this.txtSoQuyetDinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtSoQuyetDinh.BeforeTouchSize = new System.Drawing.Size(175, 29);
+            this.txtSoQuyetDinh.BeforeTouchSize = new System.Drawing.Size(545, 29);
             this.txtSoQuyetDinh.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtSoQuyetDinh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSoQuyetDinh.Font = new System.Drawing.Font("Segoe UI Light", 12F);
             this.txtSoQuyetDinh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.txtSoQuyetDinh.Location = new System.Drawing.Point(752, 39);
+            this.txtSoQuyetDinh.Location = new System.Drawing.Point(892, 38);
             this.txtSoQuyetDinh.MinimumSize = new System.Drawing.Size(24, 20);
             this.txtSoQuyetDinh.Name = "txtSoQuyetDinh";
             this.txtSoQuyetDinh.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
@@ -241,7 +265,7 @@
             this.autoLabel15.BackColor = System.Drawing.Color.Transparent;
             this.autoLabel15.Font = new System.Drawing.Font("Segoe UI Light", 12F);
             this.autoLabel15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.autoLabel15.Location = new System.Drawing.Point(610, 40);
+            this.autoLabel15.Location = new System.Drawing.Point(750, 39);
             this.autoLabel15.Name = "autoLabel15";
             this.autoLabel15.Size = new System.Drawing.Size(54, 21);
             this.autoLabel15.TabIndex = 38;
@@ -253,7 +277,7 @@
             this.cbbKyLuatType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbKyLuatType.Font = new System.Drawing.Font("Segoe UI Light", 12F);
             this.cbbKyLuatType.FormattingEnabled = true;
-            this.cbbKyLuatType.Location = new System.Drawing.Point(405, 39);
+            this.cbbKyLuatType.Location = new System.Drawing.Point(491, 38);
             this.cbbKyLuatType.Name = "cbbKyLuatType";
             this.cbbKyLuatType.Size = new System.Drawing.Size(173, 29);
             this.cbbKyLuatType.TabIndex = 37;
@@ -263,7 +287,7 @@
             this.autoLabel14.BackColor = System.Drawing.Color.Transparent;
             this.autoLabel14.Font = new System.Drawing.Font("Segoe UI Light", 12F);
             this.autoLabel14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.autoLabel14.Location = new System.Drawing.Point(321, 39);
+            this.autoLabel14.Location = new System.Drawing.Point(407, 38);
             this.autoLabel14.Name = "autoLabel14";
             this.autoLabel14.Size = new System.Drawing.Size(76, 21);
             this.autoLabel14.TabIndex = 36;
@@ -275,7 +299,7 @@
             this.autoLabel13.BackColor = System.Drawing.Color.Transparent;
             this.autoLabel13.Font = new System.Drawing.Font("Segoe UI Light", 12F);
             this.autoLabel13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.autoLabel13.Location = new System.Drawing.Point(610, 84);
+            this.autoLabel13.Location = new System.Drawing.Point(750, 83);
             this.autoLabel13.Name = "autoLabel13";
             this.autoLabel13.Size = new System.Drawing.Size(88, 21);
             this.autoLabel13.TabIndex = 34;
@@ -297,7 +321,7 @@
             // txtKyLuatId
             // 
             this.txtKyLuatId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtKyLuatId.BeforeTouchSize = new System.Drawing.Size(175, 29);
+            this.txtKyLuatId.BeforeTouchSize = new System.Drawing.Size(173, 29);
             this.txtKyLuatId.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtKyLuatId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtKyLuatId.Font = new System.Drawing.Font("Segoe UI Light", 12F);
@@ -378,117 +402,6 @@
             this.dtgvKyLuat.Size = new System.Drawing.Size(1263, 195);
             this.dtgvKyLuat.TabIndex = 15;
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.btnSearch);
-            this.groupBox3.Controls.Add(this.txtStudentIdSearch);
-            this.groupBox3.Controls.Add(this.autoLabel2);
-            this.groupBox3.Controls.Add(this.txtKyLuatIdSearch);
-            this.groupBox3.Controls.Add(this.autoLabel3);
-            this.groupBox3.Font = new System.Drawing.Font("Segoe UI Light", 12F);
-            this.groupBox3.Location = new System.Drawing.Point(35, 285);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1268, 88);
-            this.groupBox3.TabIndex = 34;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Tìm kiếm";
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSearch.Location = new System.Drawing.Point(1024, 40);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(87, 31);
-            this.btnSearch.TabIndex = 5;
-            this.btnSearch.Text = "Tìm kiếm";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            // 
-            // txtStudentIdSearch
-            // 
-            this.txtStudentIdSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtStudentIdSearch.BeforeTouchSize = new System.Drawing.Size(175, 29);
-            this.txtStudentIdSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
-            this.txtStudentIdSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtStudentIdSearch.Font = new System.Drawing.Font("Segoe UI Light", 12F);
-            this.txtStudentIdSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.txtStudentIdSearch.Location = new System.Drawing.Point(619, 40);
-            this.txtStudentIdSearch.MinimumSize = new System.Drawing.Size(24, 20);
-            this.txtStudentIdSearch.Name = "txtStudentIdSearch";
-            this.txtStudentIdSearch.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
-            this.txtStudentIdSearch.Size = new System.Drawing.Size(250, 29);
-            this.txtStudentIdSearch.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2007;
-            this.txtStudentIdSearch.TabIndex = 33;
-            this.txtStudentIdSearch.ThemeName = "Office2007";
-            // 
-            // autoLabel2
-            // 
-            this.autoLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.autoLabel2.Font = new System.Drawing.Font("Segoe UI Light", 12F);
-            this.autoLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.autoLabel2.Location = new System.Drawing.Point(512, 40);
-            this.autoLabel2.Name = "autoLabel2";
-            this.autoLabel2.Size = new System.Drawing.Size(53, 21);
-            this.autoLabel2.TabIndex = 32;
-            this.autoLabel2.Text = "Mã SV";
-            this.autoLabel2.ThemeName = "Managed";
-            // 
-            // txtKyLuatIdSearch
-            // 
-            this.txtKyLuatIdSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtKyLuatIdSearch.BeforeTouchSize = new System.Drawing.Size(175, 29);
-            this.txtKyLuatIdSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
-            this.txtKyLuatIdSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtKyLuatIdSearch.Font = new System.Drawing.Font("Segoe UI Light", 12F);
-            this.txtKyLuatIdSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.txtKyLuatIdSearch.Location = new System.Drawing.Point(119, 40);
-            this.txtKyLuatIdSearch.MinimumSize = new System.Drawing.Size(24, 20);
-            this.txtKyLuatIdSearch.Name = "txtKyLuatIdSearch";
-            this.txtKyLuatIdSearch.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
-            this.txtKyLuatIdSearch.Size = new System.Drawing.Size(175, 29);
-            this.txtKyLuatIdSearch.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2007;
-            this.txtKyLuatIdSearch.TabIndex = 31;
-            this.txtKyLuatIdSearch.ThemeName = "Office2007";
-            // 
-            // autoLabel3
-            // 
-            this.autoLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.autoLabel3.Font = new System.Drawing.Font("Segoe UI Light", 12F);
-            this.autoLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.autoLabel3.Location = new System.Drawing.Point(12, 40);
-            this.autoLabel3.Name = "autoLabel3";
-            this.autoLabel3.Size = new System.Drawing.Size(74, 21);
-            this.autoLabel3.TabIndex = 30;
-            this.autoLabel3.Text = "Mã kỉ luật";
-            this.autoLabel3.ThemeName = "Managed";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.AllowValueChangeOnMouseWheel = true;
-            this.dateTimePicker1.DateTimeIcon = null;
-            this.dateTimePicker1.DateTimePattern = Syncfusion.WinForms.Input.Enums.DateTimePattern.Custom;
-            this.dateTimePicker1.Format = "dd/MM/yyyy";
-            this.dateTimePicker1.Location = new System.Drawing.Point(752, 130);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(156, 29);
-            this.dateTimePicker1.TabIndex = 35;
-            this.dateTimePicker1.ThemeName = "Managed";
-            this.dateTimePicker1.ToolTipText = "";
-            this.dateTimePicker1.Value = new System.DateTime(2025, 12, 11, 0, 0, 0, 0);
-            // 
-            // dtpKyLuatDate
-            // 
-            this.dtpKyLuatDate.AllowValueChangeOnMouseWheel = true;
-            this.dtpKyLuatDate.DateTimeIcon = null;
-            this.dtpKyLuatDate.DateTimePattern = Syncfusion.WinForms.Input.Enums.DateTimePattern.Custom;
-            this.dtpKyLuatDate.Format = "dd/MM/yyyy";
-            this.dtpKyLuatDate.Location = new System.Drawing.Point(752, 84);
-            this.dtpKyLuatDate.Name = "dtpKyLuatDate";
-            this.dtpKyLuatDate.Size = new System.Drawing.Size(156, 29);
-            this.dtpKyLuatDate.TabIndex = 36;
-            this.dtpKyLuatDate.ThemeName = "Managed";
-            this.dtpKyLuatDate.ToolTipText = "";
-            this.dtpKyLuatDate.Value = new System.DateTime(2025, 12, 11, 0, 0, 0, 0);
-            // 
             // dtgvKyLuatId
             // 
             this.dtgvKyLuatId.HeaderText = "Mã kỉ luật";
@@ -537,6 +450,117 @@
             this.dtgvNgayketthuc.MinimumWidth = 6;
             this.dtgvNgayketthuc.Name = "dtgvNgayketthuc";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.btnSearch);
+            this.groupBox3.Controls.Add(this.txtStudentIdSearch);
+            this.groupBox3.Controls.Add(this.autoLabel2);
+            this.groupBox3.Controls.Add(this.txtKyLuatIdSearch);
+            this.groupBox3.Controls.Add(this.autoLabel3);
+            this.groupBox3.Font = new System.Drawing.Font("Segoe UI Light", 12F);
+            this.groupBox3.Location = new System.Drawing.Point(35, 285);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(1268, 88);
+            this.groupBox3.TabIndex = 34;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Tìm kiếm";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSearch.Location = new System.Drawing.Point(1024, 40);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(87, 31);
+            this.btnSearch.TabIndex = 5;
+            this.btnSearch.Text = "Tìm kiếm";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            // 
+            // txtStudentIdSearch
+            // 
+            this.txtStudentIdSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
+            this.txtStudentIdSearch.BeforeTouchSize = new System.Drawing.Size(173, 29);
+            this.txtStudentIdSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
+            this.txtStudentIdSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtStudentIdSearch.Font = new System.Drawing.Font("Segoe UI Light", 12F);
+            this.txtStudentIdSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.txtStudentIdSearch.Location = new System.Drawing.Point(619, 40);
+            this.txtStudentIdSearch.MinimumSize = new System.Drawing.Size(24, 20);
+            this.txtStudentIdSearch.Name = "txtStudentIdSearch";
+            this.txtStudentIdSearch.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
+            this.txtStudentIdSearch.Size = new System.Drawing.Size(250, 29);
+            this.txtStudentIdSearch.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2007;
+            this.txtStudentIdSearch.TabIndex = 33;
+            this.txtStudentIdSearch.ThemeName = "Office2007";
+            // 
+            // autoLabel2
+            // 
+            this.autoLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.autoLabel2.Font = new System.Drawing.Font("Segoe UI Light", 12F);
+            this.autoLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.autoLabel2.Location = new System.Drawing.Point(512, 40);
+            this.autoLabel2.Name = "autoLabel2";
+            this.autoLabel2.Size = new System.Drawing.Size(53, 21);
+            this.autoLabel2.TabIndex = 32;
+            this.autoLabel2.Text = "Mã SV";
+            this.autoLabel2.ThemeName = "Managed";
+            // 
+            // txtKyLuatIdSearch
+            // 
+            this.txtKyLuatIdSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
+            this.txtKyLuatIdSearch.BeforeTouchSize = new System.Drawing.Size(173, 29);
+            this.txtKyLuatIdSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
+            this.txtKyLuatIdSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtKyLuatIdSearch.Font = new System.Drawing.Font("Segoe UI Light", 12F);
+            this.txtKyLuatIdSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.txtKyLuatIdSearch.Location = new System.Drawing.Point(119, 40);
+            this.txtKyLuatIdSearch.MinimumSize = new System.Drawing.Size(24, 20);
+            this.txtKyLuatIdSearch.Name = "txtKyLuatIdSearch";
+            this.txtKyLuatIdSearch.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
+            this.txtKyLuatIdSearch.Size = new System.Drawing.Size(175, 29);
+            this.txtKyLuatIdSearch.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2007;
+            this.txtKyLuatIdSearch.TabIndex = 31;
+            this.txtKyLuatIdSearch.ThemeName = "Office2007";
+            // 
+            // autoLabel3
+            // 
+            this.autoLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.autoLabel3.Font = new System.Drawing.Font("Segoe UI Light", 12F);
+            this.autoLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.autoLabel3.Location = new System.Drawing.Point(12, 40);
+            this.autoLabel3.Name = "autoLabel3";
+            this.autoLabel3.Size = new System.Drawing.Size(74, 21);
+            this.autoLabel3.TabIndex = 30;
+            this.autoLabel3.Text = "Mã kỉ luật";
+            this.autoLabel3.ThemeName = "Managed";
+            // 
+            // btnExport
+            // 
+            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExport.Location = new System.Drawing.Point(8, 130);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(75, 31);
+            this.btnExport.TabIndex = 4;
+            this.btnExport.Text = "Export";
+            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
+            // txtTenSinhVien
+            // 
+            this.txtTenSinhVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
+            this.txtTenSinhVien.BeforeTouchSize = new System.Drawing.Size(545, 29);
+            this.txtTenSinhVien.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
+            this.txtTenSinhVien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTenSinhVien.Font = new System.Drawing.Font("Segoe UI Light", 12F);
+            this.txtTenSinhVien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.txtTenSinhVien.Location = new System.Drawing.Point(491, 83);
+            this.txtTenSinhVien.MinimumSize = new System.Drawing.Size(24, 20);
+            this.txtTenSinhVien.Name = "txtTenSinhVien";
+            this.txtTenSinhVien.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
+            this.txtTenSinhVien.Size = new System.Drawing.Size(173, 29);
+            this.txtTenSinhVien.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2007;
+            this.txtTenSinhVien.TabIndex = 49;
+            this.txtTenSinhVien.ThemeName = "Office2007";
+            // 
             // UC_KyLuat
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -561,6 +585,7 @@
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtStudentIdSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKyLuatIdSearch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenSinhVien)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -597,7 +622,6 @@
         private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel2;
         private Syncfusion.Windows.Forms.Tools.TextBoxExt txtKyLuatIdSearch;
         private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel3;
-        private System.Windows.Forms.TextBox txtTenSinhVien;
         private Syncfusion.Windows.Forms.Tools.TextBoxExt txtReason;
         private Syncfusion.WinForms.Input.SfDateTimeEdit dtpKyLuatDate;
         private Syncfusion.WinForms.Input.SfDateTimeEdit dateTimePicker1;
@@ -609,5 +633,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dtgvReason;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtgvNgaybatdau;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtgvNgayketthuc;
+        private System.Windows.Forms.Button btnExport;
+        private Syncfusion.Windows.Forms.Tools.TextBoxExt txtTenSinhVien;
     }
 }

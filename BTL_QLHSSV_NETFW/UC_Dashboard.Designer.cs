@@ -75,7 +75,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UC_Dashboard";
             this.Size = new System.Drawing.Size(1340, 857);
-            this.Load += new System.EventHandler(this.UC_Dashboard_Load);
+            //this.Load += new System.EventHandler(this.UC_Dashboard_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using ClosedXML.Excel;
+using MySql.Data.MySqlClient;
 using System;
 using System.ComponentModel;
 using System.Data;
@@ -425,6 +426,115 @@ namespace BTL_QLHSSV_NETFW
             cboStudentId.Enabled = true;  
             cboStudentId.Focus();
 
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            var wb = new XLWorkbook();
+            var ws = wb.Worksheets.Add("Kỷ luật");
+            ws.Style.Font.FontName = "Times New Roman";
+
+            //Title
+            ws.Range(1, 1, 2, 8).Merge();
+            ws.Cell(1, 1).Value = "DANH SÁCH KỶ LUẬT";
+            ws.Cell(1, 1).Style.Font.SetBold().Font.FontSize = 16;
+            ws.Cell(1, 1).Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
+            ws.Cell(1, 1).Style.Fill.SetBackgroundColor(XLColor.NoColor);
+
+            //Header
+            String[] headers = { "STT", "Mã SV", "Tên sinh viên", "Hình thức kỷ luật", "Số quyết định", "Lý do", "Ngày kỷ luật", "Ngày kết thúc" };
+            for (int i = 0; i < headers.Length; i++)
+            {
+                ws.Cell(4, i + 1).Value = headers[i];
+
+                ws.Range(4, 1, 4, 8).Style.Font.SetBold().Font.FontSize = 14;
+                ws.Range(4, 1, 4, 8).Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Center);
+                ws.Range(4, 1, 4, 8).Style.Fill.SetBackgroundColor(XLColor.LightGray);
+            }
+
+
+            //Data
+            using (MySqlConnection conn = dbConn.GetConnection())
+            {
+
+                //Lấy data từ database
+                string sql = $@"
+                        SELECT
+                            kl.{C_KL_STU} AS {C_KL_STU},
+                            CONCAT(st.{C_STU_LAST}, ' ', st.{C_STU_FIRST}) AS full_name,
+                            kl.{C_KL_HT} AS {C_KL_HT},
+                            kl.{C_KL_QD} AS {C_KL_QD},
+                            kl.{C_KL_REASON} AS {C_KL_REASON},
+                            kl.{C_KL_DATE} AS {C_KL_DATE},
+                            kl.{C_KL_END} AS {C_KL_END}
+                        FROM {T_KYLUAT} kl
+                        LEFT JOIN {T_STUDENT} st ON kl.{C_KL_STU} = st.{C_STU_ID}
+                        ORDER BY kl.{C_KL_ID};
+                    ";
+                using (var cmd = new MySqlCommand(sql, conn))
+                {
+                    conn.Open();
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        int rowIndex = 5; //Số hàng bắt đầu ghi dữ liệu
+                        int no = 1; //STT
+                        while (reader.Read())
+                        {
+                            ws.Cell(rowIndex, 1).Value = no++;
+
+                            //Các cột dữ liệu
+                            ws.Cell(rowIndex, 2).Value = reader[C_KL_STU]?.ToString();
+                            ws.Cell(rowIndex, 3).Value = reader["full_name"]?.ToString();
+                            ws.Cell(rowIndex, 4).Value = reader[C_KL_HT]?.ToString();
+                            ws.Cell(rowIndex, 5).Value = reader[C_KL_QD]?.ToString();
+                            ws.Cell(rowIndex, 6).Value = reader[C_KL_REASON]?.ToString();
+                            ws.Cell(rowIndex, 7).Value = Convert.ToDateTime(reader[C_KL_DATE]).ToString("dd/mm/yyyy");
+                            ws.Cell(rowIndex, 8).Value = Convert.ToDateTime(reader[C_KL_END]).ToString("dd/mm/yyyy");
+
+
+                            //Styling cột
+                            ws.Range(rowIndex, 1, rowIndex, 8).Style.Font.FontSize = 13;
+                            ws.Range(rowIndex, 1, rowIndex, 8).Style.Font.SetBold(false);
+
+                            //Hàng tiếp theo
+                            rowIndex++;
+                        }
+                        //Filter & Sort
+                        var tableRange = ws.Range(4, 1, rowIndex - 1, 8);
+                        var table = tableRange.CreateTable();
+                        table.ShowAutoFilter = true;
+                        table.Theme = XLTableTheme.None;
+
+                        //Borders
+                        // Border toàn bộ bảng (từ header đến dòng cuối)
+                        var usedRange = ws.Range(4, 1, ws.LastRowUsed().RowNumber(), 8);
+
+                        usedRange.Style.Border.TopBorder = XLBorderStyleValues.Thin;
+                        usedRange.Style.Border.BottomBorder = XLBorderStyleValues.Thin;
+                        usedRange.Style.Border.LeftBorder = XLBorderStyleValues.Thin;
+                        usedRange.Style.Border.RightBorder = XLBorderStyleValues.Thin;
+                        usedRange.Style.Border.InsideBorder = XLBorderStyleValues.Thin;
+
+
+                    }
+                }
+
+                ws.Columns().AdjustToContents(); //Autofit content
+
+                //Lưu file
+                using (SaveFileDialog sfd = new SaveFileDialog())
+                {
+                    sfd.Filter = "Excel Files (*.xlsx)|*.xlsx";
+                    sfd.Title = "Lưu danh sách kỷ luật";
+                    sfd.FileName = "Danh_sach_ky_luat.xlsx"; // tên gợi ý
+
+                    if (sfd.ShowDialog() == DialogResult.OK)
+                    {
+                        wb.SaveAs(sfd.FileName);
+                        MessageBox.Show("Xuất file thành công!", "Thông báo");
+                    }
+                }
+            }
         }
     }
 }

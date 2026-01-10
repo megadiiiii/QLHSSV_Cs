@@ -186,7 +186,8 @@ namespace BTL_QLHSSV_NETFW
             string facuId = cboFacu.SelectedValue.ToString();
             string majorId = cboMajor.SelectedValue.ToString();
             string classId = cboClass.SelectedValue.ToString();
-
+            var test = facuId + majorId + classId;
+            MessageBox.Show(test);
             if (cboStatus.SelectedIndex == -1)
             {
                 MessageBox.Show("Vui lòng chọn trạng thái", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -306,6 +307,7 @@ namespace BTL_QLHSSV_NETFW
             txtEmail.Text = row.Cells["dgvEmail"].Value?.ToString();
             txtIdNo.Text = row.Cells["dgvIdNo"].Value?.ToString();
             cboStatus.Text = row.Cells["dgvStatus"].Value?.ToString();
+            txtCohort.Text = row.Cells["dgvCohort"].Value?.ToString();
 
             //Load Facu/Major/Class info
             comboLoad(row);
@@ -456,7 +458,7 @@ namespace BTL_QLHSSV_NETFW
         private void btnExport_Click(object sender, EventArgs e)
         {
             var wb = new XLWorkbook();
-            var ws = wb.Worksheets.Add("Student");
+            var ws = wb.Worksheets.Add("Sinh viên");
             ws.Style.Font.FontName = "Times New Roman";
 
             //Title
@@ -607,5 +609,5 @@ namespace BTL_QLHSSV_NETFW
                 MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-    }
+            }
 }

@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace BTL_QLHSSV_NETFW
 {
-    public partial class frmMainMenu : Form
+    public partial class QLHSSV : Form
     {
         private Form loginForm;
-        public frmMainMenu()
+        public QLHSSV()
         {
             InitializeComponent();
 
@@ -32,7 +32,7 @@ namespace BTL_QLHSSV_NETFW
 
         private void navTeacher_Click(object sender, EventArgs e)
         {
-
+            uC_Teacher1.BringToFront();
         }
 
         private void navFaculties_Click(object sender, EventArgs e)
@@ -83,6 +83,26 @@ namespace BTL_QLHSSV_NETFW
         private void navKyLuat_Click(object sender, EventArgs e)
         {
             uC_KyLuat1.BringToFront();
+        }
+
+        private void navScholarship_Click(object sender, EventArgs e)
+        {
+            uC_Scholarship1.BringToFront();
+        }
+        
+        private void navSuspension_Click(object sender, EventArgs e)
+        {
+            uC_Suspension1.BringToFront();
+        }
+
+        private void navRole_Click(object sender, EventArgs e)
+        {
+            uC_Role1.BringToFront();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

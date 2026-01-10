@@ -276,7 +276,7 @@ namespace BTL_QLHSSV_NETFW
         private void btnExport_Click(object sender, EventArgs e)
         {
             var wb = new XLWorkbook();
-            var ws = wb.Worksheets.Add("Authors");
+            var ws = wb.Worksheets.Add("Chuyên ngành");
             ws.Style.Font.FontName = "Times New Roman";
 
             //Title

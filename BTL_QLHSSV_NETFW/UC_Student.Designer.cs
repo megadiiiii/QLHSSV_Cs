@@ -79,7 +79,6 @@
             this.autoLabel14 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.autoLabel19 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.dgvStudentTable = new System.Windows.Forms.DataGridView();
-            this.bannerTextProvider1 = new Syncfusion.Windows.Forms.BannerTextProvider(this.components);
             this.dgvID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvFirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -95,6 +94,7 @@
             this.dgvPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvcitizenId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bannerTextProvider1 = new Syncfusion.Windows.Forms.BannerTextProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtClassNameSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNameSearch)).BeginInit();
@@ -123,9 +123,9 @@
             this.autoLabel1.Font = new System.Drawing.Font("Segoe UI Light", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.autoLabel1.Location = new System.Drawing.Point(36, 36);
             this.autoLabel1.Name = "autoLabel1";
-            this.autoLabel1.Size = new System.Drawing.Size(228, 37);
+            this.autoLabel1.Size = new System.Drawing.Size(207, 37);
             this.autoLabel1.TabIndex = 5;
-            this.autoLabel1.Text = "Thông tin sinh viên";
+            this.autoLabel1.Text = "Quản lý sinh viên";
             this.autoLabel1.ThemeName = "Managed";
             // 
             // panel2
@@ -181,7 +181,7 @@
             // txtClassNameSearch
             // 
             this.txtClassNameSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtClassNameSearch.BeforeTouchSize = new System.Drawing.Size(215, 29);
+            this.txtClassNameSearch.BeforeTouchSize = new System.Drawing.Size(298, 29);
             this.txtClassNameSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtClassNameSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtClassNameSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
@@ -206,7 +206,7 @@
             // txtNameSearch
             // 
             this.txtNameSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtNameSearch.BeforeTouchSize = new System.Drawing.Size(215, 29);
+            this.txtNameSearch.BeforeTouchSize = new System.Drawing.Size(298, 29);
             this.txtNameSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtNameSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNameSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
@@ -231,7 +231,7 @@
             // txtIDSearch
             // 
             this.txtIDSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtIDSearch.BeforeTouchSize = new System.Drawing.Size(215, 29);
+            this.txtIDSearch.BeforeTouchSize = new System.Drawing.Size(298, 29);
             this.txtIDSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtIDSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtIDSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
@@ -389,7 +389,7 @@
             // txtcitizenId
             // 
             this.txtcitizenId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtcitizenId.BeforeTouchSize = new System.Drawing.Size(215, 29);
+            this.txtcitizenId.BeforeTouchSize = new System.Drawing.Size(298, 29);
             this.txtcitizenId.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtcitizenId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtcitizenId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
@@ -405,7 +405,7 @@
             // txtEmail
             // 
             this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtEmail.BeforeTouchSize = new System.Drawing.Size(215, 29);
+            this.txtEmail.BeforeTouchSize = new System.Drawing.Size(298, 29);
             this.txtEmail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
@@ -421,7 +421,7 @@
             // txtPhone
             // 
             this.txtPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtPhone.BeforeTouchSize = new System.Drawing.Size(215, 29);
+            this.txtPhone.BeforeTouchSize = new System.Drawing.Size(298, 29);
             this.txtPhone.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
@@ -437,7 +437,7 @@
             // txtHometown
             // 
             this.txtHometown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtHometown.BeforeTouchSize = new System.Drawing.Size(215, 29);
+            this.txtHometown.BeforeTouchSize = new System.Drawing.Size(298, 29);
             this.txtHometown.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtHometown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtHometown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
@@ -453,7 +453,7 @@
             // txtFirstName
             // 
             this.txtFirstName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtFirstName.BeforeTouchSize = new System.Drawing.Size(215, 29);
+            this.txtFirstName.BeforeTouchSize = new System.Drawing.Size(298, 29);
             this.txtFirstName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtFirstName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFirstName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
@@ -469,7 +469,7 @@
             // txtLastName
             // 
             this.txtLastName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtLastName.BeforeTouchSize = new System.Drawing.Size(215, 29);
+            this.txtLastName.BeforeTouchSize = new System.Drawing.Size(298, 29);
             this.txtLastName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtLastName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtLastName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
@@ -485,7 +485,7 @@
             // txtId
             // 
             this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtId.BeforeTouchSize = new System.Drawing.Size(215, 29);
+            this.txtId.BeforeTouchSize = new System.Drawing.Size(298, 29);
             this.txtId.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtId.Cursor = System.Windows.Forms.Cursors.No;
@@ -631,7 +631,7 @@
             // txtCohort
             // 
             this.txtCohort.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtCohort.BeforeTouchSize = new System.Drawing.Size(215, 29);
+            this.txtCohort.BeforeTouchSize = new System.Drawing.Size(298, 29);
             this.txtCohort.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtCohort.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCohort.Location = new System.Drawing.Point(494, 56);

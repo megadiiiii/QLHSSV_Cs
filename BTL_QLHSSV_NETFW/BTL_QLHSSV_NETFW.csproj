@@ -229,12 +229,6 @@
     <Compile Include="UC_KhenThuong.Designer.cs">
       <DependentUpon>UC_KhenThuong.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_KyLuat.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC_KyLuat.Designer.cs">
-      <DependentUpon>UC_KyLuat.cs</DependentUpon>
-    </Compile>
     <Compile Include="UC_Major.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -264,12 +258,6 @@
     </Compile>
     <Compile Include="UC_Suspension.Designer.cs">
       <DependentUpon>UC_Suspension.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UC_Teacher.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC_Teacher.Designer.cs">
-      <DependentUpon>UC_Teacher.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="frmMainMenu.resx">
       <DependentUpon>frmMainMenu.cs</DependentUpon>
@@ -309,9 +297,6 @@
     <EmbeddedResource Include="UC_KhenThuong.resx">
       <DependentUpon>UC_KhenThuong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_KyLuat.resx">
-      <DependentUpon>UC_KyLuat.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UC_Major.resx">
       <DependentUpon>UC_Major.cs</DependentUpon>
     </EmbeddedResource>
@@ -326,9 +311,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Suspension.resx">
       <DependentUpon>UC_Suspension.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC_Teacher.resx">
-      <DependentUpon>UC_Teacher.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

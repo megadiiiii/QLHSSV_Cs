@@ -1,6 +1,7 @@
 ﻿using ClosedXML.Excel;
 using DocumentFormat.OpenXml.VariantTypes;
 using MySql.Data.MySqlClient;
+
 using Syncfusion.WinForms.ListView.Enums;
 using System;
 using System.Collections.Generic;
@@ -19,21 +20,191 @@ namespace BTL_QLHSSV_NETFW
         public UC_Scholarship()
         {
             InitializeComponent();
+
+        }
+        private string scholarship_id = null;
+
+        private void loadTableScholarship()
+        {
+            DataTable dt = new DataTable();
+            using (MySqlConnection conn = dbConn.GetConnection())
+            {
+                conn.Open();
+                string sql = @"
+            SELECT 
+                sc.scholarship_id,
+                s.student_id,
+                CONCAT(s.student_lastName, ' ', s.student_firstName) AS student_name,
+                sc.score_level,
+                sc.drl_level,
+                sc.scholarship_level,
+                sc.semester
+            FROM scholarship sc
+            JOIN student s ON s.student_id = sc.student_id
+        ";
+
+                using (MySqlCommand cmd = new MySqlCommand(sql, conn))
+                using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                {
+                    da.Fill(dt);
+                }
+
+                dgvScholarship.AutoGenerateColumns = false;
+                dgvScholarship.DataSource = dt;
+
+                dgvId.DataPropertyName = "scholarship_id";
+                dgvStudentId.DataPropertyName = "student_id";
+                dgvStudentName.DataPropertyName = "student_name";
+                dgvScoreLevel.DataPropertyName = "score_level";
+                dgvDrlLevel.DataPropertyName = "drl_level";
+                dgvScholarshipLevel.DataPropertyName = "scholarship_level";
+                dgvSemester.DataPropertyName = "semester";
+
+                dgvId.Visible = false; // Ẩn ID
+            }
+        }
+        private void dgvScholarship_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+
+            DataGridViewRow row = dgvScholarship.Rows[e.RowIndex];
+
+            cboStudentId.Text = row.Cells["dgvStudentId"].Value?.ToString();
+            txtFullName.Text = row.Cells["dgvStudentName"].Value?.ToString();
+            cboScoreLevel.Text = row.Cells["dgvScoreLevel"].Value?.ToString();
+            cboDrlLevel.Text = row.Cells["dgvDrlLevel"].Value?.ToString();
+            cboScholarshipLevel.Text = row.Cells["dgvScholarshipLevel"].Value?.ToString();
+            cboSemester.Text = row.Cells["dgvSemester"].Value?.ToString();
+
+            scholarship_id = row.Cells["dgvId"].Value?.ToString();
+        }
+        private void ClearInput()
+        {
+            cboStudentId.SelectedIndex = -1;
+            cboScoreLevel.SelectedIndex = -1;
+            cboDrlLevel.SelectedIndex = -1;
+            cboScholarshipLevel.SelectedIndex = -1;
+            cboSemester.SelectedIndex = -1;
+            txtFullName.Clear();
+        }
+
+        private void UC_HocBong_Load(object sender, EventArgs e)
+        {
+            loadTableScholarship();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(cboStudentId.Text))
+            {
+                MessageBox.Show("Vui lòng chọn sinh viên");
+                return;
+            }
 
+            try
+            {
+                using (MySqlConnection conn = dbConn.GetConnection())
+                {
+                    conn.Open();
+                    string sql = @"
+                INSERT INTO scholarship(student_id, score_level, drl_level, scholarship_level, semester)
+                VALUES (@sv, @score, @drl, @scholar, @semester)
+            ";
+
+                    using (MySqlCommand cmd = new MySqlCommand(sql, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@sv", cboStudentId.Text);
+                        cmd.Parameters.AddWithValue("@score", cboScoreLevel.Text);
+                        cmd.Parameters.AddWithValue("@drl", cboDrlLevel.Text);
+                        cmd.Parameters.AddWithValue("@scholar", cboScholarshipLevel.Text);
+                        cmd.Parameters.AddWithValue("@semester", cboSemester.Text);
+
+                        int row = cmd.ExecuteNonQuery();
+                        MessageBox.Show(row > 0 ? "Thêm học bổng thành công" : "Thêm thất bại");
+                    }
+                }
+
+                loadTableScholarship();
+                ClearInput();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
+            if (scholarship_id == null)
+            {
+                MessageBox.Show("Vui lòng chọn bản ghi cần sửa");
+                return;
+            }
+
+            try
+            {
+                using (MySqlConnection conn = dbConn.GetConnection())
+                {
+                    conn.Open();
+                    string sql = @"
+                UPDATE scholarship
+                SET score_level = @score,
+                    drl_level = @drl,
+                    scholarship_level = @scholar,
+                    semester = @semester
+                WHERE scholarship_id = @id
+            ";
+
+                    using (MySqlCommand cmd = new MySqlCommand(sql, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@score", cboScoreLevel.Text);
+                        cmd.Parameters.AddWithValue("@drl", cboDrlLevel.Text);
+                        cmd.Parameters.AddWithValue("@scholar", cboScholarshipLevel.Text);
+                        cmd.Parameters.AddWithValue("@semester", cboSemester.Text);
+                        cmd.Parameters.AddWithValue("@id", scholarship_id);
+
+                        int row = cmd.ExecuteNonQuery();
+                        MessageBox.Show(row > 0 ? "Cập nhật thành công" : "Cập nhật thất bại");
+                    }
+                }
+
+                loadTableScholarship();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
 
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            if (scholarship_id == null)
+            {
+                MessageBox.Show("Vui lòng chọn bản ghi cần xóa");
+                return;
+            }
 
+            if (MessageBox.Show("Xóa học bổng sinh viên?", "Xóa",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                using (MySqlConnection conn = dbConn.GetConnection())
+                {
+                    conn.Open();
+                    string sql = "DELETE FROM scholarship WHERE scholarship_id = @id";
+                    using (MySqlCommand cmd = new MySqlCommand(sql, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@id", scholarship_id);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+
+                MessageBox.Show("Đã xóa");
+                loadTableScholarship();
+                ClearInput();
+                scholarship_id = null;
+            }
         }
 
         private void btnExport_Click(object sender, EventArgs e)
@@ -137,7 +308,32 @@ namespace BTL_QLHSSV_NETFW
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            using (MySqlConnection conn = dbConn.GetConnection())
+            {
+                conn.Open();
+                string sql = @"
+            SELECT 
+                sc.scholarship_id,
+                s.student_id,
+                CONCAT(s.student_lastName, ' ', s.student_firstName) AS student_name,
+                sc.score_level,
+                sc.drl_level,
+                sc.scholarship_level,
+                sc.semester
+            FROM scholarship sc
+            JOIN student s ON s.student_id = sc.student_id
+            WHERE s.student_id LIKE CONCAT('%', @msv, '%')
+        ";
 
+                using (MySqlCommand cmd = new MySqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@msv", txtStudentIdSearch.Text.Trim());
+                    MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    dgvScholarship.DataSource = dt;
+                }
+            }
         }
 
         private void UC_Scholarship_Load(object sender, EventArgs e)
@@ -179,18 +375,7 @@ namespace BTL_QLHSSV_NETFW
             }
         }
 
-        private void dgvScholarship_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex < 0) return;
-
-            var row = dgvScholarship.Rows[e.RowIndex];
-            cboStudentId.Text = row.Cells["dgvStudentId"].Value.ToString();
-            txtFullName.Text = row.Cells["dgvStudentName"].Value.ToString();
-            cboScoreLevel.Text = row.Cells["dgvScoreLevel"].Value.ToString();
-            cboDrlLevel.Text = row.Cells["dgvDrlLevel"].Value.ToString();
-            cboScholarshipLevel.Text = row.Cells["dgvScholarshipLevel"].Value.ToString();
-            cboSemester.Text = row.Cells["dgvSemester"].Value.ToString();
-        }
+       
 
         private void LoadStudentId()
         {

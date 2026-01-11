@@ -102,7 +102,7 @@
             // txtStudentIdSearch
             // 
             this.txtStudentIdSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtStudentIdSearch.BeforeTouchSize = new System.Drawing.Size(300, 29);
+            this.txtStudentIdSearch.BeforeTouchSize = new System.Drawing.Size(300, 34);
             this.txtStudentIdSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
             this.txtStudentIdSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtStudentIdSearch.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -113,7 +113,7 @@
             this.txtStudentIdSearch.Name = "txtStudentIdSearch";
             this.txtStudentIdSearch.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
             this.txtStudentIdSearch.Office2010ColorScheme = Syncfusion.Windows.Forms.Office2010Theme.Black;
-            this.txtStudentIdSearch.Size = new System.Drawing.Size(797, 29);
+            this.txtStudentIdSearch.Size = new System.Drawing.Size(797, 34);
             this.txtStudentIdSearch.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2016Colorful;
             this.txtStudentIdSearch.TabIndex = 39;
             this.txtStudentIdSearch.ThemeName = "Office2016Colorful";
@@ -125,7 +125,7 @@
             this.autoLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.autoLabel3.Location = new System.Drawing.Point(12, 40);
             this.autoLabel3.Name = "autoLabel3";
-            this.autoLabel3.Size = new System.Drawing.Size(53, 21);
+            this.autoLabel3.Size = new System.Drawing.Size(66, 28);
             this.autoLabel3.TabIndex = 38;
             this.autoLabel3.Text = "Mã SV";
             this.autoLabel3.ThemeName = "Managed";
@@ -202,7 +202,7 @@
             this.autoLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.autoLabel1.Location = new System.Drawing.Point(36, 36);
             this.autoLabel1.Name = "autoLabel1";
-            this.autoLabel1.Size = new System.Drawing.Size(217, 37);
+            this.autoLabel1.Size = new System.Drawing.Size(275, 46);
             this.autoLabel1.TabIndex = 44;
             this.autoLabel1.Text = "Quản lý học bổng";
             this.autoLabel1.ThemeName = "Managed";
@@ -214,7 +214,7 @@
             this.autoLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.autoLabel4.Location = new System.Drawing.Point(12, 34);
             this.autoLabel4.Name = "autoLabel4";
-            this.autoLabel4.Size = new System.Drawing.Size(53, 21);
+            this.autoLabel4.Size = new System.Drawing.Size(66, 28);
             this.autoLabel4.TabIndex = 34;
             this.autoLabel4.Text = "Mã SV";
             this.autoLabel4.ThemeName = "Managed";
@@ -254,6 +254,7 @@
             // dgvId
             // 
             this.dgvId.HeaderText = "ID";
+            this.dgvId.MinimumWidth = 6;
             this.dgvId.Name = "dgvId";
             this.dgvId.Visible = false;
             // 
@@ -284,17 +285,19 @@
             // dgvScholarshipLevel
             // 
             this.dgvScholarshipLevel.HeaderText = "Mức học bổng";
+            this.dgvScholarshipLevel.MinimumWidth = 6;
             this.dgvScholarshipLevel.Name = "dgvScholarshipLevel";
             // 
             // dgvSemester
             // 
             this.dgvSemester.HeaderText = "Học kì";
+            this.dgvSemester.MinimumWidth = 6;
             this.dgvSemester.Name = "dgvSemester";
             // 
             // txtFullName
             // 
             this.txtFullName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtFullName.BeforeTouchSize = new System.Drawing.Size(300, 29);
+            this.txtFullName.BeforeTouchSize = new System.Drawing.Size(300, 34);
             this.txtFullName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
             this.txtFullName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFullName.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -305,7 +308,7 @@
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
             this.txtFullName.Office2010ColorScheme = Syncfusion.Windows.Forms.Office2010Theme.Black;
-            this.txtFullName.Size = new System.Drawing.Size(300, 29);
+            this.txtFullName.Size = new System.Drawing.Size(300, 34);
             this.txtFullName.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2016Colorful;
             this.txtFullName.TabIndex = 37;
             this.txtFullName.ThemeName = "Office2016Colorful";
@@ -317,7 +320,7 @@
             this.autoLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.autoLabel5.Location = new System.Drawing.Point(509, 34);
             this.autoLabel5.Name = "autoLabel5";
-            this.autoLabel5.Size = new System.Drawing.Size(54, 21);
+            this.autoLabel5.Size = new System.Drawing.Size(67, 28);
             this.autoLabel5.TabIndex = 36;
             this.autoLabel5.Text = "Tên SV";
             this.autoLabel5.ThemeName = "Managed";
@@ -357,7 +360,7 @@
             "Xuất sắc"});
             this.cboScholarshipLevel.Location = new System.Drawing.Point(169, 135);
             this.cboScholarshipLevel.Name = "cboScholarshipLevel";
-            this.cboScholarshipLevel.Size = new System.Drawing.Size(300, 29);
+            this.cboScholarshipLevel.Size = new System.Drawing.Size(300, 36);
             this.cboScholarshipLevel.TabIndex = 51;
             // 
             // cboDrlLevel
@@ -372,7 +375,7 @@
             "Xuất sắc"});
             this.cboDrlLevel.Location = new System.Drawing.Point(666, 81);
             this.cboDrlLevel.Name = "cboDrlLevel";
-            this.cboDrlLevel.Size = new System.Drawing.Size(300, 29);
+            this.cboDrlLevel.Size = new System.Drawing.Size(300, 36);
             this.cboDrlLevel.TabIndex = 50;
             // 
             // cboScoreLevel
@@ -387,7 +390,7 @@
             "Xuất sắc"});
             this.cboScoreLevel.Location = new System.Drawing.Point(169, 81);
             this.cboScoreLevel.Name = "cboScoreLevel";
-            this.cboScoreLevel.Size = new System.Drawing.Size(300, 29);
+            this.cboScoreLevel.Size = new System.Drawing.Size(300, 36);
             this.cboScoreLevel.TabIndex = 49;
             // 
             // cboSemester
@@ -407,7 +410,7 @@
             "Kì 8"});
             this.cboSemester.Location = new System.Drawing.Point(666, 129);
             this.cboSemester.Name = "cboSemester";
-            this.cboSemester.Size = new System.Drawing.Size(300, 29);
+            this.cboSemester.Size = new System.Drawing.Size(300, 36);
             this.cboSemester.TabIndex = 47;
             // 
             // autoLabel9
@@ -417,7 +420,7 @@
             this.autoLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.autoLabel9.Location = new System.Drawing.Point(509, 135);
             this.autoLabel9.Name = "autoLabel9";
-            this.autoLabel9.Size = new System.Drawing.Size(51, 21);
+            this.autoLabel9.Size = new System.Drawing.Size(64, 28);
             this.autoLabel9.TabIndex = 45;
             this.autoLabel9.Text = "Học kì";
             this.autoLabel9.ThemeName = "Managed";
@@ -429,7 +432,7 @@
             this.autoLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.autoLabel10.Location = new System.Drawing.Point(12, 135);
             this.autoLabel10.Name = "autoLabel10";
-            this.autoLabel10.Size = new System.Drawing.Size(130, 21);
+            this.autoLabel10.Size = new System.Drawing.Size(161, 28);
             this.autoLabel10.TabIndex = 43;
             this.autoLabel10.Text = "Kết quả học bổng";
             this.autoLabel10.ThemeName = "Managed";
@@ -441,7 +444,7 @@
             this.autoLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.autoLabel8.Location = new System.Drawing.Point(509, 85);
             this.autoLabel8.Name = "autoLabel8";
-            this.autoLabel8.Size = new System.Drawing.Size(127, 21);
+            this.autoLabel8.Size = new System.Drawing.Size(159, 28);
             this.autoLabel8.TabIndex = 41;
             this.autoLabel8.Text = "Kết quả rèn luyện";
             this.autoLabel8.ThemeName = "Managed";
@@ -453,7 +456,7 @@
             this.autoLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.autoLabel7.Location = new System.Drawing.Point(12, 85);
             this.autoLabel7.Name = "autoLabel7";
-            this.autoLabel7.Size = new System.Drawing.Size(116, 21);
+            this.autoLabel7.Size = new System.Drawing.Size(144, 28);
             this.autoLabel7.TabIndex = 39;
             this.autoLabel7.Text = "Kết quả học tập";
             this.autoLabel7.ThemeName = "Managed";

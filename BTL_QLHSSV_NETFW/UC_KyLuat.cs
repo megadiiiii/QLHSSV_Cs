@@ -90,7 +90,7 @@ namespace BTL_QLHSSV_NETFW
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Load sinh viên lỗi: " + ex.Message);
+                MessageBox.Show("Load sinh viên lỗi: " + ex.Message); 
             }
         }
         private void cboStudentId_SelectionChangeCommitted(object sender, EventArgs e)

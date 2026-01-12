@@ -16,10 +16,10 @@ namespace BTL_QLHSSV_NETFW
         static void Main()
         {
             SyncfusionLicenseProvider.RegisterLicense("Ngo9BigBOggjHTQxAR8/V1JFaF1cXGtCf1FpRmJGdld5fUVHYVZUTXxaS00DNHVRdkdlWX5fcHRURmRYV01+XEdWYEg=");
-            //Application.EnableVisualStyles();
+            Application.EnableVisualStyles();
             ToolStripManager.RenderMode = ToolStripManagerRenderMode.Professional;
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new QLHSSV());
+            Application.Run(new frmLogin());
         }
     }
 }

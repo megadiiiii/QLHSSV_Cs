@@ -73,10 +73,9 @@ namespace BTL_QLHSSV_NETFW
                 MessageBox.Show($"Đăng nhập thành công!\nXin chào {fullname}",
                                 "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                frmMainMenu main = new frmMainMenu();
+                main.Show();
                 this.Hide();
-                QLHSSV main = new QLHSSV();
-                main.ShowDialog();
-                this.Show();
             }
             catch (Exception ex)
             {

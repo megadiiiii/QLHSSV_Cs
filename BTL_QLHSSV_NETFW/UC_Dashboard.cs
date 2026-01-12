@@ -13,151 +13,69 @@ namespace BTL_QLHSSV_NETFW
 {
     public partial class UC_Dashboard : UserControl
     {
+
         public UC_Dashboard()
         {
             InitializeComponent();
         }
 
-        //private void UC_Dashboard_Load(object sender, EventArgs e)
-        //{
-        //    txtStudentCount.Text = StudentCount().ToString();
-        //    txtFacuCnt.Text = FacuCount().ToString();
-        //    txtMajorCnt.Text = MajorCount().ToString();
-        //    txtClassCnt.Text = ClassCount().ToString();
-        //    txtKT.Text = RewardCount().ToString();
-        //    txtKL.Text = KLCount().ToString();
-        //}
+        private int CountTable(string tableName)
+        {
+            int total = 0;
+            try
+            {
+                string query = $"SELECT COUNT(*) FROM {tableName}";
+                using (MySqlConnection conn = dbConn.GetConnection())
+                {
+                    conn.Open();
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        total = Convert.ToInt32(cmd.ExecuteScalar());
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi đếm dữ liệu bảng {tableName}: " + ex.Message);
+            }
+            return total;
+        }
 
-        //private int StudentCount()
-        //{
-        //    int total = 0;
-        //    try
-        //    {
-        //        String query = "SELECT COUNT(*) FROM student";
-        //        using (MySqlConnection conn = dbConn.GetConnection())
-        //        {
-        //            conn.Open();
-        //            using (MySqlCommand cmd = new MySqlCommand(query, conn))
-        //            {
-        //                total = Convert.ToInt32(cmd.ExecuteScalar());
-        //            }
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("Lỗi khi đếm sinh viên: " + ex.Message);
-        //    }
-        //    return total;
-        //}
+        private void UC_Dashboard_Load(object sender, EventArgs e)
+        {
+            int totalStudents = CountTable("student");
 
-        //private int FacuCount()
-        //{
-        //    int total = 0;
-        //    try
-        //    {
-        //        String query = "SELECT COUNT(*) FROM faculties";
-        //        using (MySqlConnection conn = dbConn.GetConnection())
-        //        {
-        //            conn.Open();
-        //            using (MySqlCommand cmd = new MySqlCommand(query, conn))
-        //            {
-        //                total = Convert.ToInt32(cmd.ExecuteScalar());
-        //            }
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("Lỗi khi đếm khoa: " + ex.Message);
-        //    }
-        //    return total;
-        //}
+            txtFacuCount.Text = CountTable("faculties").ToString();
+            txtMajorCount.Text = CountTable("major").ToString();
+            txtCohortCount.Text = CountTable("cohort").ToString();
+            txtClassCount.Text = CountTable("class").ToString();
+            txtStudentCount.Text = totalStudents.ToString();
+            txtRoleCount.Text = CountTable("role").ToString();
+            txtTeacherCount.Text = CountTable("teacher").ToString();
 
-        //private int MajorCount()
-        //{
-        //    int total = 0;
-        //    try
-        //    {
-        //        String query = "SELECT COUNT(*) FROM major";
-        //        using (MySqlConnection conn = dbConn.GetConnection())
-        //        {
-        //            conn.Open();
-        //            using (MySqlCommand cmd = new MySqlCommand(query, conn))
-        //            {
-        //                total = Convert.ToInt32(cmd.ExecuteScalar());
-        //            }
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("Lỗi khi đếm sinh viên: " + ex.Message);
-        //    }
-        //    return total;
-        //}
+            txtRewardCount.Text = CountTable("reward").ToString();
+            txtDiscCount.Text = CountTable("kyluat").ToString();
+            txtScholarCount.Text = CountTable("scholarship").ToString();
+            txtSusCount.Text = CountTable("suspension").ToString();
 
-        //private int ClassCount()
-        //{
-        //    int total = 0;
-        //    try
-        //    {
-        //        String query = "SELECT COUNT(*) FROM class";
-        //        using (MySqlConnection conn = dbConn.GetConnection())
-        //        {
-        //            conn.Open();
-        //            using (MySqlCommand cmd = new MySqlCommand(query, conn))
-        //            {
-        //                total = Convert.ToInt32(cmd.ExecuteScalar());
-        //            }
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("Lỗi khi đếm lớp: " + ex.Message);
-        //    }
-        //    return total;
-        //}
+            double rewardPercent = CalcPercent("reward", totalStudents);
+            double discPercent = CalcPercent("kyluat", totalStudents);
+            double scholarPercent = CalcPercent("scholarship", totalStudents);
+            double susPercent = CalcPercent("suspension", totalStudents);
 
-        //private int RewardCount()
-        //{
-        //    int total = 0;
-        //    try
-        //    {
-        //        String query = "SELECT COUNT(*) FROM reward";
-        //        using (MySqlConnection conn = dbConn.GetConnection())
-        //        {
-        //            conn.Open();
-        //            using (MySqlCommand cmd = new MySqlCommand(query, conn))
-        //            {
-        //                total = Convert.ToInt32(cmd.ExecuteScalar());
-        //            }
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("Lỗi khi đếm sinh viên: " + ex.Message);
-        //    }
-        //    return total;
-        //}
+            txtRewardPercent.Text = "Chiếm " + rewardPercent.ToString("F2") + " %" + " tống số sinh viên";
+            txtDiscPercent.Text = "Chiếm " + discPercent.ToString("F2") + " %" + " tống số sinh viên";
+            txtScholarPercent.Text = "Chiếm " + scholarPercent.ToString("F2") + " %" + " tống số sinh viên";
+            txtSusPercent.Text = "Chiếm " + susPercent.ToString("F2") + " %" + " tống số sinh viên";
+        }
 
-        //private int KLCount()
-        //{
-        //    int total = 0;
-        //    try
-        //    {
-        //        String query = "SELECT COUNT(*) FROM kyluat";
-        //        using (MySqlConnection conn = dbConn.GetConnection())
-        //        {
-        //            conn.Open();
-        //            using (MySqlCommand cmd = new MySqlCommand(query, conn))
-        //            {
-        //                total = Convert.ToInt32(cmd.ExecuteScalar());
-        //            }
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("Lỗi khi đếm sinh viên: " + ex.Message);
-        //    }
-        //    return total;
-        //}
+
+        private double CalcPercent(string targetTable, int totalStudents)
+        {
+            if (totalStudents <= 0) return 0;
+
+            int count = CountTable(targetTable);
+            return (double)count / totalStudents * 100;
+        }
     }
 }

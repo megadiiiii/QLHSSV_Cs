@@ -25,7 +25,6 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.autoLabel11 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.txtTeacherId = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.autoLabel14 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.txtTeacherName = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
@@ -33,6 +32,7 @@
             this.cboFacuId = new System.Windows.Forms.ComboBox();
             this.autoLabel4 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.txtFacuName = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.autoLabel11 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.autoLabel1 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
@@ -149,22 +149,10 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin giảng viên";
             // 
-            // autoLabel11
-            // 
-            this.autoLabel11.BackColor = System.Drawing.Color.Transparent;
-            this.autoLabel11.Font = new System.Drawing.Font("Segoe UI Light", 12F);
-            this.autoLabel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.autoLabel11.Location = new System.Drawing.Point(12, 35);
-            this.autoLabel11.Name = "autoLabel11";
-            this.autoLabel11.Size = new System.Drawing.Size(104, 21);
-            this.autoLabel11.TabIndex = 30;
-            this.autoLabel11.Text = "Mã giảng viên";
-            this.autoLabel11.ThemeName = "Managed";
-            // 
             // txtTeacherId
             // 
             this.txtTeacherId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtTeacherId.BeforeTouchSize = new System.Drawing.Size(290, 29);
+            this.txtTeacherId.BeforeTouchSize = new System.Drawing.Size(175, 29);
             this.txtTeacherId.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtTeacherId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTeacherId.Font = new System.Drawing.Font("Segoe UI Light", 12F);
@@ -193,7 +181,7 @@
             // txtTeacherName
             // 
             this.txtTeacherName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtTeacherName.BeforeTouchSize = new System.Drawing.Size(290, 29);
+            this.txtTeacherName.BeforeTouchSize = new System.Drawing.Size(175, 29);
             this.txtTeacherName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtTeacherName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTeacherName.Font = new System.Drawing.Font("Segoe UI Light", 12F);
@@ -245,7 +233,7 @@
             // txtFacuName
             // 
             this.txtFacuName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtFacuName.BeforeTouchSize = new System.Drawing.Size(290, 29);
+            this.txtFacuName.BeforeTouchSize = new System.Drawing.Size(175, 29);
             this.txtFacuName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtFacuName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFacuName.Font = new System.Drawing.Font("Segoe UI Light", 12F);
@@ -259,6 +247,18 @@
             this.txtFacuName.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Office2007;
             this.txtFacuName.TabIndex = 49;
             this.txtFacuName.ThemeName = "Office2007";
+            // 
+            // autoLabel11
+            // 
+            this.autoLabel11.BackColor = System.Drawing.Color.Transparent;
+            this.autoLabel11.Font = new System.Drawing.Font("Segoe UI Light", 12F);
+            this.autoLabel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.autoLabel11.Location = new System.Drawing.Point(12, 35);
+            this.autoLabel11.Name = "autoLabel11";
+            this.autoLabel11.Size = new System.Drawing.Size(104, 21);
+            this.autoLabel11.TabIndex = 30;
+            this.autoLabel11.Text = "Mã giảng viên";
+            this.autoLabel11.ThemeName = "Managed";
             // 
             // panel2
             // 
@@ -378,7 +378,7 @@
             // txtTeacherIdSearch
             // 
             this.txtTeacherIdSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtTeacherIdSearch.BeforeTouchSize = new System.Drawing.Size(290, 29);
+            this.txtTeacherIdSearch.BeforeTouchSize = new System.Drawing.Size(175, 29);
             this.txtTeacherIdSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtTeacherIdSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTeacherIdSearch.Font = new System.Drawing.Font("Segoe UI Light", 12F);
@@ -407,7 +407,7 @@
             // txtTeacherNameSearch
             // 
             this.txtTeacherNameSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(251)))));
-            this.txtTeacherNameSearch.BeforeTouchSize = new System.Drawing.Size(290, 29);
+            this.txtTeacherNameSearch.BeforeTouchSize = new System.Drawing.Size(175, 29);
             this.txtTeacherNameSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(208)))), ((int)(((byte)(229)))));
             this.txtTeacherNameSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTeacherNameSearch.Font = new System.Drawing.Font("Segoe UI Light", 12F);
